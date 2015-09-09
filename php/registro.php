@@ -1,16 +1,14 @@
 <?php
 
-$name = $_POST['name'];
-$AP = $_POST['AP'];
-$AM = $_POST['AM'];
-$User = $_POST['user'];
-$Pass = $_POST['pass'];
-$rPass = $_POST['rPass'];
-$Age = $_POST['Age'];
-$Email = $_POST['Email'];
+$name = $_POST['nombre'];//nombre
+$AP = $_POST['AP'];//apellido paterno
+$AM = $_POST['AM'];//apellido materno
+$User = $_POST['User'];//Nombre usuario
+$Pass = md5($_POST['Pass']);//contraseña
+$Age = $_POST['Age'];//edad del usuario
+$Email = $_POST['Email'];//correo electronico
 
-if ($enlace = new sqli(localhost,root,"","publidom")) {
-  $consulta = "insert into usuarios() values()";
+if ($enlace = new mysqli("localhost","root","","publidom")) {
   if ($enlace -> query("call registro('$User','$name.$AP.$AM','$Age','$Email','$Pass')")) {
     echo 1;
   }else{echo 0;}

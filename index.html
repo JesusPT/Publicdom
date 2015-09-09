@@ -39,11 +39,11 @@
 			<div class = "mostrar" id ="zoomin">
 				<img src="Images/cross106.png" class="close">
 			    <h2>Registro</h2>
-				<form id = "formRegistro" action="" method="POST" name="nformRegistro">
+				<form id = "formRegistro" action="php/registro.php" method="POST" name="nformRegistro">
 		       		<ul>
 		       			<li>
 		       				<label>Nombres</label>
-							<input type="text" name="name" 	placeholder="Nombre" />
+							<input type="text" name="Nom" 	placeholder="Nombre" />
 		       			</li>
 		       			<li>
 		       				<label>Apellido Paterno</label>
@@ -74,7 +74,7 @@
 							<input type="email" name="Email" placeholder="ejemplo@mail.com" />
 		       			</li>
 		       			<li>
-		       				<input id = "registrarse" type="submit" value="Registrarse" class="Reg" data-type="zoomin"></input>
+		       				<input type="submit" value="Registrarse" class="Reg" data-type="zoomin"></input>
 		       			</li>
 		       		</ul>
 		      	</form>

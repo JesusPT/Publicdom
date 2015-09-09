@@ -1,10 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
+	<meta charset="UTF-8">
+	<title>PubliDOM</title>
+	<link rel="icon" type="image/png" href="Images\archive3.png" />
+	<link rel="stylesheet" href="css\normalize.css">
+	<link rel="stylesheet" href="css\index.css">
+	<script src="Js/jquery-1.10.2.js"></script>
+	<script src="Js/index.js"></script>
 </head>
 <body>
+	
+	<!--NAV   Logo, botones de inicio de sesión y registrar !-->
+	<nav>
+		<div id="Logo">
+			<a href="index.html">
+				<img src="Images\PublicDOMBlanco.png" alt="">
+			</a>
+			
+		</div>
+		
+
+		<ul>
+
+			<li ><a id = "btoIni" class = "barra" href="#">Iniciar Sesión</a></li>
+			<li><a id="btoReg" class = "barra"  href="#contenedor">Registrarse</a></li>
+		</ul>
+
+
+	</nav>
+
+
+	<!--CENTRAL  Imagen Slogan, Conoce más  !-->
+	<section id="Central">
+
+
+		<div id = "contenedor">			
+			<div class = "mostrar" id ="zoomin">
+				<img src="Images/cross106.png" class="close">
+			    <h2>Registro</h2>
+				<form id = "formRegistro" action="" method="POST" name="nformRegistro">
+		       		<ul>
+		       			<li>
+		       				<label>Nombres</label>
+							<input type="text" name="name" 	placeholder="Nombre" />
+		       			</li>
+		       			<li>
+		       				<label>Apellido Paterno</label>
+							<input type="text" name="AP" placeholder="Apellido Paterno" />
+		       			</li> 
+		       			<li>
+		       				<label>Apellido Materno</label>
+							<input type="text" name="AM" placeholder="Apellido Materno" />
+		       			</li>
+		       			<li>
+		       				<label>Usuario</label>
+							<input type="text" name="User" placeholder="Usuario" />
+		       			</li>
+		       			<li>
+		       				<label>Contraseña</label>
+							<input type="password" name="Pass" placeholder="********" />
+		       			</li>
+		       			<li>
+		       				<label>Reingresa Contraseña</label>
+							<input type="password" name="rPass" placeholder="********" />
+		       			</li>
+		       			<li>
+		       				<label>Edad</label>
+							<input type="text" name="Age" placeholder="Edad" />
+		       			</li>
+		       			<li>
+		       				<label>Correo Electronico</label>
+							<input type="email" name="Email" placeholder="ejemplo@mail.com" />
+		       			</li>
+		       			<li>
+		       				<input type="submit" value="Registrarse" class="Reg" data-type="zoomin"></input>
+		       			</li>
+		       		</ul>
+		      	</form>
+			</div>
+		</div>
+
+		<div id = "ventaIni">			
+			<div class = "mostrar" id ="zoomin">
+				<img src="Images/cross106.png" id="closeIni">
+			    <h2>Iniciar Sesion</h2>
+			    <form id = "formInicioSesion" action="" method="POST" name="nformInicioSesion">
+			    	<ul>
+			    		<li>
+			    			<label>Usuario</label>
+							<input type="text" name="User" placeholder="Usuario" />
+			    		</li>
+			    		<li>
+			    			<label>Contraseña</label>
+							<input type="password" name="Pasxs" placeholder="********" />
+			    		</li>
+			    		<li>
+			    			<input type="submit" value="Iniciar Sesion" class="" data-type="zoomin"></input>
+			    		</li>
+			    	</ul>
+		      	</form>
+			</div>
+		</div>
+
+		
+		
+		
+
+
+		<div id="registro" class="panel">
+			<div class="content">
+				
+			</div>
+		</div>
+
+
+		
+		<div id="contSlogan">
+			<img id="slogan" src="Images\prueba.jpg">		
+
+			<div class="Boton" id = "conoce">
+				<a href="more-info.html">Conoce más</a>
+			</div>
+		</div>
+
+
+
+	</section>
+
+
+	<!-- FOOTER  Logo Nuestro, contacto, soporte, acerca de y logo TEC   !-->
+	<footer>
+		<div id="FooIzq">
+			<img src="Images\softcraft.jpg" alt="">
+		</div>
+
+		<div id="FooCent">
+			<ul>
+				<li><a href="#">Contacto: (044) 341 878 2672</a></li>
+				<li><a href="#">Soporte</a></li>
+				<li><a href="#">Acerca de</a></li>
+			</ul>
+		</div>
+
+		<div id="FooDer">
+			<img src="Images\itcg.jpg" alt="">
+		</div>
+		
+	</footer>
+
+
 
 </body>
 </html>

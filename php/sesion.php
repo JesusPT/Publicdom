@@ -3,7 +3,7 @@
 	$usuario = $_POST['user'];
 	$pass = $_POST['pass'];
 
-if ($enlace = new mysqli("localhots","root")) {//Conexion con la DB
+if ($enlace = new mysqli("localhots","root","","publidom")) {//Conexion con la DB
 	$consulta = "SELECT * FROM usuario where idUser = '$usuario', pass = '$pass'";//Consulta SQL a ejecutar
 	if ($respuesta = $enlace->query($consulta)) {//Realizar consulta
 		if ($respuesta -> num_rows > 0) {//si la respuesta contiene alguna fila

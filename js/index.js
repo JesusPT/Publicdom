@@ -12,5 +12,9 @@ $(document).on("ready",function(){
 			$("#ventaIni").css("display","none");
 		});
 
-		$('#')
+		$('#registrarse').on('click',function(){
+			$.ajax({
+				
+			});
+		});
 });

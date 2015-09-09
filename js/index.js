@@ -11,5 +11,6 @@ $(document).on("ready",function(){
 		$("#closeIni").click(function(){
 			$("#ventaIni").css("display","none");
 		});
-});
 
+		$('#')
+});

@@ -1,0 +1,432 @@
+/***
+*	CSS de la página principal de Usuario o
+*	cliente final.
+*
+*	Se dividirá en las siguientes partes:
+*		-NAV
+*		-BARRA DE PUBLICIDAD
+*		-BUSCADOR
+*		-CUERPO
+*			+MENÚ
+*				*PERFIL: EDITAR PERFIL;
+*				*CARRITO: ITEMS QUE DESEA COMPRAR;
+*				*PEDIDOS: AGENDAR SERVICIOS;
+*				*HISTORIAL: PROD/SER VISITADOS CON ANTERIORIDAD;
+*				*FAVORITOS: PRD/SER MÁS USADOS;
+*				*SALIR: SALIR DEL SISTEMA;
+*			+CAJA VISUALIZADORA
+*		-FOOTER
+*			+LOGO SOFTCRAFT
+*			+INFORMACIÓN SOFTCRAFT
+*			+LOGO ITCG
+*
+*
+***/
+
+
+
+
+
+
+
+
+
+
+
+/**********
+	NAV
+	En esta zona se mostraá el estado en el que se encuentra
+	la sesión del usuario, así como su imagen de perfil y opciones
+	y configuraciones.
+	Además contará con el nombre de la página.
+**********/
+
+/*
+	#Sesión:
+		Ambas:
+			Una alineación horizontal y un margen a la
+			dereha de 30px
+		Imagen de Perfil
+		Opción Salir
+*/
+#sesion li{
+	display: inline-block;
+	margin-right: 15%;
+}
+
+
+
+/***************************
+	PUBLICIDAD - ARRIBA
+	Zona en la que los negocios tendrán una pequeña aparición,
+	en base a la calificación y popularidad de estos.
+***************************/
+#Publicidad{
+	background-color: #DDD;
+	border-radius: 5px;
+	height: 50px;
+	margin: 10px 10px 10px 10px;
+}
+
+#Publicidad h2{
+	text-align: center;
+	padding-top: 10px;
+}
+
+
+/***************
+	BARRITA
+***************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*____________   PANEL IZQUIERDO   ____________*/
+#BLeft{
+	position: relative;
+	display: inline-block;
+}
+
+.pIzquierda{
+	background-color: #5D5E60;
+	border: 2px solid #5D5E60;
+	border-radius: 4px;
+	padding: 5px;
+	margin: 0 0 5px -6px;
+	text-align: center;
+	width: 75px;
+}
+
+.pIzquierda img{
+	width: 48px;
+}
+
+.pIzquierda a{
+	color: #000;
+	text-decoration: none;
+}
+
+.Deslizar{
+	background-color: #1F262B;
+	border: 2px solid black;
+	padding: 8px;
+}
+
+.Deslizar a{
+	color: #8F8F8F;
+	display: block;
+	text-decoration: none;
+}
+
+.Deslizar p{
+	color: #8F8F8F;
+	font-weight: bold;
+	padding-bottom: 15px;
+	text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*____________   PANEL CENTRAL   ____________*/
+#BCenter{
+	display: inline-block;
+	left: 8px;
+	margin: 0 auto;
+	position: relative;
+	top: 10px;
+	vertical-align: top;
+	width: 70%;
+
+}
+
+/*Estilo general de recuadros del centro*/
+.more{
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px #CCC;
+	display: none;
+	padding: 15px;
+}
+
+.boton{
+	color:#F2F2F2;
+	background-color: #4A6FA5;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 8px;
+}
+
+.boton a{
+	color: #F2F2F2;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Estilos de Perfil*/
+
+#editar-izq{
+	position: relative;
+	left: 60em;
+	top: -7em;
+}
+
+#more-profile{
+	position: relative;
+}
+
+#more-profile img{
+	position: relative;
+	left: -3em;
+	top: 2em;
+	width: 135px;
+}
+
+#nuser{
+	position: relative;
+	left: 12em;
+	top: -4em;
+}
+
+#profile-favs, #profile-sched{
+	background-color: #4F6D7A;
+	border-radius: 10px;
+	display: inline-block;
+	padding: 20px;
+	position: relative;
+	margin: 2em;
+	width: 20em;
+}
+
+#profile-favs h3, #profile-sched h3{
+	color: #F2F2F2;
+	padding-bottom: 5px;
+}
+
+#profile-favs a, #profile-sched a{
+	color: #C2C0BD;
+	text-decoration: none;
+}
+
+/*Estilos de Editar Perfil*/
+#more-edituser{
+	position: relative;
+}
+
+#img-box{
+	border: 1px solid #CCC;
+	border-radius: 5px;
+
+	padding: 1em;
+	margin: 1em;
+}
+
+#img-box img{
+	border-radius: 5px;
+	width: 8em;
+}
+
+#barra-selectora{
+	display: inline-block;
+	position: relative;
+	margin: 15px;
+}
+
+#formEdDatosPers{
+	position: relative;
+	margin: 2em;
+}
+
+#formEdDatosPers input{
+	border: 1px solid #AEADB3;
+	border-radius: 3px;
+	left: 25px;
+	padding: 5px;
+}
+
+#formEdDatosPers label{
+	width: 150px;
+	margin-top: 1px;
+	display: inline-block;
+	float: left;
+	padding: 3px;
+}
+
+#formEdDatosPers ul{
+	list-style-type: none;
+	list-style-position: outside;
+	margin: 0px;
+	padding: 0px;
+}
+
+#formEdDatosPers li{
+	position: relative;
+}
+
+#formEdDatosPers label, #formEdDatosPers li, #formEdDatosPers input{
+	margin: 3px;
+}
+
+#formEdDatosPers label, #form input{
+	position: relative;
+	width: 49%;
+}
+
+#formEdDatosPers:last-child input{
+	right: -15%;
+}
+
+
+
+
+
+
+
+
+
+/*Estilos de Búsqueda*/
+.ser-package, .ser-package-history, .ser-package-favs{
+	margin: 15px 0 0 25px;
+}
+
+.descrip-serv, .descrip-serv-history, .descrip-serv-favs{
+	color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Estilos de Pedidos*/
+#more-pedidos{
+	position: relative;
+}
+
+#more-pedidos h2{
+	margin-bottom: 1em;
+}
+
+.info-display{
+	box-shadow: 1px 1px 1px #888888;
+	border-radius: 5px;
+	margin: 1em;
+	position: relative;
+}
+
+.dineros{
+	font-weight: bold;
+	color: #333;
+	margin: 0 15px;
+	padding: 15px 0 25px 0;
+}
+
+.info-display p{
+	left: 1em;
+	position: relative;
+}
+
+.suatmm{
+	border: 1px solid black;
+	display: inline-block;
+	padding:15px;
+	position: relative;
+	left: 75%;
+	top: -4em;
+}
+
+
+
+
+
+/*____________   PANEL DERECHO   ____________*/
+#BRight{
+	background-color: #92374D;
+	border-radius: 5px;
+	height: 15em;
+	margin: 10px 10px 10px 10px;
+	position: relative;
+	display: inline-block;
+}
+
+
+
+
+/***************
+	BUSQUEDA
+***************/
+
+#Buscador{
+	width: 60%;
+	padding-bottom: 1em;
+	margin-left: 33em;
+
+}
+
+#Buscador p{
+	font-weight: bold;
+	padding: 3px;
+}
+
+#Buscador input{
+	border: 1px solid #CCC;
+	width: 30em;
+	height: 30px;
+	border-radius: 10px;
+}
+
+#btoBuscar img{
+	width: 14px;
+}
+
+
+/***************************
+	PUBLICIDAD - LATERAL
+***************************/
+
+.Deslizar{
+	display: none;
+}

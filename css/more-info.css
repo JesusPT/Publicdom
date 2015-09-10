@@ -1,0 +1,23 @@
+
+#Central{
+	padding-left: 15%;
+}
+
+.pregunta{
+	
+
+	padding: 50px 15% 50px 0; 
+}
+
+.pregunta h4{
+	background-color: #C0D6DF;
+	border-radius: 5px;
+	font-size: 18px;
+	font-style: italic;
+	padding: 15px 0 15px 15px;
+}
+
+.pregunta p{
+	color: #1F262B;
+	padding: 50px 5% 15px 5%;
+}

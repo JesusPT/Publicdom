@@ -1,0 +1,326 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>PubliDom - Inicio</title>
+	<link rel="icon" type="image/png" href="Images\archive3.png" />
+	<link rel="stylesheet" href="css\normalize.css">
+	<link rel="stylesheet" href="css\index.css">
+	<link rel="stylesheet" href="css\ppal-usuario.css">
+	<script src="Js/jquery-1.10.2.js"></script>
+	<script src="Js/Usuario.js"></script>
+</head>
+
+<body>
+
+  <!-- NAV
+  En esta zona se mostraá el estado en el que se encuentra
+  la sesión del usuario, así como su imagen de perfil y opciones
+  y configuraciones.
+  Además contará con el nombre de la página. -->
+	<nav>
+		<div id="Logo">
+			<a href="index.html">
+				<img src="Images\PublicDOMBlanco.png" alt="">
+			</a>
+		</div>
+
+
+		<ul id="sesion">
+			<li><img src="images\woman139.png"/></li>
+			<li><a href="index.html">Salir</a></li>
+		</ul>
+	</nav>
+
+
+  <!-- PUBLICIDAD - ARRIBA
+	Zona en la que los negocios tendrán una pequeña aparición,
+	en base a la calificación y popularidad de estos. -->
+	<div id = "Publicidad">
+		<h2>Publicidad Mágica y algo cool</h2>
+	</div>
+
+	<div id = "Buscador">
+		<p>Buscar</p>
+		<input type="search" name="busqueda">
+		<div class = "boton" id="btoBuscar">
+			<a href="#">
+				<img src="Images\magnifying47.png" alt="">
+			</a>
+
+		</div>
+	</div>
+
+
+	<section id = "Cuerpo">
+
+    <!-- BARRITA -->
+
+    <!-- ____________   PANEL IZQUIERDO   ____________ -->
+		<div id = "BLeft">
+			<ul id = "Menu">
+				<li>
+					<div class="pIzquierda" id = "perfil">
+							<img src="images\user197(2).png"/>
+						<p>Perfil</p>
+					</div>
+				</li>
+
+				<li id = "carrito">
+					<div class="pIzquierda">
+							<img src="images\marker20.png"/>
+						<p>Carrito</p>
+					</div>
+				</li>
+
+
+				<li id = "pedidos">
+					<div class="pIzquierda">
+							<img src="images\clipboard109(1).png"/>
+						<p>Pedidos</p>
+					</div>
+				</li>
+
+				<li id = "historial">
+					<div class="pIzquierda">
+						<img src="images\history6(1).png"/>
+						<p>Historial</p>
+					</div>
+
+				</li>
+
+				<li id = "favoritos">
+					<div class="pIzquierda">
+						<img src="images\star167(1).png"/>
+						<p>Favoritos</p>
+					</div>
+
+				</li>
+
+
+				<li >
+					<div class="pIzquierda">
+							<p>Salir</p>
+					</div>
+
+				</li>
+			</ul>
+		</div>
+
+
+
+
+		<!--____________   PANEL CENTRAL   ____________-->
+
+		<div id = "BCenter">
+			<div id = "Contenedor">
+				<!-- CAJA DE EDICION DE INFO DE USUARIO !-->
+				<div id="more-edituser" class="more">
+					<h2>Editar Perfil</h2>
+
+					<div id="img-box">
+						<img src="Images/woman139 (1).png">
+
+						<div id="barra-selectora">
+							<p>Cambiar Imagen de Perfil</p>
+
+							<form enctype="multipart/form-data" action="uploader.php" method="POST">
+								<input name="uploadedfile" type="file"/>
+								<input type="submit" class = "boton" value="Subir archivo"/>
+							</form>
+
+						</div>
+
+						<div class="boton">
+							<a href="#" id="save-img">Guardar</a>
+						</div>
+					</div>
+
+
+
+					<div id="data-box">
+						<form id="formEdDatosPers" action="" method="POST" name ="nformEdDatosPers">
+				       		<ul>
+				       			<li>
+				       				<label for = "name">Nombres</label>
+									<input type="text" name="name" 	placeholder="Nombre" />
+				       			</li>
+				       			<li>
+				       				<label for = "AP">Apellido Paterno</label>
+									<input type="text" name="AP" placeholder="Apellido Paterno" />
+				       			</li>
+				       			<li>
+				       				<label for = "AM">Apellido Materno</label>
+									<input type="text" name="AM" placeholder="Apellido Materno" />
+				       			</li>
+				       			<li>
+				       				<label for = "User">Usuario</label>
+									<input type="text" name="User" placeholder="Usuario" />
+				       			</li>
+				       			<li>
+				       				<label for = "Pass">Contraseña</label>
+									<input type="password" name="Pass" placeholder="********" />
+				       			</li>
+				       			<li>
+				       				<label for = "rPass">Reingresa Contraseña</label>
+									<input type="password" name="rPass" placeholder="********" />
+				       			</li>
+				       			<li>
+				       				<label for = "Age">Edad</label>
+									<input type="text" name="Age" placeholder="Edad" />
+				       			</li>
+				       			<li>
+				       				<label for = "Email">Correo Electronico</label>
+									<input type="email" name="Email" placeholder="ejemplo@mail.com" />
+				       			</li>
+				       			<li>
+				       				<input type="submit" value="Registrarse" class="Reg" data-type="zoomin"></input>
+				       			</li>
+				       		</ul>
+		      			</form>
+					</div>
+				</div>
+
+				<!-- CAJA MOSTRAR INFORMACIÓN USUARIO  !-->
+				<div id="more-profile" class="more">
+					<div id="editar-izq" class="boton">
+						<a href="#more-edituser" id="edit-profile">Editar</a>
+					</div>
+					<img src="Images/woman139 (1).png" id="profile-imagp">
+					<h3 id="nuser">Usuario_33</h3>
+
+					<div id="profile-favs" class="that-box">
+						<h3>Favoritos</h3>
+						<a href="#" class="serviceF">Servicio</a>
+					</div>
+
+					<div id="profile-sched" class="that-box">
+						<h3>Servicios Recientes</h3>
+						<a href="#" class="serviceS">Servicio Reciente</a>
+					</div>
+				</div>
+
+				<!-- CAJA MOSTRAR BUSQUEDA  !-->
+				<div id="more-search" class="more">
+					<h2>Búsqueda</h2>
+					<div class="ser-package">
+						<a href="#" class="serv-link">Servicio 1</a>
+						<p class="descrip-serv">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi voluptates dolorum consectetur nemo aliquam vel, veritatis quos. Provident ratione veniam eius unde est, nam distinctio. A eos qui tenetur similique.</p>
+					</div>
+          <div class="ser-package">
+						<a href="#" class="serv-link">Servicio 1</a>
+						<p class="descrip-serv">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi voluptates dolorum consectetur nemo aliquam vel, veritatis quos. Provident ratione veniam eius unde est, nam distinctio. A eos qui tenetur similique.</p>
+					</div>
+				</div>
+
+
+				<!-- CAJA MOSTRAR INFORMACIÓN PEDIDOS !-->
+				<div id="more-pedidos" class="more">
+
+					<h2>Pedidos</h2>
+
+					<div class="info-display">
+
+						<h4 class="nombre-prod">Producto 1</h4>
+						<p class="cantidad">Cantidad X</p>
+						<p class="empres">Empresa Y</p>
+
+						<div class="suatmm">
+							<p class="dineros">$<span>20.00</span></p>
+							<div class="boton">
+								<a href="" class="pide">Pedir</a>
+							</div>
+						</div>
+
+					</div>
+
+          <div class="info-display">
+
+						<h4 class="nombre-prod">Producto 1</h4>
+						<p class="cantidad">Cantidad X</p>
+						<p class="empres">Empresa Y</p>
+
+						<div class="suatmm">
+							<p class="dineros">$<span>20.00</span></p>
+							<div class="boton">
+								<a href="" class="pide">Pedir</a>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<!-- CAJA MOSTRAR HISTORIAS !-->
+				<div id="more-history" class="more"> 
+					<h2>Historial</h2>
+					<div class="ser-package-history">
+						<a href="#" class="serv-link-history">Servicio 1</a>
+						<p class="descrip-serv-history">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi voluptates dolorum consectetur nemo aliquam vel, veritatis quos. Provident ratione veniam eius unde est, nam distinctio. A eos qui tenetur similique.</p>
+					</div>
+				</div>
+
+
+
+				<!-- CAJA MOSTRAR HISTORIAS !-->
+				<div id="more-favs" class="more">
+					<h2>Favoritos</h2>
+					<div class="ser-package-favs">
+						<a href="#" class="serv-link-favs">Servicio 1</a>
+						<p class="descrip-serv-favs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi voluptates dolorum consectetur nemo aliquam vel, veritatis quos. Provident ratione veniam eius unde est, nam distinctio. A eos qui tenetur similique.</p>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+
+		<!--Panel Central-->
+
+
+
+
+
+			<div id="CPerfUs">
+
+			</div>
+
+		</div>
+
+
+		<!-- PUBLICIDAD
+
+		<div id = "BRight">
+			<p>Más publicidad... ¿Porqué?</p>
+		</div>
+		!-->
+
+
+	</section>
+
+
+	<!-- FOOTER  Logo Nuestro, contacto, soporte, acerca de y logo TEC   !-->
+	<footer>
+		<div id="FooIzq">
+			<img src="Images\softcraft.jpg" alt="">
+		</div>
+
+		<div id="FooCent">
+			<ul>
+				<li><a href="#">Contacto: (044) 341 878 2672</a></li>
+				<li><a href="#">Soporte</a></li>
+				<li><a href="#">Acerca de</a></li>
+			</ul>
+		</div>
+
+		<div id="FooDer">
+			<img src="Images\Logo ITCG-13.png" alt="">
+		</div>
+
+	</footer>
+
+
+</body>
+</html>

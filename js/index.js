@@ -22,18 +22,22 @@ $(document).on("ready",function(){
 			var rpass = document.nformRegistro.rPass.value;
 			var age = document.nformRegistro.Age.value;
 			var mail = document.nformRegistro.Email.value;
-			//if (pass != rpass) {
-				//break;
-			//}
-			$.ajax({
-				type:"POST",
-				url: "php/registro.php",
-				data: "name="+nom+"&AP="+ap+"&AM="+am+"&User="+us+"&Pass="+pass+"&Age="+age+"&Email="+mail,
-				success: function(respuesta){
-					if (respuesta==0) {
-						console.log("Error");
+			if (pass == rpass) {
+				$.ajax({
+					type:"POST",
+					url: "php/registro.php",
+					data: "name="+nom+"&AP="+ap+"&AM="+am+"&User="+us+"&Pass="+pass+"&Age="+age+"&Email="+mail,
+					success: function(respuesta){
+						if (respuesta==0) {
+							console.log("Error");
+						}
 					}
-				}
-			});
+				});
+			}else{
+				$("input[name $='Pass']").css("border-color","red");
+				document.nformRegistro.Pass.value = "";
+				document.nformRegistro.rPass.value = ""
+			}
+
 		});
 });

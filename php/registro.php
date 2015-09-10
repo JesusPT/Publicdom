@@ -1,7 +1,7 @@
 <?php
 
-$name = $_POST['name']." ".$_POST['AP']." ".$_POST['AM'];//
-$User = $_POST['User'];//Nombre usuario
+$name = $_POST['name']." ".$_POST['AP']." ".$_POST['AM'];//nombre del usuario
+$User = $_POST['User'];//usuario
 $Pass = md5($_POST['Pass']);//contraseña
 $Age = $_POST['Age'];//edad del usuario
 $Email = $_POST['Email'];//correo electronico

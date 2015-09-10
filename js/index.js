@@ -14,7 +14,7 @@ $(document).on("ready",function(){
 
 		$('#formRegistro').on('submit',function(e){
 			e.preventDefault();
-			var nom = document.nformRegistro.Nom.value;
+			var nom = document.nformRegistro.name.value;
 			var ap = document.nformRegistro.AP.value;
 			var am = document.nformRegistro.AM.value;
 			var us = document.nformRegistro.User.value;
@@ -28,7 +28,7 @@ $(document).on("ready",function(){
 			$.ajax({
 				type:"POST",
 				url: "php/registro.php",
-				data: "nombre="+nom+"&AP="+ap+"&AM="+am+"&User="+us+"&Pass="+pass+"&Age="+age+"&Email="+mail,
+				data: "name="+nom+"&AP="+ap+"&AM="+am+"&User="+us+"&Pass="+pass+"&Age="+age+"&Email="+mail,
 				success: function(respuesta){
 					if (respuesta==0) {
 						console.log("Error");

@@ -1,7 +1,7 @@
 /***
 *	CSS de la página principal de Usuario o
 *	cliente final.
-*	
+*
 *	Se dividirá en las siguientes partes:
 *		-NAV
 *		-BARRA DE PUBLICIDAD
@@ -41,12 +41,12 @@
 	Además contará con el nombre de la página.
 **********/
 
-/* 
+/*
 	#Sesión:
 		Ambas:
-			Una alineación horizontal y un margen a la 
+			Una alineación horizontal y un margen a la
 			dereha de 30px
-		Imagen de Perfil 
+		Imagen de Perfil
 		Opción Salir
 */
 #sesion li{
@@ -77,6 +77,18 @@
 /***************
 	BARRITA
 ***************/
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*____________   PANEL IZQUIERDO   ____________*/
 #BLeft{
@@ -123,8 +135,20 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /*____________   PANEL CENTRAL   ____________*/
-#BCenter{	
+#BCenter{
 	display: inline-block;
 	left: 8px;
 	margin: 0 auto;
@@ -132,24 +156,20 @@
 	top: 10px;
 	vertical-align: top;
 	width: 70%;
-	
+
 }
 
 /*Estilo general de recuadros del centro*/
 .more{
-	border: 1px solid #888888;
+	border: 1px solid #CCC;
 	border-radius: 5px;
-	box-shadow: 1px 1px 1px #888888;
+	box-shadow: 1px 1px 1px #CCC;
 	display: none;
 	padding: 15px;
 }
 
-.more h2{
-
-}
-
-
 .boton{
+	color:#F2F2F2;
 	background-color: #4A6FA5;
 	border-radius: 5px;
 	display: inline-block;
@@ -160,6 +180,21 @@
 	color: #F2F2F2;
 	text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*Estilos de Perfil*/
@@ -194,17 +229,17 @@
 	padding: 20px;
 	position: relative;
 	margin: 2em;
-	width: 20em;	
+	width: 20em;
 }
 
 #profile-favs h3, #profile-sched h3{
 	color: #F2F2F2;
-	padding-bottom: 5px;	
+	padding-bottom: 5px;
 }
 
 #profile-favs a, #profile-sched a{
 	color: #C2C0BD;
-	text-decoration: none;	
+	text-decoration: none;
 }
 
 /*Estilos de Editar Perfil*/
@@ -213,9 +248,9 @@
 }
 
 #img-box{
-	border: 1px solid #888888;
+	border: 1px solid #CCC;
 	border-radius: 5px;
-	
+
 	padding: 1em;
 	margin: 1em;
 }
@@ -232,7 +267,6 @@
 }
 
 #formEdDatosPers{
-	left: ;
 	position: relative;
 	margin: 2em;
 }
@@ -240,10 +274,27 @@
 #formEdDatosPers input{
 	border: 1px solid #AEADB3;
 	border-radius: 3px;
+	left: 25px;
+	padding: 5px;
+}
+
+#formEdDatosPers label{
+	width: 150px;
+	margin-top: 1px;
+	display: inline-block;
+	float: left;
+	padding: 3px;
+}
+
+#formEdDatosPers ul{
+	list-style-type: none;
+	list-style-position: outside;
+	margin: 0px;
+	padding: 0px;
 }
 
 #formEdDatosPers li{
-	list-style: none;
+	position: relative;
 }
 
 #formEdDatosPers label, #formEdDatosPers li, #formEdDatosPers input{
@@ -254,6 +305,41 @@
 	position: relative;
 	width: 49%;
 }
+
+#formEdDatosPers:last-child input{
+	right: -15%;
+}
+
+
+
+
+
+
+
+
+
+/*Estilos de Búsqueda*/
+.ser-package, .ser-package-history, .ser-package-favs{
+	margin: 15px 0 0 25px;
+}
+
+.descrip-serv, .descrip-serv-history, .descrip-serv-favs{
+	color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Estilos de Pedidos*/
 #more-pedidos{
@@ -271,6 +357,13 @@
 	position: relative;
 }
 
+.dineros{
+	font-weight: bold;
+	color: #333;
+	margin: 0 15px;
+	padding: 15px 0 25px 0;
+}
+
 .info-display p{
 	left: 1em;
 	position: relative;
@@ -281,7 +374,7 @@
 	display: inline-block;
 	padding:15px;
 	position: relative;
-	left: 30em;
+	left: 75%;
 	top: -4em;
 }
 
@@ -310,13 +403,23 @@
 	width: 60%;
 	padding-bottom: 1em;
 	margin-left: 33em;
+
 }
 
+#Buscador p{
+	font-weight: bold;
+	padding: 3px;
+}
 
 #Buscador input{
+	border: 1px solid #CCC;
 	width: 30em;
 	height: 30px;
 	border-radius: 10px;
+}
+
+#btoBuscar img{
+	width: 14px;
 }
 
 
@@ -327,4 +430,3 @@
 .Deslizar{
 	display: none;
 }
-

@@ -13,23 +13,29 @@
 
 <body>
 
-	
+  <!-- NAV
+  En esta zona se mostraá el estado en el que se encuentra
+  la sesión del usuario, así como su imagen de perfil y opciones
+  y configuraciones.
+  Además contará con el nombre de la página. -->
 	<nav>
 		<div id="Logo">
 			<a href="index.html">
 				<img src="Images\PublicDOMBlanco.png" alt="">
 			</a>
 		</div>
-		
+
 
 		<ul id="sesion">
 			<li><img src="images\woman139.png"/></li>
 			<li><a href="index.html">Salir</a></li>
-		</ul>		
+		</ul>
 	</nav>
 
 
-
+  <!-- PUBLICIDAD - ARRIBA
+	Zona en la que los negocios tendrán una pequeña aparición,
+	en base a la calificación y popularidad de estos. -->
 	<div id = "Publicidad">
 		<h2>Publicidad Mágica y algo cool</h2>
 	</div>
@@ -41,50 +47,43 @@
 			<a href="#">
 				<img src="Images\magnifying47.png" alt="">
 			</a>
-			
-		</div>	
+
+		</div>
 	</div>
-	
+
 
 	<section id = "Cuerpo">
-		<div id = "BLeft">			
+
+    <!-- BARRITA -->
+
+    <!-- ____________   PANEL IZQUIERDO   ____________ -->
+		<div id = "BLeft">
 			<ul id = "Menu">
 				<li>
 					<div class="pIzquierda" id = "perfil">
-						<a href="#">
 							<img src="images\user197(2).png"/>
-						</a>						
 						<p>Perfil</p>
 					</div>
 				</li>
-				
+
 				<li id = "carrito">
 					<div class="pIzquierda">
-						<a href="#">
 							<img src="images\marker20.png"/>
-						</a>
-						
 						<p>Carrito</p>
 					</div>
 				</li>
-				
+
 
 				<li id = "pedidos">
 					<div class="pIzquierda">
-						<a href="#">
 							<img src="images\clipboard109(1).png"/>
-						</a>
-						 
 						<p>Pedidos</p>
 					</div>
 				</li>
 
 				<li id = "historial">
 					<div class="pIzquierda">
-						<a href="#">
-							<img src="images\history6(1).png"/>
-						</a>
-						
+						<img src="images\history6(1).png"/>
 						<p>Historial</p>
 					</div>
 
@@ -92,22 +91,16 @@
 
 				<li id = "favoritos">
 					<div class="pIzquierda">
-						<a href="#">
-							<img src="images\star167(1).png"/>
-						</a>
-						
+						<img src="images\star167(1).png"/>
 						<p>Favoritos</p>
 					</div>
 
 				</li>
-								
+
 
 				<li >
 					<div class="pIzquierda">
-						<a href="index.html">
 							<p>Salir</p>
-						</a>
-						
 					</div>
 
 				</li>
@@ -117,27 +110,27 @@
 
 
 
-		<!--Panel Central-->
+		<!--____________   PANEL CENTRAL   ____________-->
 
 		<div id = "BCenter">
 			<div id = "Contenedor">
 				<!-- CAJA DE EDICION DE INFO DE USUARIO !-->
 				<div id="more-edituser" class="more">
 					<h2>Editar Perfil</h2>
-					
+
 					<div id="img-box">
 						<img src="Images/woman139 (1).png">
-						
+
 						<div id="barra-selectora">
 							<p>Cambiar Imagen de Perfil</p>
 
 							<form enctype="multipart/form-data" action="uploader.php" method="POST">
 								<input name="uploadedfile" type="file"/>
-								<input type="submit" value="Subir archivo"/>
+								<input type="submit" class = "boton" value="Subir archivo"/>
 							</form>
 
 						</div>
-						
+
 						<div class="boton">
 							<a href="#" id="save-img">Guardar</a>
 						</div>
@@ -149,35 +142,35 @@
 						<form id="formEdDatosPers" action="" method="POST" name ="nformEdDatosPers">
 				       		<ul>
 				       			<li>
-				       				<label>Nombres</label>
+				       				<label for = "name">Nombres</label>
 									<input type="text" name="name" 	placeholder="Nombre" />
 				       			</li>
 				       			<li>
-				       				<label>Apellido Paterno</label>
+				       				<label for = "AP">Apellido Paterno</label>
 									<input type="text" name="AP" placeholder="Apellido Paterno" />
 				       			</li>
 				       			<li>
-				       				<label>Apellido Materno</label>
+				       				<label for = "AM">Apellido Materno</label>
 									<input type="text" name="AM" placeholder="Apellido Materno" />
 				       			</li>
 				       			<li>
-				       				<label>Usuario</label>
+				       				<label for = "User">Usuario</label>
 									<input type="text" name="User" placeholder="Usuario" />
 				       			</li>
 				       			<li>
-				       				<label>Contraseña</label>
+				       				<label for = "Pass">Contraseña</label>
 									<input type="password" name="Pass" placeholder="********" />
 				       			</li>
 				       			<li>
-				       				<label>Reingresa Contraseña</label>
+				       				<label for = "rPass">Reingresa Contraseña</label>
 									<input type="password" name="rPass" placeholder="********" />
 				       			</li>
 				       			<li>
-				       				<label>Edad</label>
+				       				<label for = "Age">Edad</label>
 									<input type="text" name="Age" placeholder="Edad" />
 				       			</li>
 				       			<li>
-				       				<label>Correo Electronico</label>
+				       				<label for = "Email">Correo Electronico</label>
 									<input type="email" name="Email" placeholder="ejemplo@mail.com" />
 				       			</li>
 				       			<li>
@@ -186,10 +179,9 @@
 				       		</ul>
 		      			</form>
 					</div>
-				</div>	
+				</div>
 
 				<!-- CAJA MOSTRAR INFORMACIÓN USUARIO  !-->
-
 				<div id="more-profile" class="more">
 					<div id="editar-izq" class="boton">
 						<a href="#more-edituser" id="edit-profile">Editar</a>
@@ -210,8 +202,12 @@
 
 				<!-- CAJA MOSTRAR BUSQUEDA  !-->
 				<div id="more-search" class="more">
-					<h2>Busqueda</h2>
+					<h2>Búsqueda</h2>
 					<div class="ser-package">
+						<a href="#" class="serv-link">Servicio 1</a>
+						<p class="descrip-serv">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi voluptates dolorum consectetur nemo aliquam vel, veritatis quos. Provident ratione veniam eius unde est, nam distinctio. A eos qui tenetur similique.</p>
+					</div>
+          <div class="ser-package">
 						<a href="#" class="serv-link">Servicio 1</a>
 						<p class="descrip-serv">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi voluptates dolorum consectetur nemo aliquam vel, veritatis quos. Provident ratione veniam eius unde est, nam distinctio. A eos qui tenetur similique.</p>
 					</div>
@@ -220,11 +216,26 @@
 
 				<!-- CAJA MOSTRAR INFORMACIÓN PEDIDOS !-->
 				<div id="more-pedidos" class="more">
-					
+
 					<h2>Pedidos</h2>
 
 					<div class="info-display">
-						
+
+						<h4 class="nombre-prod">Producto 1</h4>
+						<p class="cantidad">Cantidad X</p>
+						<p class="empres">Empresa Y</p>
+
+						<div class="suatmm">
+							<p class="dineros">$<span>20.00</span></p>
+							<div class="boton">
+								<a href="" class="pide">Pedir</a>
+							</div>
+						</div>
+
+					</div>
+
+          <div class="info-display">
+
 						<h4 class="nombre-prod">Producto 1</h4>
 						<p class="cantidad">Cantidad X</p>
 						<p class="empres">Empresa Y</p>
@@ -242,7 +253,7 @@
 
 
 				<!-- CAJA MOSTRAR HISTORIAS !-->
-				<div id="more-history" class="more">
+				<div id="more-history" class="more"> 
 					<h2>Historial</h2>
 					<div class="ser-package-history">
 						<a href="#" class="serv-link-history">Servicio 1</a>
@@ -263,7 +274,7 @@
 
 
 
-			</div> 
+			</div>
 		</div>
 
 		<!--Panel Central-->
@@ -273,13 +284,13 @@
 
 
 			<div id="CPerfUs">
-				
+
 			</div>
 
 		</div>
 
 
-		<!-- PUBLICIDAD 
+		<!-- PUBLICIDAD
 
 		<div id = "BRight">
 			<p>Más publicidad... ¿Porqué?</p>
@@ -289,7 +300,7 @@
 
 	</section>
 
-	
+
 	<!-- FOOTER  Logo Nuestro, contacto, soporte, acerca de y logo TEC   !-->
 	<footer>
 		<div id="FooIzq">
@@ -305,11 +316,11 @@
 		</div>
 
 		<div id="FooDer">
-			<img src="Images\itcg.jpg" alt="">
+			<img src="Images\Logo ITCG-13.png" alt="">
 		</div>
-		
+
 	</footer>
 
-	
+
 </body>
 </html>

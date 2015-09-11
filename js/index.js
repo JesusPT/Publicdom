@@ -37,6 +37,22 @@ $(document).on("ready",function(){
 				$("input[name $='Pass']").css("border-color","red");
 				document.nformRegistro.Pass.value = "";
 				document.nformRegistro.rPass.value = ""
+				var message = document.getElementById("mensaje");
+				//var message = $('#message').("mensaje");
+				//console.log(message);
+				//console.log($('#message'));
+				message.innerHTML = "Las contraseñas no coinciden";
+				document.getElementById("mensaje").style.color = "red";
+				document.getElementById("mensaje").style.fontStyle = "italic";
+				document.getElementById("mensaje").style.textAlign = "center";
+				document.getElementById("mensaje").style.display = "inline-block";
+				document.getElementById("mensaje").style.backgroundColor = "yellow";
+
+
+
+
+
+
 			}
 
 		});

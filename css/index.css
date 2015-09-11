@@ -26,7 +26,7 @@ nav img{
 	top: 7px;
 }
 
-nav ul{	
+nav ul{
 	display:inline-block;
 	list-style:none;
 	left: 62em;
@@ -141,24 +141,24 @@ nav ul li img{
 	margin: 0 10px;
 }
 
-.mostrar {	
+.mostrar {
 	background: #F2F2F2;
 	border: 1px solid black;
 	border-radius: 3px;
 	box-shadow: 0px 0px 30px rgba(0,0,0,0.2);
-	color: #1F262B; 
+	color: #1F262B;
 	display: block;
 	margin: 8em auto;
 	position: relative;
 	padding: 2em;
 	width: 30em;
-	
+
 	-webkit-transition: 0.4s ease-out;
 	-moz-transition: 0.4s ease-out;
 	-ms-transition: 0.4s ease-out;
 	-o-transition: 0.4s ease-out;
 	transition: 0.4s ease-out;
-	/*opacity: 0;*/	
+	/*opacity: 0;*/
 }
 
 .mostrar h2{
@@ -193,11 +193,11 @@ nav ul li img{
 	background-color: #4F6D7A;
 	border: none;
 	color: #C0D6DF;
-	margin-bottom: 2px; 
+	margin-bottom: 2px;
 }
 
 
- 
+
 /*********************
 	SECTION - BODY
 **********************/

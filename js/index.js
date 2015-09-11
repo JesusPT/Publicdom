@@ -41,13 +41,15 @@ $(document).on("ready",function(){
 				//var message = $('#message').("mensaje");
 				//console.log(message);
 				//console.log($('#message'));
-				message.innerHTML = "Las contraseñas no coinciden";
-				document.getElementById("mensaje").style.color = "red";
+				//message.innerHTML = "Las contraseñas no coinciden";
+				$('#mensaje').text("Las contraseñas no coinciden");
+				//$('#mensaje').text("");
+/*			document.getElementById("mensaje").style.color = "red";
 				document.getElementById("mensaje").style.fontStyle = "italic";
 				document.getElementById("mensaje").style.textAlign = "center";
 				document.getElementById("mensaje").style.display = "inline-block";
 				document.getElementById("mensaje").style.backgroundColor = "yellow";
-
+*/
 
 
 

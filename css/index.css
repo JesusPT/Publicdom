@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*Paleta 7*/
 *{
 	margin: 0 auto;
@@ -72,16 +73,14 @@ nav ul li img{
 	width: 200px;
 }
 
+=======
+>>>>>>> 2881ee1c2e071fa1171b3d70c92d95cdc9ef48ac
 
 
 
 /**************************
 	OCULTAR - REGISTRO
 **************************/
-
-
-
-
 #contenedor, #ventaIni{
 	display: none;
 	content: " ";
@@ -240,62 +239,4 @@ nav ul li img{
 
 .Boton:hover{
 	background-color: #4F6D7A;
-}
-
-
-
-/******************
-	   FOOTER
-******************/
-footer{
-	background-color: #1F262B;
-}
-
-#FooIzq{
-	display: inline-block;
-	bottom: 30px;
-	position: relative;
-	left: 50px;
-}
-
-
-#FooIzq img{
-	float: left;
-	margin-left: 20px;
-	margin-top: 20px;
-	width: 150px;
-}
-
-#FooCent{
-	display: inline-block;
-	bottom: 30px;
-	position: relative;
-	left: 31em;
-
-}
-
-#FooCent ul{
-	position: relative;
-	margin-top: 100px;
-	list-style: none;
-}
-
-#FooCent li{
-	text-align: center;
-}
-
-#FooCent a{
-	color: #F2F2F2;
-	text-decoration: none;
-}
-
-#FooDer{
-	display: inline-block;
-	bottom: 30px;
-	position: relative;
-	left: 59em;
-}
-
-#FooDer img{
-	height: 75px;
 }

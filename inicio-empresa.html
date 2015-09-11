@@ -5,7 +5,7 @@
 	<title>PubliDom - Inicio</title>
 	<link rel="icon" type="image/png" href="Images\archive3.png" />
 	<link rel="stylesheet" href="css\normalize.css">
-	<link rel="stylesheet" href="css\index.css">
+	<link rel="stylesheet" href="css/generales.css">
 	<link rel="stylesheet" href="/css/ppal-empresa.css">
 
 </head>
@@ -20,10 +20,12 @@
 
 	<nav>
 		<div id="Logo">
-			<img src="Images\PublicDOMBlanco.png" alt="">
+			<a href="index.html">
+				<img src="Images\PublicDOMBlanco.png" alt="">
+			</a>			
 		</div>
 
-		<ul>
+		<ul="sesion">
 			<li><img src="images\factory6 (2).png"/></li>
 			<li ><a href="index.html">Salir</a></li>
 		</ul>
@@ -56,25 +58,25 @@
 				*SALIR: SALIR DEL SISTEMA; -->
 		<div id="BLeft">
 			<ul id="menuEmpresa">
-				<li id = "">
+				<li id = "menuPerfil">
 					<div>
-						<img src="" alt="" />
+						<img src="Images/office-worker2.png" alt="" />
 						<p>Perfil</p>
 					</div>
 				</li>
-				<li id = "">
+				<li id = "menuMensajes">
 					<div>
-						<img src="" alt="">
+						<img src="Images/taxi27 (2).png" alt="">
 						<p>Mensajes</p>
 					</div>
 				</li>
-				<li id = "">
+				<li id = "menuPedidos">
 					<div>
-						<img src="" alt="">
+						<img src="Images/clipboard109(2).png" alt="">
 						<p>Pedidos</p>
 					</div>
 				</li>
-				<li id = "">
+				<li id = "menuSalir">
 					<div>
 						<img src="" alt="">
 						<p>Salir</p>
@@ -90,7 +92,34 @@
 			su contenido es el siguiente:
 				* -->
 		<div id="centerEmpresa">
-			
+			<!-- Contenedor:
+				Contendrá todos los elementos expandidos de los
+				elementos del menú -->
+			<div id="contenedor">
+				<!-- moreEditEmpresa:
+					Se encarga de las opciones para EDITAR la informacion de la
+					empresa dentro de su perfil -->
+				<div id="moreEditEmpresa" class="more">
+					<h2>Editar Perfil</h2>
+
+					<!-- img-box
+						se encarga de la selección de una nieva imagen de perfil,
+						utilizando un form para dicha tarea -->
+					<div id="img-box">
+						<img src="Images/office-worker2.png" alt="">
+
+						<div id="barra-selectora">
+							<p>Cambiar Imagen de Perfil</p>
+
+							<form enctype="multipart/form-data" action="uploader.php" method="POST">
+								<input name="uploadedfile" type="file"/>
+								<input type="submit" class = "boton" value="Subir archivo"/>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 
@@ -104,7 +133,7 @@
 	<!-- FOOTER  Logo Nuestro, contacto, soporte, acerca de y logo TEC   !-->
 	<footer>
 		<div id="FooIzq">
-			<img src="Images\softcraft.jpg" alt="">
+			<img src="Images\SoftCraft - LOGO1.png" alt="">
 		</div>
 
 		<div id="FooCent">

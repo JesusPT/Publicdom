@@ -1,9 +1,15 @@
 $(document).on("ready",function(){
 		$("#btoReg").click(function(){
-			$("#contenedor").css("display","inline-block");
+			if ($("#ventaIni").css("display") == "none") {
+				$("#contenedor").css("display","inline-block");
+			}
+
 		});
 		$("#btoIni").click(function(){
-			$("#ventaIni").css("display","inline-block");
+			if ($("#contenedor").css("display") == "none") {
+				$("#ventaIni").css("display","inline-block");
+			}
+
 		});
 		$(".close").click(function(){
 			$("#contenedor").css("display","none");
@@ -14,6 +20,7 @@ $(document).on("ready",function(){
 
 		$("input[name $='Pass']").focus(function(){
 			$('#mensaje').text('');
+			$("input[name $='Pass']").css("border-color","black");
 		});
 
 		$('#formRegistro').on('submit',function(e){
@@ -40,24 +47,23 @@ $(document).on("ready",function(){
 			}else{
 				$("input[name $='Pass']").css("border-color","red");
 				document.nformRegistro.Pass.value = "";
-				document.nformRegistro.rPass.value = ""
-				var message = document.getElementById("mensaje");
-				//var message = $('#message').("mensaje");
-				//console.log(message);
-				//console.log($('#message'));
+				document.nformRegistro.rPass.value = "";
 				$('#mensaje').text("Las contraseñas no coinciden");
-				//message.innerHTML = "Las contraseñas no coinciden";
-
-				//$('#mensaje').text("");
-/*			document.getElementById("mensaje").style.color = "red";
-				document.getElementById("mensaje").style.fontStyle = "italic";
-				document.getElementById("mensaje").style.textAlign = "center";
-				document.getElementById("mensaje").style.display = "inline-block";
-				document.getElementById("mensaje").style.backgroundColor = "yellow";
-*/
 
 			}
+		});
 
+		//Cerrar ventanas al con la tecla "esc"
+		$(document).on("keydown",function(key){
+				console.log($('#contenedor').css("display"));
+			if (key.which == 27) {
+				if ($('#contenedor').css("display") == "block") {
+					$("#contenedor").css("display","none");
+				}
+				if ($('#ventaIni').css("display") == "block") {
+					$("#ventaIni").css("display","none");
+				}
+			}
 		});
 
 });

@@ -12,6 +12,10 @@ $(document).on("ready",function(){
 			$("#ventaIni").css("display","none");
 		});
 
+		$("input[name $='Pass']").focus(function(){
+			$('#mensaje').text('');
+		});
+
 		$('#formRegistro').on('submit',function(e){
 			e.preventDefault();
 			var nom = document.nformRegistro.name.value;
@@ -41,8 +45,9 @@ $(document).on("ready",function(){
 				//var message = $('#message').("mensaje");
 				//console.log(message);
 				//console.log($('#message'));
-				//message.innerHTML = "Las contraseñas no coinciden";
 				$('#mensaje').text("Las contraseñas no coinciden");
+				//message.innerHTML = "Las contraseñas no coinciden";
+
 				//$('#mensaje').text("");
 /*			document.getElementById("mensaje").style.color = "red";
 				document.getElementById("mensaje").style.fontStyle = "italic";
@@ -51,11 +56,8 @@ $(document).on("ready",function(){
 				document.getElementById("mensaje").style.backgroundColor = "yellow";
 */
 
-
-
-
-
 			}
 
 		});
+
 });

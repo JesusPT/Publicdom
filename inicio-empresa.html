@@ -196,7 +196,107 @@
 					dicho pedido dependiento de sus posibilidades. -->
 
 				<div id="morePedidos" class="more">
+					<!-- pedidoIndividual
+						Sera en donde se visualice quien, que y cuando requiere
+						del servicio o productos que ofrece la empresa. -->
+					<div class="pedidoIndividual">
+						<!-- cabeceraPedidoIndividual
+							Es donde se pondrá lo indispensable del pedido.
+							este siempre estará visible, a menos que
+							se rechaze o se acepte -->
+						<div class="cabeceraPedidoIndividual">
+							<!-- nombreClientePedido
+								Se colocará el nombre -->
+							<div>
+								<p class="nombreClientePedido">Paola Laureano</p>
+							</div>
+							<!-- tipoPedido
+								Mostrará si se trata de un producto o un
+								servicio -->
+							<div>
+								<p class="tipoPedido">Producto</p>
+							</div>
+							<!-- iconoAceptarPedido y iconoRechazarPedido
+								Se encargarán de aceptar o no el pedido al
+								que corresponden -->
+							<div class = "iconoAceptarPedido">
+								<img src="images/done.png" alt="">
+							</div>
+							<div class = "iconoRechazarPedido">
+								<img src="images/delete85.png" alt="">
+							</div>
+						</div>
 
+
+						<!-- cuerpoPedido
+							Contendrá la información del pedido -->
+						<div class="cuerpoPedido">
+							<!-- infoCliente
+								Contendrá la dirección y el telefono del cliente,
+								tanto para entregar los productos o servicios, como
+								para aclaraciones con el. -->
+							<div class="infoCliente"><ul>
+									<li>
+										<!-- direccionInfoCliente
+											contarán con la la direccion del cliente -->
+										<p class = "direccionInfoCliente">Ignacio Aldama #302</p>
+									</li>
+									<li>
+										<!-- telInfoCliente
+											contarán con el telefono del cliente -->
+										<p class = "telInfoCliente">41-2-5150</p>
+									</li>
+								</ul>
+							</div>
+
+
+
+							<!-- detallesPedido
+								Contará con los servicios y productos en si que
+								requiere el cliente que se le vendan -->
+							<div class="detallesPedido">
+								<!-- detallesPedido>ul>li
+									Contendrán el nombre del producto, así como
+									la cantidad de cada uno de ellos. -->
+								<ul>
+									<li>
+										<p class = "articuloPedido">Articulo X</p>
+										<span class = "cantidadArticuloPedido">$0.00</span>
+									</li>
+									<li>
+										<p class = "articuloPedido">Articulo X</p>
+										<span class = "cantidadArticuloPedido">$0.00</span>
+									</li>
+									<li>
+										<p class = "articuloPedido">Articulo X</p>
+										<span class = "cantidadArticuloPedido">$0.00</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+
+
+						<!-- piePedido
+							Contiene la fecha y el total monetario del pedido -->
+						<div class="piePedido">
+							<!-- horafechaPedido
+								Contiene la hora y la fecha en el que el pedido
+								fue enviado -->
+							<div class="horafechaPedido">
+								<p>Enviado a las <span class = "horaEnvioPedido">14:58</span> hrs. del <span = "fechaEnvioPedido">12/09/15</span>.</p>
+							</div>
+
+							<!-- totalPrecioPedido
+								contiene la suma total del pedido del cliente -->
+
+							<div class="totalPrecioPedido">
+								<p>Total: $<span class = "totalPesosPedido">0.0</span></p>
+							</div>
+						</div>
+
+
+					</div>
 
 				</div>
 

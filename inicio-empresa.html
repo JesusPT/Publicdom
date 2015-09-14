@@ -2,11 +2,11 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>PubliDom - Inicio</title>
+	<title>PublicDom - Inicio</title>
 	<link rel="icon" type="image/png" href="Images\archive3.png" />
 	<link rel="stylesheet" href="css\normalize.css">
-	<link rel="stylesheet" href="css/generales.css">
-	<link rel="stylesheet" href="/css/ppal-empresa.css">
+	<link rel="stylesheet" href="css\generales.css">
+	<link rel="stylesheet" href="css\ppal-empresa.css">
 
 </head>
 <body>
@@ -108,6 +108,10 @@
 					<div id="img-box">
 						<img src="Images/office-worker2.png" alt="">
 
+						<!-- barra-selectora
+							Se encarga de la interfaz en la cual
+							el usuario podrá
+							cambiar la foto de perfil de su cuenta en PublicDOM -->
 						<div id="barra-selectora">
 							<p>Cambiar Imagen de Perfil</p>
 
@@ -115,54 +119,96 @@
 								<input name="uploadedfile" type="file"/>
 								<input type="submit" class = "Boton" value="Subir archivo"/>
 							</form>
-
-							<div id = "btnGuardarImg" class="Boton">Guardar</div>
-
-							<div id="data-box">
-								<form id="formEdDatosEmp" action="" method="POST" name ="nformEdDatosEmp">
-							       		<ul>
-							       			<li>
-							       				<label for = "name">Nombres</label>
-												<input type="text" name="name" 	placeholder="Nombre" />
-							       			</li>
-							       			<li>
-							       				<label for = "AP">Apellido Paterno</label>
-												<input type="text" name="AP" placeholder="Apellido Paterno" />
-							       			</li>
-							       			<li>
-							       				<label for = "AM">Apellido Materno</label>
-												<input type="text" name="AM" placeholder="Apellido Materno" />
-							       			</li>
-							       			<li>
-							       				<label for = "User">Usuario</label>
-												<input type="text" name="User" placeholder="Usuario" />
-							       			</li>
-							       			<li>
-							       				<label for = "Pass">Contraseña</label>
-												<input type="password" name="Pass" placeholder="********" />
-							       			</li>
-							       			<li>
-							       				<label for = "rPass">Reingresa Contraseña</label>
-												<input type="password" name="rPass" placeholder="********" />
-							       			</li>
-							       			<li>
-							       				<label for = "Age">Edad</label>
-												<input type="text" name="Age" placeholder="Edad" />
-							       			</li>
-							       			<li>
-							       				<label for = "Email">Correo Electronico</label>
-												<input type="email" name="Email" placeholder="ejemplo@mail.com" />
-							       			</li>
-							       			<li>
-							       				<input type="submit" value="Registrarse" class="Reg" data-type="zoomin"></input>
-							       			</li>
-							       		</ul>
-					      			</form>
-							</div>
-
 						</div>
+
+						<div id = "btnGuardarImg" class="Boton">Guardar</div>
+					</div>
+
+
+
+					<!-- data-box
+						Es donde se encuentra el formulario con los
+						datos a editar -->
+					<div id="data-box">
+						<form id="formEdDatosEmp" action="" method="POST" name ="nformEdDatosEmp">
+							<ul>
+								<li>
+							 		<label for = "name">Nombres</label>
+									<input type="text" name="name" 	placeholder="Nombre" />
+							    </li>
+							    <li>
+							    	<label for = "AP">Apellido Paterno</label>
+									<input type="text" name="AP" placeholder="Apellido Paterno" />
+							    </li>
+							    <li>
+							    	<label for = "AM">Apellido Materno</label>
+									<input type="text" name="AM" placeholder="Apellido Materno" />
+							    </li>
+							    <li>
+							    	<label for = "User">Usuario</label>
+									<input type="text" name="User" placeholder="Usuario" />
+							    </li>
+							    <li>
+							    	<label for = "Pass">Contraseña</label>
+									<input type="password" name="Pass" placeholder="********" />
+							    </li>
+							    <li>
+							    	<label for = "rPass">Reingresa Contraseña</label>
+									<input type="password" name="rPass" placeholder="********" />
+							    </li>
+							    <li>
+							    	<label for = "Age">Edad</label>
+									<input type="text" name="Age" placeholder="Edad" />
+							    </li>
+							    <li>
+							    	<label for = "Email">Correo Electronico</label>
+									<input type="email" name="Email" placeholder="ejemplo@mail.com" />
+							    </li>
+							    <li>
+							    	<input type="submit" value="Registrarse" class="Reg" data-type="zoomin"></input>
+							    </li>
+							</ul>
+						</form>
 					</div>
 				</div>
+
+
+				<!-- moreMensajes
+					Se encargar de gestionar los mensajes que tiene
+					la cuenta de la empresa.
+					Será una especie de buzón para esta empresa. -->
+
+				<div id="moreMensajes" class="more">
+					<div class="mensaje">
+						<h3 class="mDestinatario">
+							Paola
+						</h3>
+						<h4 class="mAsunto">
+							El Asunto
+						</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium blanditiis pariatur magnam qui quam, soluta, perspiciatis sint ipsum tempore, adipisci explicabo animi ea! Vel aut architecto id modi commodi provident.</p>
+					</div>
+				</div>
+
+				<!-- morePedidos
+					Se encargará de gestionar los pedidos que reciba la empresa.
+					Dicha empresa tendrá la posibilidad de aceptar o rechazar
+					dicho pedido dependiento de sus posibilidades. -->
+
+				<div id="morePedidos" class="more">
+
+
+				</div>
+
+
+
+
+
+
+
+
+
+
 			</div>
 		</div>
 

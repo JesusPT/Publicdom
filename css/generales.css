@@ -37,9 +37,22 @@ body{
 
 
 
-/*NAV */
-/*NAV
-        Estilos generales del nav*/
+/**********
+	NAV
+	En esta zona se mostraá el estado en el que se encuentra
+	la sesión del usuario, así como su imagen de perfil y opciones
+	y configuraciones.
+	Además contará con el nombre de la página.
+**********/
+
+/*
+	#Sesión:
+		Ambas:
+			Una alineación horizontal y un margen a la
+			dereha de 30px
+		Imagen de Perfil
+		Opción Salir
+*/
         nav{
         	background: #143F7D;
         }
@@ -97,6 +110,11 @@ body{
         	width: 200px;
         }
 
+		#sesion li{
+			display: inline-block;
+			margin-right: 15%;
+		}
+
 	/******************
 		   ESTILOS DE ELEMENTOS GENERALES
 	******************/
@@ -106,7 +124,7 @@ body{
 		background-color: #4A6FA5;
 		box-shadow: 0px 0px 30px rgba(0,0,0,0.2);
 		border-radius: 10px;
-		display: inline-block;		
+		display: inline-block;
 		padding: 10px 5px;
 		position: relative;
 		width: 150px;

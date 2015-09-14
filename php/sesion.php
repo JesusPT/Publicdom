@@ -1,7 +1,7 @@
 <?php
 
-	$usuario = $_POST['user'];
-	$pass = $_POST['pass'];
+	$usuario = $_POST['User'];
+	$pass = $_POST['Pass'];
 
 if ($enlace = new mysqli("localhots","root","","publidom")) {//Conexion con la DB
 	$consulta = "SELECT * FROM usuario where idUser = '$usuario', pass = '$pass'";//Consulta SQL a ejecutar

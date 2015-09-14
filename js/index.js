@@ -22,7 +22,7 @@ $(document).on("ready",function(){
 			$('#mensaje').text('');
 			$("input[name $='Pass']").css("border-color","black");
 		});
-
+		//Captura formulario de registro
 		$('#formRegistro').on('submit',function(e){
 			e.preventDefault();
 			var nom = document.nformRegistro.name.value;

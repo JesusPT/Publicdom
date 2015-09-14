@@ -49,9 +49,25 @@ $(document).on("ready",function(){
 				document.nformRegistro.Pass.value = "";
 				document.nformRegistro.rPass.value = "";
 				$('#mensaje').text("Las contraseñas no coinciden");
-
 			}
 		});
+
+		$('#formInicioSesion').on("submit",function(e){
+			e.preventDefault();
+			var user = document.formInicioSesion.User.value;
+			var pass = document.formInicioSesion.Pasxs.value;
+			$.ajax({
+				type: "POST",
+				url: "php/sesion.php",
+				data: "User="+user+"&Pass="+pass,
+				success: function(respuesta){
+					if (respuesta == 0) {
+						//Porblema con el servidor
+					}
+				}
+			});
+		})
+
 
 		//Cerrar ventanas al con la tecla "esc"
 		$(document).on("keydown",function(key){

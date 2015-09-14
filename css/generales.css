@@ -115,10 +115,33 @@ body{
 			margin-right: 15%;
 		}
 
+		/***************************
+			PUBLICIDAD - ARRIBA
+			Zona en la que los negocios tendrán una pequeña aparición,
+			en base a la calificación y popularidad de estos.
+		***************************/
+		#Publicidad{
+			background-color: #DDD;
+			border-radius: 5px;
+			height: 50px;
+			margin: 10px 10px 10px 10px;
+		}
+
+		#Publicidad h2{
+			text-align: center;
+			padding-top: 10px;
+		}
+
+
+
+
+
 	/******************
 		   ESTILOS DE ELEMENTOS GENERALES
 	******************/
-
+	a:visited{
+		color: rgb(85, 26, 139);
+	}
 
 	.Boton{
 		background-color: #4A6FA5;
@@ -141,6 +164,19 @@ body{
 
 	.Boton:hover{
 		background-color: #4F6D7A;
+	}
+
+	.boton{
+		color:#F2F2F2;
+		background-color: #4A6FA5;
+		border-radius: 5px;
+		display: inline-block;
+		padding: 8px;
+	}
+
+	.boton a{
+		color: #F2F2F2;
+		text-decoration: none;
 	}
 
 

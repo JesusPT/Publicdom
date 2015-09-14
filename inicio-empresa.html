@@ -59,26 +59,25 @@
 		<div id="BLeft">
 			<ul id="menuEmpresa">
 				<li id = "menuPerfil">
-					<div>
+					<div class = "pIzquierda">
 						<img src="images/office-worker2.png" alt="" />
 						<p>Perfil</p>
 					</div>
 				</li>
 				<li id = "menuMensajes">
-					<div>
+					<div class = "pIzquierda">
 						<img src="images/taxi27 (2).png" alt="">
 						<p>Mensajes</p>
 					</div>
 				</li>
 				<li id = "menuPedidos">
-					<div>
+					<div class = "pIzquierda">
 						<img src="images/clipboard109(2).png" alt="">
 						<p>Pedidos</p>
 					</div>
 				</li>
 				<li id = "menuSalir">
-					<div>
-						<img src="" alt="">
+					<div class = "pIzquierda">
 						<p>Salir</p>
 					</div>
 				</li>
@@ -117,11 +116,11 @@
 
 							<form enctype="multipart/form-data" action="uploader.php" method="POST">
 								<input name="uploadedfile" type="file"/>
-								<input type="submit" class = "Boton" value="Subir archivo"/>
+								<input type="submit" class = "boton" value="Subir archivo"/>
 							</form>
 						</div>
 
-						<div id = "btnGuardarImg" class="Boton">Guardar</div>
+						<div id = "btnGuardarImg" class="boton">Guardar</div>
 					</div>
 
 
@@ -184,17 +183,20 @@
 							Paola
 						</h3>
 						<h4 class="mAsunto">
-							El Asunto
+							<a href="#">El Asunto</a>
 						</h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium blanditiis pariatur magnam qui quam, soluta, perspiciatis sint ipsum tempore, adipisci explicabo animi ea! Vel aut architecto id modi commodi provident.</p>
 					</div>
 				</div>
 
+
+
+
+
 				<!-- morePedidos
 					Se encargará de gestionar los pedidos que reciba la empresa.
 					Dicha empresa tendrá la posibilidad de aceptar o rechazar
 					dicho pedido dependiento de sus posibilidades. -->
-
 				<div id="morePedidos" class="more">
 					<!-- pedidoIndividual
 						Sera en donde se visualice quien, que y cuando requiere
@@ -216,14 +218,18 @@
 							<div>
 								<p class="tipoPedido">Producto</p>
 							</div>
-							<!-- iconoAceptarPedido y iconoRechazarPedido
-								Se encargarán de aceptar o no el pedido al
-								que corresponden -->
-							<div class = "iconoAceptarPedido">
-								<img src="images/done.png" alt="">
-							</div>
-							<div class = "iconoRechazarPedido">
-								<img src="images/delete85.png" alt="">
+							<!-- desicionPedido
+								Contiene los botones para decidir -->
+							<div class="decisionPedido">
+								<!-- iconoAceptarPedido y iconoRechazarPedido
+									Se encargarán de aceptar o no el pedido al
+									que corresponden -->
+								<div class = "iconoAceptarPedido">
+									<img src="images/done.png" alt="">
+								</div>
+								<div class = "iconoRechazarPedido">
+									<img src="images/delete85.png" alt="">
+								</div>
 							</div>
 						</div>
 
@@ -235,13 +241,19 @@
 								Contendrá la dirección y el telefono del cliente,
 								tanto para entregar los productos o servicios, como
 								para aclaraciones con el. -->
-							<div class="infoCliente"><ul>
+							<div class="infoCliente">
+								<div class = "cabInfoCliente">
+									<p>Información del Cliente</p>
+								</div>
+								<ul>
 									<li>
+										<p>Dirección: </p>
 										<!-- direccionInfoCliente
 											contarán con la la direccion del cliente -->
 										<p class = "direccionInfoCliente">Ignacio Aldama #302</p>
 									</li>
 									<li>
+										<p>Teléfono: </p>
 										<!-- telInfoCliente
 											contarán con el telefono del cliente -->
 										<p class = "telInfoCliente">41-2-5150</p>
@@ -255,21 +267,25 @@
 								Contará con los servicios y productos en si que
 								requiere el cliente que se le vendan -->
 							<div class="detallesPedido">
+								<div class = "cabDetallesPedido">
+									<p>Información del Cliente</p>
+								</div>
+
 								<!-- detallesPedido>ul>li
 									Contendrán el nombre del producto, así como
 									la cantidad de cada uno de ellos. -->
 								<ul>
 									<li>
 										<p class = "articuloPedido">Articulo X</p>
-										<span class = "cantidadArticuloPedido">$0.00</span>
+										<span class = "cantidadArticuloPedido">1</span>
 									</li>
 									<li>
 										<p class = "articuloPedido">Articulo X</p>
-										<span class = "cantidadArticuloPedido">$0.00</span>
+										<span class = "cantidadArticuloPedido">3</span>
 									</li>
 									<li>
 										<p class = "articuloPedido">Articulo X</p>
-										<span class = "cantidadArticuloPedido">$0.00</span>
+										<span class = "cantidadArticuloPedido">2</span>
 									</li>
 								</ul>
 							</div>
@@ -298,6 +314,126 @@
 
 					</div>
 
+
+
+
+
+
+					<div class="pedidoIndividual">
+						<!-- cabeceraPedidoIndividual
+							Es donde se pondrá lo indispensable del pedido.
+							este siempre estará visible, a menos que
+							se rechaze o se acepte -->
+						<div class="cabeceraPedidoIndividual">
+							<!-- nombreClientePedido
+								Se colocará el nombre -->
+							<div>
+								<p class="nombreClientePedido">Jesús Pérez Toledo</p>
+							</div>
+							<!-- tipoPedido
+								Mostrará si se trata de un producto o un
+								servicio -->
+							<div>
+								<p class="tipoPedido">Servicio</p>
+							</div>
+							<!-- desicionPedido
+								Contiene los botones para decidir -->
+							<div class="decisionPedido">
+								<!-- iconoAceptarPedido y iconoRechazarPedido
+									Se encargarán de aceptar o no el pedido al
+									que corresponden -->
+								<div class = "iconoAceptarPedido">
+									<img src="images/done.png" alt="">
+								</div>
+								<div class = "iconoRechazarPedido">
+									<img src="images/delete85.png" alt="">
+								</div>
+							</div>
+						</div>
+
+
+						<!-- cuerpoPedido
+							Contendrá la información del pedido -->
+						<div class="cuerpoPedido">
+							<!-- infoCliente
+								Contendrá la dirección y el telefono del cliente,
+								tanto para entregar los productos o servicios, como
+								para aclaraciones con el. -->
+							<div class="infoCliente">
+								<div class = "cabInfoCliente">
+									<p>Información del Cliente</p>
+								</div>
+								<ul>
+									<li>
+										<p>Dirección: </p>
+										<!-- direccionInfoCliente
+											contarán con la la direccion del cliente -->
+										<p class = "direccionInfoCliente">Primero de Mayo #289-a</p>
+									</li>
+									<li>
+										<p>Teléfono: </p>
+										<!-- telInfoCliente
+											contarán con el telefono del cliente -->
+										<p class = "telInfoCliente">41-2-5150</p>
+									</li>
+								</ul>
+							</div>
+
+
+
+							<!-- detallesPedido
+								Contará con los servicios y productos en si que
+								requiere el cliente que se le vendan -->
+							<div class="detallesPedido">
+								<div class = "cabDetallesPedido">
+									<p>Información del Cliente</p>
+								</div>
+
+								<!-- detallesPedido>ul>li
+									Contendrán el nombre del producto, así como
+									la cantidad de cada uno de ellos. -->
+								<ul>
+									<li>
+										<p class = "articuloPedido">Servicio X</p>
+										<span class = "cantidadArticuloPedido">1</span>
+									</li>
+									<li>
+										<p class = "articuloPedido">Servicio X</p>
+										<span class = "cantidadArticuloPedido">1</span>
+									</li>
+									<li>
+										<p class = "articuloPedido">Servicio X</p>
+										<span class = "cantidadArticuloPedido">1</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+
+
+						<!-- piePedido
+							Contiene la fecha y el total monetario del pedido -->
+						<div class="piePedido">
+							<!-- horafechaPedido
+								Contiene la hora y la fecha en el que el pedido
+								fue enviado -->
+							<div class="horafechaPedido">
+								<p>Enviado a las <span class = "horaEnvioPedido">10:44</span> hrs. del <span = "fechaEnvioPedido">10/09/15</span>.</p>
+							</div>
+
+							<!-- totalPrecioPedido
+								contiene la suma total del pedido del cliente -->
+
+							<div class="totalPrecioPedido">
+								<p>Total: $<span class = "totalPesosPedido">0.0</span></p>
+							</div>
+						</div>
+
+
+
+
+
+
 				</div>
 
 
@@ -308,13 +444,18 @@
 
 
 
+				</div>
 
 			</div>
-		</div>
 
 
-		<div id = "BRight">
-			<p>Más publicidad... ¿Porqué?</p>
+
+
+
+
+
+
+			</div>
 		</div>
 
 	</section>

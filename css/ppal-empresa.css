@@ -19,3 +19,314 @@
 *
 *
 ***/
+
+
+
+/*BLeft
+    Contiene el menú de la empresa, el cual cuenta con lo siguiente:
+        *PERFIL: EDITAR PERFIL;
+        *MENSAJES: MENSAJES QUE LOS USUARIOS CLIENTES LE ENVIEN
+        *PEDIDOS: AGENDAR SERVICIOS;
+        *SALIR: SALIR DEL SISTEMA;*/
+
+#BLeft{
+	position: relative;
+	display: inline-block;
+}
+
+/*.pIzquierda
+    Contiene los estilos generales de iconos del lado
+    izquierdo*/
+.pIzquierda{
+	background-color: #5D5E60;
+	border: 2px solid #5D5E60;
+	border-radius: 4px;
+	padding: 5px;
+	margin: 0 0 5px -6px;
+	text-align: center;
+	width: 75px;
+}
+
+.pIzquierda img{
+	width: 48px;
+}
+
+.pIzquierda a{
+	color: #000;
+	text-decoration: none;
+}
+
+
+/*____________   PANEL CENTRAL   ____________
+
+centerEmpresa
+    Se encargaraá de visualizar todos los extendidos del menú
+    del lado izquierdo.*/
+
+
+#centerEmpresa{
+	display: inline-block;
+	left: 8px;
+	margin: 0 auto;
+	position: relative;
+	top: 10px;
+	vertical-align: top;
+	width: 70%;
+
+}
+
+.more{
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px #CCC;
+
+
+
+
+
+
+
+
+
+    /*RECUERDA QUITARLO DESPUES DE DARLE ESTILOS*/
+
+	/*display: none;*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+/*moreEditEmpresa
+    Se encarga de las opciones para EDITAR la
+    informacion de la empresa dentro de su perfil*/
+
+#moreEditEmpresa{
+	position: relative;
+}
+
+#img-box{
+	border: 1px solid #CCC;
+	border-radius: 5px;
+
+	padding: 1em;
+	margin: 1em;
+}
+
+#img-box img{
+	border-radius: 5px;
+	width: 8em;
+}
+
+#barra-selectora{
+	display: inline-block;
+	position: relative;
+	margin: 15px;
+}
+
+
+
+
+
+
+
+/*ESTILOS DEL FORMULARIO DE EMPRESA*/
+
+#formEdDatosEmp{
+	position: relative;
+	margin: 2em;
+}
+
+#formEdDatosEmp input{
+	border: 1px solid #AEADB3;
+	border-radius: 3px;
+	left: 25px;
+	padding: 5px;
+}
+
+#formEdDatosEmp label{
+	width: 150px;
+	margin-top: 1px;
+	display: inline-block;
+	float: left;
+	padding: 3px;
+}
+
+#formEdDatosEmp ul{
+	list-style-type: none;
+	list-style-position: outside;
+	margin: 0px;
+	padding: 0px;
+}
+
+#formEdDatosEmp li{
+	position: relative;
+}
+
+#formEdDatosEmp label, #formEdDatosEmp li, #formEdDatosEmp input{
+	margin: 3px;
+}
+
+#formEdDatosEmp label, #form input{
+	position: relative;
+	width: 49%;
+}
+
+#formEdDatosEmp:last-child input{
+	right: -15%;
+}
+
+
+
+
+
+/*__________________________________Estilos Mensajes*/
+.mensaje{
+    color: #333;
+	margin: 15px 0 0 25px;
+}
+
+
+
+
+
+
+/*____________________________Estilos de morePedidos*/
+
+/*pedidoIndividual
+    Sera en donde se visualice quien, que y cuando requiere
+    del servicio o productos que ofrece la empresa.*/
+.pedidoIndividual{
+    border: 1px solid #AAA;
+    border-radius: 4px;
+	margin-bottom: 4px;
+}
+
+/*cabeceraPedidoIndividual
+   Es donde se pondrá lo indispensable del pedido.
+   este siempre estará visible, a menos que
+   se rechaze o se acepte*/
+.cabeceraPedidoIndividual{
+    background: #AAA;
+    display: flex;
+    padding: 5px 0;
+}
+
+.nombreClientePedido{
+    font-weight: bold;
+    flex-grow: 3
+}
+
+.tipoPedido{
+    font-style: italic;
+    flex-grow: 1;
+}
+
+.decisionPedido div{
+    flex-grow: 1;
+    display: inline-block;
+}
+.decisionPedido img{
+    width: 20px;
+}
+
+
+
+
+
+
+
+/*cuerpoPedido
+    Contendrá la información del pedido */
+.cuerpoPedido{
+    display: flex;
+}
+
+
+/*infoCliente
+    Contendrá la dirección y el telefono del cliente,
+    tanto para entregar los productos o servicios, como
+    para aclaraciones con el.*/
+.infoCliente{
+    flex-grow: 1;
+    padding-left: 8px;
+}
+
+.cabInfoCliente p{
+    font-weight: bold;
+}
+
+.infoCliente ul{
+    list-style: none;
+}
+
+.infoCliente li p:first-child{
+    font-style: italic;
+}
+
+
+
+/*detallesPedido
+    Contará con los servicios y productos en si que
+    requiere el cliente que se le vendan*/
+.detallesPedido{
+    flex-grow: 2;
+}
+
+.cabDetallesPedido,.cabInfoCliente{
+    margin-bottom: 10px;
+}
+.cabDetallesPedido p{
+    font-weight: bold;
+}
+
+.detallesPedido ul{
+    padding-left: 5%;
+}
+
+.detallesPedido li p{
+    font-weight: bold;
+}
+
+.detallesPedido li span{
+    padding-left: 5%;
+}
+
+/*
+piePedido
+    Contiene la fecha y el total monetario del pedido*/
+.piePedido{
+    background: #CCC;
+    display: flex;
+    padding: 5px 0;
+}
+
+.totalPrecioPedido{
+    font-weight: bold;
+}

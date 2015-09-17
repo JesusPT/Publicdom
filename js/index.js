@@ -54,8 +54,8 @@ $(document).on("ready",function(){
 
 		$('#formInicioSesion').on("submit",function(e){
 			e.preventDefault();
-			var user = document.formInicioSesion.User.value;
-			var pass = document.formInicioSesion.Pasxs.value;
+			var user = document.nformInicioSesion.User.value;
+			var pass = document.nformInicioSesion.Pass.value;
 			$.ajax({
 				type: "POST",
 				url: "php/sesion.php",
@@ -63,6 +63,8 @@ $(document).on("ready",function(){
 				success: function(respuesta){
 					if (respuesta == 0) {
 						//Porblema con el servidor
+					}else if (respuesta) {
+
 					}
 				}
 			});
@@ -71,7 +73,6 @@ $(document).on("ready",function(){
 
 		//Cerrar ventanas al con la tecla "esc"
 		$(document).on("keydown",function(key){
-				console.log($('#contenedor').css("display"));
 			if (key.which == 27) {
 				if ($('#contenedor').css("display") == "block") {
 					$("#contenedor").css("display","none");

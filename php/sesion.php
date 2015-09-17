@@ -12,6 +12,7 @@ if ($enlace = new mysqli("localhots","root","","publidom")) {//Conexion con la D
 				unset($_SESSION['perfil']);//limpiar el espacio 'perfil'
 				$_SESSION['perfil']['user'] = $_POST['user'];//Guardar nombre de usuario en el arreglo de sesiones
 				$_SESSION['perfil']['pass'] = $_POST['pass'];//Guardar contraseña en el arreglo de sesiones
+				echo 1;
 			}else{
 				//Error al obtener el arreglo asociativo
 				echo 0;

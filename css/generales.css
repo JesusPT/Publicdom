@@ -139,9 +139,7 @@ body{
 	/******************
 		   ESTILOS DE ELEMENTOS GENERALES
 	******************/
-	a:visited{
-		color: rgb(85, 26, 139);
-	}
+	
 
 	.Boton{
 		background-color: #4A6FA5;

@@ -39,29 +39,85 @@
 	cursor: pointer;
 }
 
-#closeIni{
-	margin: 1em auto;
-	display: block;
-	position: relative;
-	left: 14.5em;
-	top:-20px;
-	padding: 5px;
+#closeIni,
+.close
+{
 	border-radius: 3px;
+	cursor: pointer;
+	display: block;
+	left: 14.5em;
+	margin: 1em auto;
+	padding: 5px;
+	position: relative;
+	top:-20px;
+
 	-webkit-transition: 0.2s linear;
 	-moz-transition: 0.2s linear;
 	-ms-transition: 0.2s linear;
 	-o-transition: 0.2s linear;
 	transition: 0.2s linear;
-	cursor: pointer;
+	width: 15px;
+}
+
+/*ESTILOS DEL FORMULARIO DE EMPRESA*/
+
+#formRegistro, #formInicioSesion{
+	position: relative;
+	margin: 2em;
+}
+
+#formRegistro input, #formInicioSesion input{
+	border: 1px solid #AEADB3;
+	border-radius: 3px;
+	left: 25px;
+	padding: 5px;
+}
+
+#formRegistro label, #formInicioSesion label{
+	width: 150px;
+	margin-top: 1px;
+	display: inline-block;
+	float: left;
+	padding: 3px;
 }
 
 #formRegistro ul, #formInicioSesion ul{
-	list-style: none;
+	list-style-type: none;
+	list-style-position: outside;
+	margin: 0px;
+	padding: 0px;
 }
 
 #formRegistro li, #formInicioSesion li{
-	margin: 0 10px;
+	position: relative;
 }
+
+#formRegistro label, #formRegistro li, #formRegistro input
+#formInicioSesion label, #formInicioSesion li, #formInicioSesion input
+{
+	margin: 3px;
+}
+
+#formRegistro label, #formRegistro input{
+	position: relative;
+	width: 33%;
+}
+
+#formRegistro:last-child input{
+	right: -15%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .mostrar {
 	background: #F2F2F2;

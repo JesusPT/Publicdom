@@ -22,7 +22,7 @@ $(document).on("ready",function(){
 			$('#mensaje').text('');
 			$("input[name $='Pass']").css("border-color","black");
 		});
-
+		//Captura formulario de registro
 		$('#formRegistro').on('submit',function(e){
 			e.preventDefault();
 			var nom = document.nformRegistro.name.value;
@@ -51,13 +51,30 @@ $(document).on("ready",function(){
 				document.nformRegistro.Pass.value = "";
 				document.nformRegistro.rPass.value = "";
 				$('#mensaje').text("Las contraseñas no coinciden");
-
 			}
 		});
 
+		$('#formInicioSesion').on("submit",function(e){
+			e.preventDefault();
+			var user = document.nformInicioSesion.User.value;
+			var pass = document.nformInicioSesion.Pass.value;
+			$.ajax({
+				type: "POST",
+				url: "php/sesion.php",
+				data: "User="+user+"&Pass="+pass,
+				success: function(respuesta){
+					if (respuesta == 0) {
+						//Porblema con el servidor
+					}else if (respuesta) {
+
+					}
+				}
+			});
+		})
+
+
 		//Cerrar ventanas al con la tecla "esc"
 		$(document).on("keydown",function(key){
-				console.log($('#contenedor').css("display"));
 			if (key.which == 27) {
 				if ($('#contenedor').css("display") == "block") {
 					$("#contenedor").css("display","none");

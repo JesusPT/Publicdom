@@ -37,9 +37,22 @@ body{
 
 
 
-/*NAV */
-/*NAV
-        Estilos generales del nav*/
+/**********
+	NAV
+	En esta zona se mostraá el estado en el que se encuentra
+	la sesión del usuario, así como su imagen de perfil y opciones
+	y configuraciones.
+	Además contará con el nombre de la página.
+**********/
+
+/*
+	#Sesión:
+		Ambas:
+			Una alineación horizontal y un margen a la
+			dereha de 30px
+		Imagen de Perfil
+		Opción Salir
+*/
         nav{
         	background: #143F7D;
         }
@@ -97,16 +110,42 @@ body{
         	width: 200px;
         }
 
+		#sesion li{
+			display: inline-block;
+			margin-right: 15%;
+		}
+
+		/***************************
+			PUBLICIDAD - ARRIBA
+			Zona en la que los negocios tendrán una pequeña aparición,
+			en base a la calificación y popularidad de estos.
+		***************************/
+		#Publicidad{
+			background-color: #DDD;
+			border-radius: 5px;
+			height: 50px;
+			margin: 10px 10px 10px 10px;
+		}
+
+		#Publicidad h2{
+			text-align: center;
+			padding-top: 10px;
+		}
+
+
+
+
+
 	/******************
 		   ESTILOS DE ELEMENTOS GENERALES
 	******************/
-
+	
 
 	.Boton{
 		background-color: #4A6FA5;
 		box-shadow: 0px 0px 30px rgba(0,0,0,0.2);
 		border-radius: 10px;
-		display: inline-block;		
+		display: inline-block;
 		padding: 10px 5px;
 		position: relative;
 		width: 150px;
@@ -123,6 +162,19 @@ body{
 
 	.Boton:hover{
 		background-color: #4F6D7A;
+	}
+
+	.boton{
+		color:#F2F2F2;
+		background-color: #4A6FA5;
+		border-radius: 5px;
+		display: inline-block;
+		padding: 8px;
+	}
+
+	.boton a{
+		color: #F2F2F2;
+		text-decoration: none;
 	}
 
 

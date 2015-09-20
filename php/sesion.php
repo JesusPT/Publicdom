@@ -1,7 +1,7 @@
 <?php
 
-	$usuario = $_POST['user'];
-	$pass = $_POST['pass'];
+	$usuario = $_POST['User'];
+	$pass = $_POST['Pass'];
 
 if ($enlace = new mysqli("localhots","root","","publidom")) {//Conexion con la DB
 	$consulta = "SELECT * FROM usuario where idUser = '$usuario', pass = '$pass'";//Consulta SQL a ejecutar
@@ -12,6 +12,7 @@ if ($enlace = new mysqli("localhots","root","","publidom")) {//Conexion con la D
 				unset($_SESSION['perfil']);//limpiar el espacio 'perfil'
 				$_SESSION['perfil']['user'] = $_POST['user'];//Guardar nombre de usuario en el arreglo de sesiones
 				$_SESSION['perfil']['pass'] = $_POST['pass'];//Guardar contraseña en el arreglo de sesiones
+				echo 1;
 			}else{
 				//Error al obtener el arreglo asociativo
 				echo 0;

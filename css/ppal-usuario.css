@@ -24,72 +24,6 @@
 ***/
 
 
-
-
-
-
-
-
-
-
-
-/**********
-	NAV
-	En esta zona se mostraá el estado en el que se encuentra
-	la sesión del usuario, así como su imagen de perfil y opciones
-	y configuraciones.
-	Además contará con el nombre de la página.
-**********/
-
-/*
-	#Sesión:
-		Ambas:
-			Una alineación horizontal y un margen a la
-			dereha de 30px
-		Imagen de Perfil
-		Opción Salir
-*/
-#sesion li{
-	display: inline-block;
-	margin-right: 15%;
-}
-
-
-
-/***************************
-	PUBLICIDAD - ARRIBA
-	Zona en la que los negocios tendrán una pequeña aparición,
-	en base a la calificación y popularidad de estos.
-***************************/
-#Publicidad{
-	background-color: #DDD;
-	border-radius: 5px;
-	height: 50px;
-	margin: 10px 10px 10px 10px;
-}
-
-#Publicidad h2{
-	text-align: center;
-	padding-top: 10px;
-}
-
-
-/***************
-	BARRITA
-***************/
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*____________   PANEL IZQUIERDO   ____________*/
 #BLeft{
 	position: relative;
@@ -115,35 +49,6 @@
 	text-decoration: none;
 }
 
-.Deslizar{
-	background-color: #1F262B;
-	border: 2px solid black;
-	padding: 8px;
-}
-
-.Deslizar a{
-	color: #8F8F8F;
-	display: block;
-	text-decoration: none;
-}
-
-.Deslizar p{
-	color: #8F8F8F;
-	font-weight: bold;
-	padding-bottom: 15px;
-	text-align: right;
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -165,34 +70,9 @@
 	border-radius: 5px;
 	box-shadow: 1px 1px 1px #CCC;
 	display: none;
+	margin-bottom: 15px;
 	padding: 15px;
 }
-
-.boton{
-	color:#F2F2F2;
-	background-color: #4A6FA5;
-	border-radius: 5px;
-	display: inline-block;
-	padding: 8px;
-}
-
-.boton a{
-	color: #F2F2F2;
-	text-decoration: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

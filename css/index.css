@@ -5,8 +5,8 @@
 	OCULTAR - REGISTRO
 **************************/
 #contenedor, #ventaIni{
-	display: none;
 	content: " ";
+	display: none;
 	height: 100%;
 	width: 100%;
 	position: fixed;
@@ -59,6 +59,11 @@
 	width: 15px;
 }
 
+
+
+
+
+
 /*ESTILOS DEL FORMULARIO DE EMPRESA*/
 
 #formRegistro, #formInicioSesion{
@@ -74,7 +79,7 @@
 }
 
 #formRegistro label, #formInicioSesion label{
-	width: 150px;
+	width: 30%;
 	margin-top: 1px;
 	display: inline-block;
 	float: left;
@@ -90,6 +95,7 @@
 
 #formRegistro li, #formInicioSesion li{
 	position: relative;
+	width: 100%;
 }
 
 #formRegistro label, #formRegistro li, #formRegistro input
@@ -121,7 +127,7 @@
 
 .mostrar {
 	background: #F2F2F2;
-	border: 1px solid black;
+	border: 1px solid #999;
 	border-radius: 3px;
 	box-shadow: 0px 0px 30px rgba(0,0,0,0.2);
 	color: #1F262B;

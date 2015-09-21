@@ -18,16 +18,16 @@ $Email = $_POST['Email'];//correo electronico
 
 */
  // Validacion de Formulario
- if (preg_match("/^(([A-Z]{1})([a-z|ñáéíóú]{1,13}[\s]?)){1,5}$/",$_POST['name'])) {//2 Validacion(Comienza con mayuscula)
-   if (preg_match("/^[A-Z]{1}[a-z|ñáéíóú]*$/",$_POST['AP'])) {//3
-     if (preg_match("/^[A-Z]{1}[a-z|ñáéíóú]*$/",$_POST['AM'])) {//4
-       if (preg_match("/^[a-zA-Z0-9|_|#]{3,11}$/", $_POST['User'])) {//5
-         if( preg_match ("/^[\w|-]{5,18}$/",$_POST['Pass'])){//6
-           if(preg_match("/^[\d]{2}$/",$_POST['Age'])){//7
-             if (filter_var($_POST['Email'], FILTER_VALIDATE_EMAIL)){//8
+ if (preg_match("/^(([A-Z]{1})([a-z|ñáéíóú]{1,13}[\s]?)){1,5}$/",$name)) {//2 Validacion(Comienza con mayuscula)
+   if (preg_match("/^[A-Z]{1}[a-z|ñáéíóú]*$/",$paterno)) {//3
+     if (preg_match("/^[A-Z]{1}[a-z|ñáéíóú]*$/",$materno)) {//4
+       if (preg_match("/^[a-zA-Z0-9|_|#]{3,11}$/", $User)) {//5
+         if( preg_match ("/^[\w|-]{5,18}$/",$Pass)){//6
+           if(preg_match("/^[\d]{2}$/",$Age)){//7
+             if (filter_var(Email, FILTER_VALIDATE_EMAIL)){//8
                   //echo "dentro de email";
                if ($enlace = new mysqli("localhost","root","","publidom")) {
-                 if ($enlace -> query("call registro('$User','$name','$Age','$Email','$Pass')")) {
+                 if ($enlace -> query("call registro('$User','$name. .$paterno. .$materno','$Age','$Email','$Pass')")) {
                    echo 1;
                  }else{
                    echo 0;

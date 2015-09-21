@@ -33,6 +33,8 @@ $(document).on("ready",function(){
 			var rpass = document.nformRegistro.rPass.value;
 			var age = document.nformRegistro.Age.value;
 			var mail = document.nformRegistro.Email.value;
+		
+
 			if (pass == rpass) {
 				$.ajax({
 					type:"POST",

@@ -45,75 +45,72 @@ body{
 	Además contará con el nombre de la página.
 **********/
 
-/*
-	#Sesión:
-		Ambas:
-			Una alineación horizontal y un margen a la
-			dereha de 30px
-		Imagen de Perfil
-		Opción Salir
-*/
+		/*NAV
+			Estilos generales del nav*/
         nav{
         	background: #143F7D;
+			display: flex;
         }
 
+		/*#Logo
+			Div que contiene al logo de PublicDom*/
+		#Logo{
+			flex-grow: 6;
+			padding: 10px 0 10px 20px;
+		}
 
-        nav img{
-        	left: 30% ;
-        	position: relative;
-        	top: 7px;
-        }
+		/*#Logo img
+			Se encarga de los atributos de la imagen
+			del logo de PublicDom*/
+		#Logo img{
+			width: 200px;
+		}
 
-        nav ul{
-        	display:inline-block;
-        	list-style:none;
-        	left: 62em;
-        	position: relative;
-        	width: 236px;
-        	top: -9px;
-        }
+		/*nav ul
+			Contiene todos los estilos de la lista ul, sin tomar en cuenta los elementos internos*/
 
-        nav ul li{
-        	display:inline-block;
-        	padding:1em;
-        }
+		nav ul{
+			flex-grow: 1;
+			list-style: none;
+			padding: 19px 0 10px 20px;
+		}
 
-        nav ul li a{
-        	color:#f8f8f8;
-        	text-decoration:none;
-        	-webkit-transition:all 0.2s ease;
+		/*nav li
+			Contiene los estilos generales de los puntos
+			de la lista li, sin tomar en cuenta los elementos
+			internos*/
+		nav li{
+			display: inline;
+			padding: 0 16px;
+		}
+
+		/*nav li a
+			Solo los estilos de los a dentro de los li.
+			no toma en cuenta lo demás*/
+		nav li a{
+			color: #f8f8f8;
+			-webkit-transition:all 0.2s ease;
         	-moz-transition:all 0.2s ease;
         	-o-transition:all 0.2s ease;
         	-ms-transition:all 0.2s ease;
+			text-decoration: none;
         	transition:all 0.2s ease;
-        }
-
-        nav ul li a:hover{
-        	border-bottom:2px solid #f8f8f8;
-        	border-top:2px solid #f8f8f8;
-        	color:#f8f8f8;
-        	padding-bottom:12px;
-        	padding-top:12px;
-        }
-
-        nav ul li img{
-        	background-color: #F2F2F2;
-        }
-
-
-        #Logo{
-        	display: inline-block;
-        }
-
-        #Logo img{
-        	padding: 5px;
-        	width: 200px;
-        }
-
-		#sesion li{
-			display: inline-block;
-			margin-right: 15%;
 		}
+
+		/*nav ul li a:hover
+			Efecto de barras en movimiento de las
+			opciones de conexion en los li*/
+		nav ul li a:hover{
+		   border-bottom:2px solid #f8f8f8;
+		   border-top:2px solid #f8f8f8;
+		   color:#f8f8f8;
+		   padding-bottom:12px;
+		   padding-top:12px;
+	   }
+
+
+
+
 
 		/***************************
 			PUBLICIDAD - ARRIBA
@@ -139,7 +136,7 @@ body{
 	/******************
 		   ESTILOS DE ELEMENTOS GENERALES
 	******************/
-	
+
 
 	.Boton{
 		background-color: #4A6FA5;

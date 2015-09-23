@@ -2,7 +2,6 @@ $(document).on("ready",function(){
 		$("#perfil").click(function(){
 			$(".more").css("display","none");
 			$("#more-profile").slideToggle("slow");
-			
 		});
 
 		$("#edit-profile").click(function(){
@@ -28,6 +27,6 @@ $(document).on("ready",function(){
 		$("#favoritos").click(function(){
 			$(".more").css("display","none");
 			$("#more-favs").slideToggle("slow");
-		});		
-	
+		});
+
 });

@@ -18,9 +18,9 @@ $(document).on("ready",function(){
 			$("#ventaIni").css("display","none");
 		});
 
-		$("input[name $='Pass']").focus(function(){
+		$("input").focus(function(){
 			$('#mensaje').text('');
-			$("input[name $='Pass']").css("border-color","black");
+			$(this).css("border-color","#999");
 		});
 		//Captura formulario de registro
 		$('#formRegistro').on('submit',function(e){
@@ -33,7 +33,7 @@ $(document).on("ready",function(){
 			var rpass = document.nformRegistro.rPass.value;
 			var age = document.nformRegistro.Age.value;
 			var mail = document.nformRegistro.Email.value;
-		
+
 
 			if (pass == rpass) {
 				$.ajax({
@@ -41,9 +41,42 @@ $(document).on("ready",function(){
 					url: "php/registro.php",
 					data: "name="+nom+"&AP="+ap+"&AM="+am+"&User="+us+"&Pass="+pass+"&Age="+age+"&Email="+mail,
 					success: function(respuesta){
-						if (respuesta==0) {
+						if (respuesta == 0) {
 							console.log("Error");
+						}else if (respuesta == 1) {
+							//correcto
+							$('#mensaje').text("Correcto");
+						}else if (respuesta == 2) {
+							//
+							$("input[name $='name']").css("border-color","red");
+							$("input[name $='name']").val("");
+							$('#mensaje').text("Nombre no válido");
+						}else if (respuesta == 3) {
+							$("input[name $='AP']").css("border-color","red");
+							$("input[name $='AP']").val("");
+							$('#mensaje').text("Apellido paterno no válido");
+						}else if (respuesta == 4) {
+							$("input[name $='AM']").css("border-color","red");
+							$("input[name $='AM']").val("");
+							$('#mensaje').text("Apellido materno no válido");
+						}else if (respuesta == 5) {
+							$("input[name $='User']").css("border-color","red");
+							$("input[name $='User']").val("");
+							$('#mensaje').text("Nombre de Usuario no válido");
+						}else if (respuesta == 6) {
+							$("input[name $='Pass']").css("border-color","red");
+							$("input[name $='Pass']").val("");
+							$('#mensaje').text("Contraseña no válida");
+						}else if (respuesta == 7) {
+							$("input[name $='Age']").css("border-color","red");
+							$("input[name $='Age']").val("");
+							$('#mensaje').text("Edad no válido");
+						}else if (respuesta == 8) {
+							$("input[name $='Email']").css("border-color","red");
+							$("input[name $='Email']").val("");
+							$('#mensaje').text("E-mail no válido");
 						}
+
 					}
 				});
 			}else{
@@ -73,7 +106,5 @@ $(document).on("ready",function(){
 		})
 
 
-		//Cerrar ventanas al con la tecla "esc"
-		
 
 });

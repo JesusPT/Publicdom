@@ -98,8 +98,9 @@ $(document).on("ready",function(){
 				success: function(respuesta){
 					if (respuesta == 0) {
 						//Porblema con el servidor
-					}else if (respuesta) {
-
+						console.log("Error");
+					}else if (respuesta == 1) {
+						$(window).attr('location',"inicio-usuario.html");
 					}
 				}
 			});

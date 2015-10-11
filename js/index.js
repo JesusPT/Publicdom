@@ -1,4 +1,15 @@
 $(document).on("ready",function(){
+
+	$.ajax({
+		url: "php/val.php",
+		success: function(respuesta){
+			if (respuesta == 1) {
+				$(window).attr('location',"/Publicdom/inicio-usuario.html");
+			}
+		}
+	});
+
+
 		$("#btoReg").click(function(){
 			if ($("#ventaIni").css("display") == "none") {
 				$("#contenedor").css("display","inline-block");

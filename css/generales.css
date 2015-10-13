@@ -185,7 +185,7 @@ body{
 footer{
 	background-color: #1F262B;
 	display: flex;
-	height: 15%;
+	padding: 15px 0;
 }
 
 
@@ -209,8 +209,8 @@ footer{
 	text-align: center;
 }
 
-#FooDer li{
-	color: #4A6FA5;
+#FooCent li a{
+	color: #F2F2F2;;
 	text-decoration: none;
 }
 

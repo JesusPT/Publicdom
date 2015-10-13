@@ -189,13 +189,11 @@
 #slogan{
 	left: 4em;
 	position: relative;
-}
-
-#slogan{
-	height: 500px;
 	margin-left: 20%;
 	z-index: -1;
+	width: 50%;
 }
+
 
 
 .Boton{

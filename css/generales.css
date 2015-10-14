@@ -1,5 +1,5 @@
 /*ESTILOS GENERALES
-        Contiene todos los estilos que se utilizarán en todas las páginas
+        Contiene todos los estilos que se utilizarán en todas las páginasdjyd
         d este proyecto. esto constará de:
                 -Limpieza de todas las medidas
                 -Body generales
@@ -175,58 +175,137 @@ body{
 	}
 
 
-        /******************
-        	   FOOTER
-        ******************/
-        footer{
-        	background-color: #1F262B;
-        }
-
-        #FooIzq{
-        	display: inline-block;
-        	bottom: 30px;
-        	position: relative;
-        	left: 50px;
-        }
 
 
-        #FooIzq img{
-        	float: left;
-        	/*margin-left: 20px;
-        	margin-top: 5px;*/
-        	width: 100px;
-        }
 
-        #FooCent{
-        	display: inline-block;
-        	bottom: 30px;
-        	position: relative;
-        	left: 31em;
 
-        }
+/******************
+   FOOTER
+******************/
+footer{
+	background-color: #1F262B;
+	display: flex;
+	padding: 15px 0;
+}
 
-        #FooCent ul{
-        	position: relative;
-        	margin-top: 100px;
-        	list-style: none;
-        }
 
-        #FooCent li{
-        	text-align: center;
-        }
 
-        #FooCent a{
-        	color: #F2F2F2;
-        	text-decoration: none;
-        }
+#FooIzq{
+	display: flex;
+	flex-grow: 1;
+}
 
-        #FooDer{
-        	display: inline-block;
-        	bottom: 30px;
-        	position: relative;
-        	left: 59em;
-        }
+#FooIzq img{
+	height: 100px;
+}
 
-        #FooDer img{
-        	height: 75px;
-        }
+#FooCent{
+	flex-grow: 3;
+}
+
+#FooCent ul{
+	list-style: none;
+	padding: 3% 0 0 3%;
+	text-align: center;
+}
+
+#FooCent li a{
+	color: #F2F2F2;;
+	text-decoration: none;
+}
+
+#FooDer{
+	flex-grow: 1;
+}
+
+#FooDer img{
+	height: 100px;
+}
+
+
+
+
+
+
+
+/*********************************
+			QUERIES
+*********************************/
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	#FooIzq img, #FooDer img{
+		height: 80px;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	#FooIzq img, #FooDer img{
+		height: 80px;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+	body{
+		font-size: 12px;
+	}
+
+	/******************
+			NAV
+	*******************/
+
+	#Logo img{
+		width: 150px;
+	}
+
+	/******************
+			FOOTER
+	*******************/
+	#footer{
+		font-size: 12px;
+	}
+	#FooIzq img, #FooDer img{
+		height: 50px;
+	}
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) { }
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { }
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { }
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { }
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) { }
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) { }
+
+/* iPhone 4 and high pixel ratio devices ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) { }

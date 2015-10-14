@@ -266,6 +266,20 @@ footer{
 		width: 150px;
 	}
 
+	nav{
+		display: block;
+		text-align: center;
+	}
+
+	nav, nav ul li{
+		display: block;
+	}
+
+	nav ul li{
+		font-size: 12px;
+		padding: 1em;
+	}
+
 	/******************
 			FOOTER
 	*******************/
@@ -284,6 +298,9 @@ footer{
 
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width : 321px) {
+	/******************
+			FOOTER
+	*******************/
 
 }
 

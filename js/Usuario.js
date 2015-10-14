@@ -1,6 +1,6 @@
 $(document).on("ready",function(){
 
-
+//Validar sesion
 $.ajax({
 	url: "php/val.php",
 	success: function(respuesta){
@@ -10,6 +10,22 @@ $.ajax({
 	}
 });
 
+
+$('#formEdDatosPers').on('submit',function(e){
+
+	e.preventDefault();
+	$.ajax({
+		url: "editarUsuario.php",
+		method: "POST",
+		//data:,
+		success: function(respuesta){
+			if (respuesta==0) {
+
+			}
+		}
+	});
+
+});
 
 //Cerrar session
 
@@ -97,6 +113,24 @@ $.ajax({
 		});
 //Fin Efectos de ventanas
 //---------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------
+
+$.ajax({
+	url: "php/datos.php",
+	success: function(respuesta){
+		if (respuesta == 0) {
+			console.log("error al poner el nombre");
+		}else {
+			console.log(respuesta);
+			$('#nombreUsuario').text(respuesta);
+		}
+	}
+});
+
+
+//------------------------------------------------------------------------------
 
 		$(".pide").on("click",function(e){
 			e.preventDefault();

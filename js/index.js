@@ -108,10 +108,17 @@ $(document).on("ready",function(){
 				data: "User="+user+"&Pass="+pass,
 				success: function(respuesta){
 					if (respuesta == 0) {
-						//Porblema con el servidor
-						console.log("Error");
+						console.log("Error de conexion");
 					}else if (respuesta == 1) {
 						$(window).attr('location',"inicio-usuario.html");
+					}else if (respuesta == 2) {
+						//Error en la consulta
+					}else if (respuesta == 3) {
+						console.log("entre a 3");
+						$("input[name $='User']").css("border-color","red");
+						$("input[name $='User']").val("");
+						$("input[name $='Pass']").css("border-color","red");
+						$("input[name $='Pass']").val("");
 					}
 				}
 			});

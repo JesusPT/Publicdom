@@ -221,3 +221,87 @@ footer{
 #FooDer img{
 	height: 100px;
 }
+
+
+
+
+
+
+
+/*********************************
+			QUERIES
+*********************************/
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	#FooIzq img, #FooDer img{
+		height: 80px;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	#FooIzq img, #FooDer img{
+		height: 80px;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+	body{
+		font-size: 12px;
+	}
+
+	/******************
+			NAV
+	*******************/
+
+	#Logo img{
+		width: 150px;
+	}
+
+	/******************
+			FOOTER
+	*******************/
+	#footer{
+		font-size: 12px;
+	}
+	#FooIzq img, #FooDer img{
+		height: 50px;
+	}
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) { }
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) { }
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) { }
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { }
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { }
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { }
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) { }
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) { }
+
+/* iPhone 4 and high pixel ratio devices ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) { }

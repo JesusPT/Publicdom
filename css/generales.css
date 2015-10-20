@@ -312,6 +312,7 @@ footer{
 	#FooIzq, #FooCent, #FooDer{
 		flex-direction: column;
 		flex-grow: 2;
+		flex-wrap: nowrap;
 	}
 
 	#FooIzq{

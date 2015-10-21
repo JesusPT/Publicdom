@@ -282,28 +282,26 @@
 #Buscador{
 	display: flex;
 	justify-content: space-around;
-	width: 65%;
-	/*width: 60%;
-	padding-bottom: 1em;
-	margin-left: 33em;*/
+	width: 60%;
 
 }
 
 #Buscador p{
 	flex-grow: 1;
 	font-weight: bold;
-	padding: 3px;
 }
 
 #Buscador input{
 	flex-grow: 3;
 	border: 1px solid #CCC;
-	/*height: 30px;*/
 	border-radius: 10px;
 }
 
-#btoBuscar img{
+#btoBuscar{
 	flex-grow: 1;
+}
+
+#btoBuscar img{
 	height: 14px;
 }
 

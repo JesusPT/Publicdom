@@ -280,26 +280,31 @@
 ***************/
 
 #Buscador{
-	width: 60%;
+	display: flex;
+	justify-content: space-around;
+	width: 65%;
+	/*width: 60%;
 	padding-bottom: 1em;
-	margin-left: 33em;
+	margin-left: 33em;*/
 
 }
 
 #Buscador p{
+	flex-grow: 1;
 	font-weight: bold;
 	padding: 3px;
 }
 
 #Buscador input{
+	flex-grow: 3;
 	border: 1px solid #CCC;
-	width: 30em;
-	height: 30px;
+	/*height: 30px;*/
 	border-radius: 10px;
 }
 
 #btoBuscar img{
-	width: 14px;
+	flex-grow: 1;
+	height: 14px;
 }
 
 

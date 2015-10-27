@@ -280,26 +280,25 @@
 ***************/
 
 #Buscador{
-	width: 60%;
-	padding-bottom: 1em;
-	margin-left: 33em;
-
-}
-
-#Buscador p{
-	font-weight: bold;
-	padding: 3px;
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
+	width: 65%;
 }
 
 #Buscador input{
-	border: 1px solid #CCC;
-	width: 30em;
-	height: 30px;
-	border-radius: 10px;
+	border: 1px solid #AEADB3;
+	border-radius: 5px;
+	flex-grow: 3;
+	height: 2em;
+}
+
+#btoBuscarf{
+	flex-grow: 1;
 }
 
 #btoBuscar img{
-	width: 14px;
+	height: 1em;
 }
 
 
@@ -310,3 +309,69 @@
 .Deslizar{
 	display: none;
 }
+
+
+
+
+
+/*********************************
+			QUERIES
+*********************************/
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+
+
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { }
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { }
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { }
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) { }
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) { }
+
+/* iPhone 4 and high pixel ratio devices ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) { }

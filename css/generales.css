@@ -185,6 +185,7 @@ body{
 footer{
 	background-color: #1F262B;
 	display: flex;
+	justify-content: space-around;
 	padding: 15px 0;
 }
 
@@ -298,14 +299,36 @@ footer{
 
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width : 321px) {
-	/******************
-			FOOTER
-	*******************/
+
+
 
 }
 
 /* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) { }
+@media only screen and (max-width : 320px) {
+	/******************
+			FOOTER
+	*******************/
+	#FooIzq, #FooCent, #FooDer{
+		flex-direction: column;
+		flex-grow: 2;
+		flex-wrap: nowrap;
+	}
+
+	#FooIzq{
+		order: 1;
+	}
+
+	#FooDer{
+		flex-wrap: wrap-reverse;
+		order: 2;
+	}
+
+	#FooCent{
+		order: 3;
+	}
+
+}
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { }

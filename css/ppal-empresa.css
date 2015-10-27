@@ -129,6 +129,15 @@ centerEmpresa
 
 #moreEditEmpresa{
 	position: relative;
+	display: none;
+}
+
+#moreMensajes{
+	display: none;
+}
+
+#morePedidos{
+	display: none;
 }
 
 #img-box{

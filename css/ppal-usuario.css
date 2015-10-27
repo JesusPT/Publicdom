@@ -286,26 +286,18 @@
 	width: 65%;
 }
 
-
-#Buscador p{
-	font-weight: bold;
-	flex-grow: 1;
-}
-
 #Buscador input{
 	border: 1px solid #AEADB3;
 	border-radius: 5px;
-	flex-grow: 2;
-	padding: .3em;
+	flex-grow: 3;
+	height: 2em;
 }
 
 #btoBuscarf{
-	display: flex;
-	justify-content: flex-start;
 	flex-grow: 1;
 }
 
-#btoBuscarf img{
+#btoBuscar img{
 	height: 1em;
 }
 
@@ -317,10 +309,6 @@
 .Deslizar{
 	display: none;
 }
-
-
-
-
 
 
 

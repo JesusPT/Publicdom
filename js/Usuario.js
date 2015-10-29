@@ -114,20 +114,53 @@ $('#formEdDatosPers').on('submit',function(e){
 //Fin Efectos de ventanas
 //---------------------------------------------------------------------
 
-
+//Datos del usuario
 //------------------------------------------------------------------------------
 
 $.ajax({
 	url: "php/datos.php",
 	success: function(respuesta){
+
 		if (respuesta == 0) {
 			console.log("error al poner el nombre");
+		}else if(respuesta == 1){
+
 		}else {
-			console.log(respuesta);
-			$('#nombreUsuario').text(respuesta);
+			respuesta = respuesta.split(",");
+			console.log(respuesta[0]);
+			$('#nombreUsuario').text(respuesta[0]);
+			$('#nuser').text(respuesta[1]);
 		}
 	}
 });
+
+
+//------------------------------------------------------------------------------
+//historial del usuario
+
+
+$.ajax({
+	url: "php/historial.php",
+	success: function(respuesta){
+
+		if (respuesta == 0) {
+			console.log("error al poner el nombre");
+		}else if(respuesta == 1){
+
+		}else {
+			respuesta = respuesta.split("~");
+			for (var i = 0; i < respuesta.length - 1; i++) {
+				$("#more-history").append("	<div class='ser-package-history'> <a href='#' class='serv-link-history'>"+respuesta[i]+"</a><p class='descrip-serv-history'>"+respuesta[i+1]+"</p> </div>");
+				i++;
+			}
+
+		}
+	}
+});
+
+//------------------------------------------------------------------------------
+//Busqueda
+
 
 
 //------------------------------------------------------------------------------

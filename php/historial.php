@@ -4,16 +4,16 @@
   $user = $_SESSION['perfil']['user'];
 
   if (@$enlace = new mysqli("localhost","root","","publidom")) {
-    $consulta = "SELECT nomUsuario from usuario where idUsuario ='".$user."'";
+    $consulta = "SELECT nomProducto,descripcion from producto pro INNER JOIN historiales his ON pro.idProducto = his.idProducto and idUsuario = '".$user."'";
     if (@$respuesta = $enlace -> query($consulta)) {
       if ($respuesta -> num_rows > 0) {
-        if ($filas = $respuesta -> fetch_assoc()) {
-          echo $filas['nomUsuario'];
-          echo ",";
-          echo $user;
+        while ($filas = $respuesta -> fetch_assoc()) {
 
-        }else {
-          echo 0;
+          foreach ($filas as $key) {
+            echo $key;
+            echo "~";
+          }
+
         }
       }else {
         echo 1;

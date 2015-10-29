@@ -280,26 +280,25 @@
 ***************/
 
 #Buscador{
-	width: 60%;
-	padding-bottom: 1em;
-	margin-left: 33em;
-
-}
-
-#Buscador p{
-	font-weight: bold;
-	padding: 3px;
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
+	width: 65%;
 }
 
 #Buscador input{
-	border: 1px solid #CCC;
-	width: 30em;
-	height: 30px;
-	border-radius: 10px;
+	border: 1px solid #AEADB3;
+	border-radius: 5px;
+	flex-grow: 3;
+	height: 2em;
+}
+
+#btoBuscarf{
+	flex-grow: 1;
 }
 
 #btoBuscar img{
-	width: 14px;
+	height: 1em;
 }
 
 
@@ -310,10 +309,6 @@
 .Deslizar{
 	display: none;
 }
-
-
-
-
 
 
 

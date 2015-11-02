@@ -231,32 +231,42 @@
 }
 
 .info-display{
-	box-shadow: 1px 1px 1px #888888;
+	border: 1px solid #CCC;
 	border-radius: 5px;
+	box-shadow: 1px 1px 1px #CCC;
+	display: flex;
+	padding: 1em;
 	margin: 1em;
-	position: relative;
+	/*position: relative;*/
 }
 
-.dineros{
-	font-weight: bold;
-	color: #333;
-	margin: 0 15px;
-	padding: 15px 0 25px 0;
+.detallesProd{
+	/*display: flex;
+	align-items: center;*/
 }
 
-.info-display p{
-	left: 1em;
-	position: relative;
+.detallesProd h4{
+	text-align: left;
 }
+
+.detallesProd h4, .detallesProd p{
+	padding: 0.2em 0;
+	text-align: left;
+}
+
 
 .suatmm{
-	border: 1px solid black;
-	display: inline-block;
-	padding:15px;
-	position: relative;
-	left: 75%;
-	top: -4em;
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
 }
+
+.suatmm p{
+	padding: 0 1em;
+}
+
+
+
 
 
 
@@ -280,7 +290,7 @@
 ***************/
 
 #Buscador{
-	align-items: center;
+	align-items: flex-end;
 	display: flex;
 	justify-content: space-around;
 	width: 65%;

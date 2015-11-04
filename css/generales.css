@@ -48,6 +48,7 @@ body{
 		/*NAV
 			Estilos generales del nav*/
         nav{
+			align-items: center;
         	background: #143F7D;
 			display: flex;
         }
@@ -70,19 +71,15 @@ body{
 			Contiene todos los estilos de la lista ul, sin tomar en cuenta los elementos internos*/
 
 		nav ul{
+			display: flex;
+			align-items: center;
 			flex-grow: 1;
+			flex-flow: nowrap;
+			justify-content: space-around;
 			list-style: none;
-			padding: 19px 0 10px 20px;
+			/*padding: 19px 0 10px 20px;*/
 		}
 
-		/*nav li
-			Contiene los estilos generales de los puntos
-			de la lista li, sin tomar en cuenta los elementos
-			internos*/
-		nav li{
-			display: inline;
-			padding: 0 16px;
-		}
 
 		/*nav li a
 			Solo los estilos de los a dentro de los li.
@@ -95,6 +92,10 @@ body{
         	-ms-transition:all 0.2s ease;
 			text-decoration: none;
         	transition:all 0.2s ease;
+		}
+
+		nav ul li img{
+			height: 2em;
 		}
 
 		/*nav ul li a:hover
@@ -187,6 +188,10 @@ footer{
 	display: flex;
 	justify-content: space-around;
 	padding: 15px 0;
+
+
+
+	bottom: 0;
 }
 
 

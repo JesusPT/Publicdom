@@ -48,6 +48,7 @@ body{
 		/*NAV
 			Estilos generales del nav*/
         nav{
+			align-items: center;
         	background: #143F7D;
 			display: flex;
         }
@@ -70,9 +71,12 @@ body{
 			Contiene todos los estilos de la lista ul, sin tomar en cuenta los elementos internos*/
 
 		nav ul{
+			align-items: center;
 			flex-grow: 1;
+			flex-flow: nowrap;
+			justify-content: space-around;
 			list-style: none;
-			padding: 19px 0 10px 20px;
+			/*padding: 19px 0 10px 20px;*/
 		}
 
 		/*nav li
@@ -187,6 +191,10 @@ footer{
 	display: flex;
 	justify-content: space-around;
 	padding: 15px 0;
+
+
+	
+	bottom: 0;
 }
 
 

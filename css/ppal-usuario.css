@@ -22,6 +22,14 @@
 *
 *
 ***/
+/*____________   NAV   ____________*/
+#sesion span{
+	color:  #f8f8f8;
+}
+
+#sesion li img{
+	background: #f8f8f8;
+}
 
 
 /*____________   PANEL IZQUIERDO   ____________*/
@@ -79,28 +87,22 @@
 
 /*Estilos de Perfil*/
 
-#editar-izq{
-	position: relative;
-	left: 60em;
-	top: -7em;
-}
 
 #more-profile{
 	position: relative;
 }
 
-#more-profile img{
-	position: relative;
-	left: -3em;
-	top: 2em;
-	width: 135px;
+#edImgUsuario{
+	display: flex;
 }
 
-#nuser{
-	position: relative;
-	left: 12em;
-	top: -4em;
+
+#edImgUsuario img{
+
+	height: 13em;
 }
+
+
 
 #profile-favs, #profile-sched{
 	background-color: #4F6D7A;
@@ -121,6 +123,10 @@
 	color: #C2C0BD;
 	text-decoration: none;
 }
+
+
+
+
 
 /*Estilos de Editar Perfil*/
 #more-edituser{

@@ -62,11 +62,6 @@ $('#formEdDatosPers').on('submit',function(e){
 			}
 		});
 
-		$("#btoBuscar").on("click",function(){
-			$(".more").css("display","none");
-			$("#more-search").slideToggle("slow");
-		});
-
 		$("#historial").on("click",function(){
 			if ($("#more-history").css('display')=='block') {
 				$("#more-history").slideToggle("slow");
@@ -89,19 +84,6 @@ $('#formEdDatosPers').on('submit',function(e){
 				$(".pIzquierda").css('background-color','#5D5E60');
 				$(this).css('background-color','rgb(194, 194, 194)');
 				$("#more-pedidos").slideToggle("slow");
-			}
-
-		});
-
-		$("#favoritos").on("click",function(){
-			if ($("#more-favs").css('display')=='block') {
-				$("#more-favs").slideToggle("slow");
-				$(this).css('background-color','#5D5E60');
-			}else {
-				$(".more").css("display","none");
-				$(".pIzquierda").css('background-color','#5D5E60');
-				$(this).css('background-color','rgb(194, 194, 194)');
-				$("#more-favs").slideToggle("slow");
 			}
 
 		});
@@ -161,7 +143,69 @@ $.ajax({
 //------------------------------------------------------------------------------
 //Busqueda
 
+$("#btoBuscar").on("click",function(){
+	var clave = $("input[name$='busqueda']").val();
+	$('.ser-package').remove();
+	$.ajax({
+		url: "php/busqueda.php",
+		type: "POST",
+		data: "busqueda="+clave,
+		success: function(respuesta){
 
+			if (respuesta == 0) {
+				console.log("error al poner el nombre");
+			}else if(respuesta == 1){
+
+			}else {
+				respuesta = respuesta.split("~");
+				for (var i = 0; i < respuesta.length - 1; i++) {
+					$("#more-search").append("<div class='ser-package'><a href='#' class='serv-link'>"+ respuesta[i] +"</a><p class='descrip-serv'>"+ respuesta[i+1] +"</p></div>");
+					i++;
+				}
+
+			}
+		}
+	});
+	$(".more").css("display","none");
+	$("#more-search").slideToggle("slow");
+});
+
+//------------------------------------------------------------------------------
+//favoritos
+
+$("#favoritos").on("click",function(){
+	if ($("#more-favs").css('display')=='block') {
+		$("#more-favs").slideToggle("slow");
+		$(this).css('background-color','#5D5E60');
+
+
+	}else {
+		$('.ser-package-favs').remove();
+		$(".more").css("display","none");
+		$(".pIzquierda").css('background-color','#5D5E60');
+		$(this).css('background-color','rgb(194, 194, 194)');
+		$("#more-favs").slideToggle("slow");
+
+		$.ajax({
+			url: "php/favoritos.php",
+			success: function(respuesta){
+				if (respuesta == 0) {
+					console.log("error al poner el nombre");
+				}else if(respuesta == 1){
+
+				}else {
+					respuesta = respuesta.split("~");
+					for (var i = 0; i < respuesta.length - 1; i++) {
+						$("#more-favs").append("<div class='ser-package-favs'><a href='#' class='serv-link-favs'>"+ respuesta[i] +"</a><p class='descrip-serv-favs'> "+ respuesta[i+1] +" </p></div>");
+						i++;
+					}
+
+				}
+			}
+		});
+	}
+
+});
 
 //------------------------------------------------------------------------------
 

@@ -34,348 +34,358 @@
 		</ul>
 	</nav>
 
+	<section id="Central">
+		<!-- PUBLICIDAD - ARRIBA
+		Zona en la que los negocios tendrán una pequeña aparición,
+		en base a la calificación y popularidad de estos. -->
+		<div id = "Publicidad">
+			<h2>Publicidad Mágica y algo cool</h2>
+		</div>
 
-  <!-- PUBLICIDAD - ARRIBA
-	Zona en la que los negocios tendrán una pequeña aparición,
-	en base a la calificación y popularidad de estos. -->
-	<div id = "Publicidad">
-		<h2>Publicidad Mágica y algo cool</h2>
-	</div>
-
-	<div id = "Buscador">
-		<input type="search" name="busqueda">
-		<div id="btoBuscarf">
-			<div class = "boton" id="btoBuscar">
-				<a href="#">
-					<img src="images/magnifying47.png" alt="">
-				</a>
+		<div id = "Buscador">
+			<input type="search" name="busqueda">
+			<div id="btoBuscarf">
+				<div class = "boton" id="btoBuscar">
+					<a href="#">
+						<img src="images/magnifying47.png" alt="">
+					</a>
+				</div>
 			</div>
 		</div>
-	</div>
 
 
-	<section id = "Cuerpo">
+		<section id = "Cuerpo">
 
-    <!-- BARRITA -->
+	    <!-- BARRITA -->
 
-    <!-- ____________   PANEL IZQUIERDO   ____________ -->
-		<div id = "BLeft">
-			<ul id = "Menu">
-				<li>
-					<div class="pIzquierda" id = "perfil">
-							<img src="images/user197(2).png"/>
-						<p>Perfil</p>
-					</div>
-				</li>
+	    <!-- ____________   PANEL IZQUIERDO   ____________ -->
+			<div id = "BLeft">
+				<ul id = "Menu">
+					<li>
+						<div class="pIzquierda" id = "perfil">
+								<img src="images/user197(2).png"/>
+							<p>Perfil</p>
+						</div>
+					</li>
 
-				<li>
-					<div class="pIzquierda" id = "carrito">
-							<img src="images/marker20.png"/>
-						<p>Carrito</p>
-					</div>
-				</li>
-
-
-				<li>
-					<div class="pIzquierda"  id = "pedidos">
-							<img src="images/clipboard109(1).png"/>
-						<p>Pedidos</p>
-					</div>
-				</li>
-
-				<li>
-					<div class="pIzquierda" id = "historial">
-						<img src="images/history6(1).png"/>
-						<p>Historial</p>
-					</div>
-
-				</li>
-
-				<li>
-					<div class="pIzquierda"  id = "favoritos">
-						<img src="images/star167(1).png"/>
-						<p>Favoritos</p>
-					</div>
-
-				</li>
+					<li>
+						<div class="pIzquierda" id = "carrito">
+								<img src="images/marker20.png"/>
+							<p>Carrito</p>
+						</div>
+					</li>
 
 
-				<li>
-					<div class="pIzquierda" id = "mSalir">
-							<p>Salir</p>
-					</div>
+					<li>
+						<div class="pIzquierda"  id = "pedidos">
+								<img src="images/clipboard109(1).png"/>
+							<p>Pedidos</p>
+						</div>
+					</li>
 
-				</li>
-			</ul>
-		</div>
-
-
-
-
-		<!--____________   PANEL CENTRAL   ____________-->
-
-		<div id = "BCenter">
-			<div id = "Contenedor">
-				<!-- CAJA DE EDICION DE INFO DE USUARIO !-->
-				<div id="more-edituser" class="more">
-					<h2>Editar Perfil</h2>
-
-					<div id="img-box">
-						<img src="images/woman139 (1).png">
-
-						<div id="barra-selectora">
-							<p>Cambiar Imagen de Perfil</p>
-
-							<form enctype="multipart/form-data" action="uploader.php" method="POST">
-								<input name="uploadedfile" type="file"/>
-								<input type="submit" class = "boton" value="Subir archivo"/>
-							</form>
-
+					<li>
+						<div class="pIzquierda" id = "historial">
+							<img src="images/history6(1).png"/>
+							<p>Historial</p>
 						</div>
 
-						<div class="boton">
-							<a href="#" id="save-img">Guardar</a>
+					</li>
+
+					<li>
+						<div class="pIzquierda"  id = "favoritos">
+							<img src="images/star167(1).png"/>
+							<p>Favoritos</p>
 						</div>
-					</div>
+
+					</li>
+
+
+					<li>
+						<div class="pIzquierda" id = "mSalir">
+								<p>Salir</p>
+						</div>
+
+					</li>
+				</ul>
+			</div>
 
 
 
-					<div id="data-box">
-						<form id="formEdDatosPers" action="" method="POST" name ="nformEdDatosPers">
-				       		<ul>
-				       			<li>
-				       				<label for = "name">Nombres</label>
-									<input type="text" name="name" 	placeholder="Nombre" />
-				       			</li>
-				       			<li>
-				       				<label for = "AP">Apellido Paterno</label>
-									<input type="text" name="AP" placeholder="Apellido Paterno" />
-				       			</li>
-				       			<li>
-				       				<label for = "AM">Apellido Materno</label>
-									<input type="text" name="AM" placeholder="Apellido Materno" />
-				       			</li>
-				       			<li>
-				       				<label for = "User">Usuario</label>
-									<input type="text" name="User" placeholder="Usuario" />
-				       			</li>
-				       			<li>
-				       				<label for = "Pass">Contraseña</label>
-									<input type="password" name="Pass" placeholder="********" />
-				       			</li>
-				       			<li>
-				       				<label for = "rPass">Reingresa Contraseña</label>
-									<input type="password" name="rPass" placeholder="********" />
-				       			</li>
-				       			<li>
-				       				<label for = "Age">Edad</label>
-									<input type="text" name="Age" placeholder="Edad" />
-				       			</li>
-				       			<li>
-				       				<label for = "Email">Correo Electronico</label>
-									<input type="email" name="Email" placeholder="ejemplo@mail.com" />
-				       			</li>
-				       			<li>
-				       				<input type="submit" value="Registrarse" class="Reg" data-type="zoomin"></input>
-				       			</li>
-				       		</ul>
-		      			</form>
-					</div>
-				</div>
 
-				<!-- CAJA MOSTRAR INFORMACIÓN USUARIO  !-->
-				<div id="more-profile" class="more">
-					<div id="edImgUsuario">
-						<!-- <img src="images/woman139 (1).png" id="profile-imagp"> -->
-						<img src="images/2015-10-26 19.16.26.JPG" alt="Foto de Perfil" id ="profile-imagp">
+			<!--____________   PANEL CENTRAL   ____________-->
 
-						<h3 id="nuser">paholau_</h3>
-						<div>
-							<div id="editar-izq" class="boton">
-								<a href="#more-edituser" id="edit-profile">Editar</a>
+			<div id = "BCenter">
+				<div id = "Contenedor">
+					<!-- CAJA DE EDICION DE INFO DE USUARIO !-->
+					<div id="more-edituser" class="more">
+						<h2>Editar Perfil</h2>
+
+						<div id="img-box">
+							<img src="images/woman139 (1).png">
+
+							<div id="barra-selectora">
+								<p>Cambiar Imagen de Perfil</p>
+
+								<form enctype="multipart/form-data" action="uploader.php" method="POST">
+									<input name="uploadedfile" type="file"/>
+									<input type="submit" class = "boton" value="Subir archivo"/>
+								</form>
+
+							</div>
+
+							<div class="boton">
+								<a href="#" id="save-img">Guardar</a>
 							</div>
 						</div>
 
-					</div>
 
 
-					<div id="profile-favs" class="that-box">
-						<h3>Favoritos</h3>
-						<a href="#" class="serviceF">Servicio</a>
-					</div>
-
-					<div id="profile-sched" class="that-box">
-						<h3>Servicios Recientes</h3>
-						<a href="#" class="serviceS">Servicio Reciente</a>
-					</div>
-				</div>
-
-				<!-- CAJA MOSTRAR BUSQUEDA  !-->
-				<div id="more-search" class="more">
-					<h2>Búsqueda</h2>
-					<div class="ser-package">
-						<a href="#" class="serv-link">Servicio 1</a>
-						<p class="descrip-serv">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi voluptates dolorum consectetur nemo aliquam vel, veritatis quos. Provident ratione veniam eius unde est, nam distinctio. A eos qui tenetur similique.</p>
-					</div>
-          			<div class="ser-package">
-						<a href="#" class="serv-link">Servicio 1</a>
-						<p class="descrip-serv">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi voluptates dolorum consectetur nemo aliquam vel, veritatis quos. Provident ratione veniam eius unde est, nam distinctio. A eos qui tenetur similique.</p>
-					</div>
-				</div>
-
-
-
-		        <!-- CAJA MOSTRAR CARRITO  !-->
-		        <div id="more-carrito" class="more">
-		        	<h2>Carrito</h2>
-
-					<div class="carritoPorEmp">
-						<span>Empresa EquisDe</span>
-						<div id="descArticulo">
-							<h3>Artículo</h3>
-							<h3>Cantidad</h3>
-							<h3>Precio</h3>
+						<div id="data-box">
+							<form id="formEdDatosPers" action="" method="POST" name ="nformEdDatosPers">
+					       		<ul>
+					       			<li>
+					       				<label for = "name">Nombres</label>
+										<input type="text" name="name" 	placeholder="Nombre" />
+					       			</li>
+					       			<li>
+					       				<label for = "AP">Apellido Paterno</label>
+										<input type="text" name="AP" placeholder="Apellido Paterno" />
+					       			</li>
+					       			<li>
+					       				<label for = "AM">Apellido Materno</label>
+										<input type="text" name="AM" placeholder="Apellido Materno" />
+					       			</li>
+					       			<li>
+					       				<label for = "User">Usuario</label>
+										<input type="text" name="User" placeholder="Usuario" />
+					       			</li>
+					       			<li>
+					       				<label for = "Pass">Contraseña</label>
+										<input type="password" name="Pass" placeholder="********" />
+					       			</li>
+					       			<li>
+					       				<label for = "rPass">Reingresa Contraseña</label>
+										<input type="password" name="rPass" placeholder="********" />
+					       			</li>
+					       			<li>
+					       				<label for = "Age">Edad</label>
+										<input type="text" name="Age" placeholder="Edad" />
+					       			</li>
+					       			<li>
+					       				<label for = "Email">Correo Electronico</label>
+										<input type="email" name="Email" placeholder="ejemplo@mail.com" />
+					       			</li>
+					       			<li>
+					       				<input type="submit" value="Registrarse" class="Reg" data-type="zoomin"></input>
+					       			</li>
+					       		</ul>
+			      			</form>
 						</div>
 					</div>
 
-					<div id="cajaDeArticulos">
-						<div class="articuloCaja">
+					<!-- CAJA MOSTRAR INFORMACIÓN USUARIO  !-->
+					<div id="more-profile" class="more">
+						<div id="edImgUsuario">
+							<!-- <img src="images/woman139 (1).png" id="profile-imagp"> -->
+							<img src="images/2015-10-26 19.16.26.JPG" alt="Foto de Perfil" id ="profile-imagp">
+
+							<h3 id="nuser">paholau_</h3>
 							<div>
-								<span class="nombreArticulo">Galletas  super duper deliciosas :D</span>
-							</div>
-							<div>
-								<p><span class="cantidadArticulo">10</span> <span class="metricaArticulo">Piezas</span></p>
-							</div>
-							<div>
-								<p>$<span class="precioUnitArticulo">1.00</span></p>
+								<div id="editar-izq" class="boton">
+									<a href="#more-edituser" id="edit-profile">Editar</a>
+								</div>
 							</div>
 
+						</div>
+
+
+						<div id="profile-favs" class="that-box">
+							<h3>Favoritos</h3>
+							<a href="#" class="serviceF">Servicio</a>
+						</div>
+
+						<div id="profile-sched" class="that-box">
+							<h3>Servicios Recientes</h3>
+							<a href="#" class="serviceS">Servicio Reciente</a>
+						</div>
+					</div>
+
+					<!-- CAJA MOSTRAR BUSQUEDA  !-->
+					<div id="more-search" class="more">
+						<h2>Búsqueda</h2>
+						<div class="ser-package">
+							<a href="#" class="serv-link">Servicio 1</a>
+							<p class="descrip-serv">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi voluptates dolorum consectetur nemo aliquam vel, veritatis quos. Provident ratione veniam eius unde est, nam distinctio. A eos qui tenetur similique.</p>
+						</div>
+	          			<div class="ser-package">
+							<a href="#" class="serv-link">Servicio 1</a>
+							<p class="descrip-serv">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi voluptates dolorum consectetur nemo aliquam vel, veritatis quos. Provident ratione veniam eius unde est, nam distinctio. A eos qui tenetur similique.</p>
+						</div>
+					</div>
+
+
+
+			        <!-- CAJA MOSTRAR CARRITO  !-->
+			        <div id="more-carrito" class="more">
+			        	<h2>Carrito</h2>
+
+						<div class="carritoPorEmp">
+							<span>Empresa EquisDe</span>
+							<div id="descArticulo">
+								<h3>Artículo</h3>
+								<h3>Cantidad</h3>
+								<h3>Precio</h3>
+							</div>
+						</div>
+
+						<div id="cajaDeArticulos">
 							<div class="articuloCaja">
 								<div>
-									<span class="nombreArticulo">Bombas de muerte y destrucción</span>
+									<span class="nombreArticulo">Galletas  super duper deliciosas :D</span>
 								</div>
 								<div>
-									<p><span class="cantidadArticulo">1</span> <span class="metricaArticulo">Piezas</span></p>
+									<p><span class="cantidadArticulo">10</span> <span class="metricaArticulo">Piezas</span></p>
 								</div>
 								<div>
-									<p>$<span class="precioUnitArticulo">100.00</span></p>
+									<p>$<span class="precioUnitArticulo">1.00</span></p>
 								</div>
-						</div>
-					</div>
 
-					<div id ="detallesFinales">
-						<div id="numerosTotales">
-							<h3>Total</h3>
-							<p>$ <span id="TotalCarrito">101.00</span></p>
-						</div>
-
-						<div id="cajaBotonesCarrito">
-							<div class="boton">
-								<a href="#">Comprar</a>
-							</div>
-							<div class="boton">
-								<a href="#">Borrar</a>
-							</div>
-						</div>
-					</div>
-
-
-			</div>
-
-
-
-
-		        </div>
-
-
-
-				<!-- CAJA MOSTRAR INFORMACIÓN PEDIDOS !-->
-				<div id="more-pedidos" class="more">
-
-					<h2>Pedidos</h2>
-
-					<div class="info-display">
-
-						<div class="detallesProd">
-							<h4 class="nombre-prod">Producto 1</h4>
-							<p class="cantidad">Cantidad X</p>
-							<p class="empres">Empresa Y</p>
-						</div>
-
-						<div class="suatmm">
-							<p class="dineros">$<span>20.00</span></p>
-							<div class="boton">
-								<a href="" class="pide">Pedir</a>
+								<div class="articuloCaja">
+									<div>
+										<span class="nombreArticulo">Bombas de muerte y destrucción</span>
+									</div>
+									<div>
+										<p><span class="cantidadArticulo">1</span> <span class="metricaArticulo">Piezas</span></p>
+									</div>
+									<div>
+										<p>$<span class="precioUnitArticulo">100.00</span></p>
+									</div>
 							</div>
 						</div>
 
-					</div>
+						<div id ="detallesFinales">
+							<div id="numerosTotales">
+								<h3>Total</h3>
+								<p>$ <span id="TotalCarrito">101.00</span></p>
+							</div>
 
-         			<div class="info-display">
-						<div class="detallesProd">
-							<h4 class="nombre-prod">Producto 1</h4>
-							<p class="cantidad">Cantidad X</p>
-							<p class="empres">Empresa Y</p>
-						</div>
-
-						<div class="suatmm">
-							<p class="dineros">$<span>20.00</span></p>
-							<div class="boton">
-								<a href="" class="pide">Pedir</a>
+							<div id="cajaBotonesCarrito">
+								<div class="boton">
+									<a href="#">Comprar</a>
+								</div>
+								<div class="boton">
+									<a href="#">Borrar</a>
+								</div>
 							</div>
 						</div>
 
-					</div>
-
-				</div>
-
-
-				<!-- CAJA MOSTRAR HISTORIAS !-->
-				<div id="more-history" class="more">
-					<h2>Historial</h2>
 
 				</div>
 
 
 
-				<!-- CAJA MOSTRAR HISTORIAS !-->
-				<div id="more-favs" class="more">
-					<h2>Favoritos</h2>
-					<!--
-					<div class="ser-package-favs">
-						<a href="#" class="serv-link-favs">Servicio 1</a>
-						<p class="descrip-serv-favs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi voluptates dolorum consectetur nemo aliquam vel, veritatis quos. Provident ratione veniam eius unde est, nam distinctio. A eos qui tenetur similique.</p>
+
+			        </div>
+
+
+
+					<!-- CAJA MOSTRAR INFORMACIÓN PEDIDOS !-->
+					<div id="more-pedidos" class="more">
+
+						<h2>Pedidos</h2>
+
+						<div class="info-display">
+
+							<div class="detallesProd">
+								<h4 class="nombre-prod">Producto 1</h4>
+								<p class="cantidad">Cantidad X</p>
+								<p class="empres">Empresa Y</p>
+							</div>
+
+							<div class="suatmm">
+								<p class="dineros">$<span>20.00</span></p>
+								<div class="boton">
+									<a href="" class="pide">Pedir</a>
+								</div>
+							</div>
+
+						</div>
+
+	         			<div class="info-display">
+							<div class="detallesProd">
+								<h4 class="nombre-prod">Producto 1</h4>
+								<p class="cantidad">Cantidad X</p>
+								<p class="empres">Empresa Y</p>
+							</div>
+
+							<div class="suatmm">
+								<p class="dineros">$<span>20.00</span></p>
+								<div class="boton">
+									<a href="" class="pide">Pedir</a>
+								</div>
+							</div>
+
+						</div>
+
 					</div>
-				-->
+
+
+					<!-- CAJA MOSTRAR HISTORIAS !-->
+					<div id="more-history" class="more">
+						<h2>Historial</h2>
+
+					</div>
+
+
+
+					<!-- CAJA MOSTRAR HISTORIAS !-->
+					<div id="more-favs" class="more">
+						<h2>Favoritos</h2>
+						<!--
+						<div class="ser-package-favs">
+							<a href="#" class="serv-link-favs">Servicio 1</a>
+							<p class="descrip-serv-favs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi voluptates dolorum consectetur nemo aliquam vel, veritatis quos. Provident ratione veniam eius unde est, nam distinctio. A eos qui tenetur similique.</p>
+						</div>
+					-->
+					</div>
+
+
+					<!-- CAJA MOSTRAR MAS INFORMACIÓN DEL PRODUCTO BUSCADO!-->
+					<div id="detallesProdBus" class="more">
+
+					</div>
+
+
+
+				</div>
+			</div>
+
+			<!--Panel Central-->
+
+
+
+
+
+				<div id="CPerfUs">
+
 				</div>
 
-
-
-			</div>
-		</div>
-
-		<!--Panel Central-->
-
-
-
-
-
-			<div id="CPerfUs">
-
 			</div>
 
-		</div>
+
+			<!-- PUBLICIDAD
+
+			<div id = "BRight">
+				<p>Más publicidad... ¿Porqué?</p>
+			</div>
+			!-->
 
 
-		<!-- PUBLICIDAD
-
-		<div id = "BRight">
-			<p>Más publicidad... ¿Porqué?</p>
-		</div>
-		!-->
-
-
+		</section>
 	</section>
+
+
+
 
 
 	<!-- FOOTER  Logo Nuestro, contacto, soporte, acerca de y logo TEC   !-->

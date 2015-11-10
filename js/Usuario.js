@@ -29,6 +29,15 @@ $('#formEdDatosPers').on('submit',function(e){
 
 //Cerrar session
 
+		$('#mSalir').on('click',function(){
+			$.ajax({
+				url: "php/cerrarSesion.php",
+				success: function(respuesta){
+					$(window).attr('location',"/Publicdom");
+				}
+			});
+		});
+
 		$('#cerrarSesion').on('click',function(){
 			$.ajax({
 				url: "php/cerrarSesion.php",
@@ -92,6 +101,19 @@ $('#formEdDatosPers').on('submit',function(e){
 			e.preventDefault();
 			$("#more-edituser").slideToggle("slow");
 			$("#more-profile").slideToggle("slow");
+		});
+
+		$("#carrito").on("click",function(){
+			if ($("#more-carrito").css('display')=='block') {
+				$("#more-carrito").slideToggle("slow");
+				$(this).css('background-color','#5D5E60');
+			}else {
+				$(".more").css("display","none");
+				$(".pIzquierda").css('background-color','#5D5E60');
+				$(this).css('background-color','rgb(194, 194, 194)');
+				$("#more-carrito").slideToggle("slow");
+			}
+
 		});
 //Fin Efectos de ventanas
 //---------------------------------------------------------------------

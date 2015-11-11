@@ -272,15 +272,35 @@
 	flex-flow: column;
 	justify-content: space-between;
 	padding: 0.2em 0;
+	text-align: left;
 }
 
+#nomPS,
+#EmpresaPSBus,
+#descPSBus{
+	padding: 0.5em 0;
+}
+
+#dispPSBus{
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+
+
+
 #rdspd{
+	align-items: center;
 	display: flex;
-	flex-direction: row;
+	justify-content: space-around;
+
 }
 
 #imagenProd{
 	flex-grow: 1;
+}
+
+#imagenProd img{
+
 }
 
 #opcionesProd{

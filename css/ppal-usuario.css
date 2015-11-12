@@ -72,6 +72,12 @@
 
 }
 
+#detallesServBusqueda{
+	position: absolute;
+	z-index: 999;
+
+}
+
 /*Estilo general de recuadros del centro*/
 .more{
 	border: 1px solid #CCC;

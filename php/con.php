@@ -22,4 +22,5 @@ $varcon = $makeconsul -> fetch_assoc();
     //echo $varcon['nomUsuario'];
 
 
+
  ?>

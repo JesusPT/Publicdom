@@ -17,6 +17,7 @@ $(document).on("ready",function(){
 
 		});
 		$("#btoIni").click(function(){
+			console.log("entre");
 			if ($("#contenedor").css("display") == "none") {
 				$("#ventaIni").css("display","inline-block");
 			}
@@ -57,6 +58,8 @@ $(document).on("ready",function(){
 						}else if (respuesta == 1) {
 							//correcto
 							$('#mensaje').text("Correcto");
+							$('#ventaIniRegEx').css('display','block');
+							$("#contenedor").css("display","none");
 						}else if (respuesta == 2) {
 							//
 							$("input[name $='name']").css("border-color","red");
@@ -122,8 +125,15 @@ $(document).on("ready",function(){
 					}
 				}
 			});
-		})
+		});
 
-
+$('#FooDer').on('click',function(){
+	$.ajax({
+		url: "php/con.php",
+		success: function(respuesta){
+			console.log("se conecto");
+		}
+	});
+});
 
 });

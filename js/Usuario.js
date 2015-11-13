@@ -234,7 +234,16 @@ $("#favoritos").on("click",function(){
 
 $('#more-search,#more-favs,#more-history').on("click",".serv-link",function(e){
 		e.preventDefault();
-		console.log("holis entre");
+
+		$.ajax({
+			url: "Producto.php",
+			type: "POST",
+			data: "idProducto=productoPrueba",
+			success: function(respuesta){
+				console.log(respuesta);
+			}
+		});
+
 		$('#contenedor').css("display","block");
 		$('#detallesServBusqueda').css("display","block");
 });

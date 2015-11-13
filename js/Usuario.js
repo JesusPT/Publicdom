@@ -154,7 +154,7 @@ $.ajax({
 		}else {
 			respuesta = respuesta.split("~");
 			for (var i = 0; i < respuesta.length - 1; i++) {
-				$("#more-history").append("	<div class='ser-package-history'> <a href='#' class='serv-link-history'>"+respuesta[i]+"</a><p class='descrip-serv-history'>"+respuesta[i+1]+"</p> </div>");
+				$("#more-history").append("	<div class='ser-package-history'> <a href='#' class='link'>"+respuesta[i]+"</a><p class='descrip-serv-history'>"+respuesta[i+1]+"</p> </div>");
 				i++;
 			}
 
@@ -181,7 +181,7 @@ $("#btoBuscar").on("click",function(){
 			}else {
 				respuesta = respuesta.split("~");
 				for (var i = 0; i < respuesta.length - 1; i++) {
-					$("#more-search").append("<div class='ser-package'><a href='#' class='serv-link'>"+ respuesta[i] +"</a><p class='descrip-serv'>"+ respuesta[i+1] +"</p></div>");
+					$("#more-search").append("<div class='ser-package'><a href='#' class='link'>"+ respuesta[i] +"</a><p class='descrip-serv'>"+ respuesta[i+1] +"</p></div>");
 					i++;
 				}
 
@@ -204,8 +204,8 @@ $("#favoritos").on("click",function(){
 	}else {
 		$('.ser-package-favs').remove();
 		$(".more").css("display","none");
-		$(".pIzquierda").css('background-color','#5D5E60');
 		$(this).css('background-color','rgb(194, 194, 194)');
+		$(".pIzquierda").css('background-color','#5D5E60');
 		$("#more-favs").slideToggle("slow");
 
 		$.ajax({
@@ -218,7 +218,7 @@ $("#favoritos").on("click",function(){
 				}else {
 					respuesta = respuesta.split("~");
 					for (var i = 0; i < respuesta.length - 1; i++) {
-						$("#more-favs").append("<div class='ser-package-favs'><a href='#' class='serv-link-favs'>"+ respuesta[i] +"</a><p class='descrip-serv-favs'> "+ respuesta[i+1] +" </p></div>");
+						$("#more-favs").append("<div class='ser-package-favs'><a href='#' class='link'>"+ respuesta[i] +"</a><p class='descrip-serv-favs'> "+ respuesta[i+1] +" </p></div>");
 						i++;
 					}
 
@@ -230,6 +230,17 @@ $("#favoritos").on("click",function(){
 });
 
 //------------------------------------------------------------------------------
+//Producto / Servicio
+
+$('#more-search,#more-favs,#more-history').on("click",".link",function(e){
+		e.preventDefault();
+		console.log("holis entre");
+		$('#contenedor').css("display","block");
+		$('#detallesServBusqueda').css("display","block");
+});
+
+//---------------------------------------------------------------------rgb(255, 50, 50)---------
+
 
 		$(".pide").on("click",function(e){
 			e.preventDefault();

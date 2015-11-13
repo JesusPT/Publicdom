@@ -4,7 +4,7 @@
 /**************************
 	OCULTAR - REGISTRO
 **************************/
-#contenedor, #ventaIni{
+#contenedor, #ventaIni, #ventaIniRegEx{
 	content: " ";
 	display: none;
 	height: 100%;

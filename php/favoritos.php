@@ -4,7 +4,7 @@
   $user = $_SESSION['perfil']['user'];
 
   if (@$enlace = new mysqli("localhost","root","","publidom")) {
-    $consulta = "SELECT nomProducto,descripcion from producto pro INNER JOIN favoritos fav ON pro.idProducto = fav.idProducto and idUsuario = '".$user."'";
+    $consulta = "SELECT pro.idProducto,nomProducto,descripcion from producto pro INNER JOIN favoritos fav ON pro.idProducto = fav.idProducto and idUsuario = '".$user."'";
     if (@$respuesta = $enlace -> query($consulta)) {
       if ($respuesta -> num_rows > 0) {
         while ($filas = $respuesta -> fetch_assoc()) {

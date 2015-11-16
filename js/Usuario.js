@@ -154,8 +154,8 @@ $.ajax({
 		}else {
 			respuesta = respuesta.split("~");
 			for (var i = 0; i < respuesta.length - 1; i++) {
-				$("#more-history").append("	<div class='ser-package-history'> <a href='#' class='serv-link'>"+respuesta[i]+"</a><p class='descrip-serv-history'>"+respuesta[i+1]+"</p> </div>");
-				i++;
+				$("#more-history").append("	<div class='ser-package-history'> <a href='#' class='serv-link' name="+respuesta[i]+">"+respuesta[i+1]+"</a><p class='descrip-serv-history'>"+respuesta[i+2]+"</p> </div>");
+				i+=2;
 			}
 
 		}
@@ -181,8 +181,8 @@ $("#btoBuscar").on("click",function(){
 			}else {
 				respuesta = respuesta.split("~");
 				for (var i = 0; i < respuesta.length - 1; i++) {
-					$("#more-search").append("<div class='ser-package'><a href='#' class='serv-link'>"+ respuesta[i] +"</a><p class='descrip-serv'>"+ respuesta[i+1] +"</p></div>");
-					i++;
+					$("#more-search").append("<div class='ser-package'><a href='#' class='serv-link' name="+respuesta[i]+">"+ respuesta[i+1] +"</a><p class='descrip-serv'>"+ respuesta[i+2] +"</p></div>");
+					i+=2;
 				}
 
 			}
@@ -218,8 +218,8 @@ $("#favoritos").on("click",function(){
 				}else {
 					respuesta = respuesta.split("~");
 					for (var i = 0; i < respuesta.length - 1; i++) {
-						$("#more-favs").append("<div class='ser-package-favs'><a href='#' class='serv-link'>"+ respuesta[i] +"</a><p class='descrip-serv-favs'> "+ respuesta[i+1] +" </p></div>");
-						i++;
+						$("#more-favs").append("<div class='ser-package-favs'><a href='#' class='serv-link' name="+respuesta[i]+">"+ respuesta[i+1] +"</a><p class='descrip-serv-favs'> "+ respuesta[i+2] +" </p></div>");
+						i+=2;
 					}
 
 				}
@@ -234,13 +234,11 @@ $("#favoritos").on("click",function(){
 
 $('#more-search,#more-favs,#more-history').on("click",".serv-link",function(e){
 		e.preventDefault();
-
+		var idProducto = $(this).attr('name');
 		$.ajax({
-			url: "Producto.php",
-			type: "POST",
-			data: "idProducto=productoPrueba",
+			url: "php/Producto.php",
+			data: "idProducto="+idProducto,
 			success: function(respuesta){
-				console.log(respuesta);
 			}
 		});
 
@@ -249,7 +247,12 @@ $('#more-search,#more-favs,#more-history').on("click",".serv-link",function(e){
 });
 
 //---------------------------------------------------------------------rgb(255, 50, 50)---------
+//compraOK
 
+$('#compraOK').on('click',function(){
+	$('#emergenteCompraOK').css('display','none');
+	$('#contenedor').css('display','none');
+});
 
 		$(".pide").on("click",function(e){
 			e.preventDefault();

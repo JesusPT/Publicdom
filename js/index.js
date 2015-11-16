@@ -1,5 +1,7 @@
 $(document).on("ready",function(){
 
+pruebaDeVariable = "Hola mundo";
+
 	$.ajax({
 		url: "php/val.php",
 		success: function(respuesta){
@@ -14,6 +16,10 @@ $(document).on("ready",function(){
 			if ($("#ventaIni").css("display") == "none") {
 				$("#contenedor").css("display","inline-block");
 			}
+
+		$('#btnOkReg').on('click',function(){
+			$("#ventaIniRegEx").css("display","none");
+		});
 
 		});
 		$("#btoIni").click(function(){

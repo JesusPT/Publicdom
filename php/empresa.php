@@ -1,12 +1,12 @@
 <?php
 
-  $idPro = $_GET['idProducto'];
+  $idEmp = $_GET['idEmpresa'];
 
   if (@$enlace = new mysqli("localhost","root","","publidom")){
-    $consulta = "SELECT idProducto,nomProducto,descripcion,precioProducto,Disponibilidad,nomEmpresa,emp.idEmpresa from producto pro INNER JOIN empresa emp ON pro.idEmpresa = emp.idEmpresa and idProducto = $idPro";
+    $consulta = "SELECT nomEmpresa,domEmpresa,telEmpresa,titular from empresa where idEmpresa = $idEmp";
     if (@$respuesta = $enlace -> query($consulta)) {
       if ($respuesta -> num_rows > 0) {
-        if ($filas = $respuesta -> fetch_assoc()) {
+        while ($filas = $respuesta -> fetch_assoc()) {
 
           foreach ($filas as $key) {
             echo $key;

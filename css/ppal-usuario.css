@@ -245,6 +245,7 @@
 
 .carritoTitulos div a{
 	font-size: 18px;
+	text-decoration: none;
 }
 
 .descArticulo{
@@ -260,17 +261,6 @@
 
 .articuloCaja{
 	display: flex;
-}
-
-
-
-
-
-
-
-
-.detallesFinales{
-
 }
 
 .numerosTotales,
@@ -421,39 +411,37 @@
 	margin-bottom: 1em;
 }
 
-.info-display{
-	border: 1px solid #CCC;
-	border-radius: 5px;
-	box-shadow: 1px 1px 1px #CCC;
+#contenedorPedido{
+	display: inline;
+	position: relative;
+	margin: 8em;
+}
+
+.pedidoEmpresa{
 	display: flex;
-	padding: 1em;
-	margin: 1em;
-	/*position: relative;*/
+	flex-flow: column;
 }
 
-.detallesProd{
-	/*display: flex;
-	align-items: center;*/
-}
-
-.detallesProd h4{
-	text-align: left;
-}
-
-.detallesProd h4, .detallesProd p{
-	padding: 0.2em 0;
-	text-align: left;
+.pedidoTitulos div a{
+	font-size: 18px;
+	text-decoration: none;
 }
 
 
-.suatmm{
-	align-items: center;
+
+.cajaDePedidos{
 	display: flex;
-	justify-content: space-around;
+	flex-flow: column;
 }
 
-.suatmm p{
-	padding: 0 1em;
+.pedidosCaja{
+	display: flex;
+}
+
+.numerosTotales,
+.cajaBotonesPedido{
+	text-align: right;
+	margin: 2em 2em 0 0;
 }
 
 

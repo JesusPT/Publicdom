@@ -99,9 +99,7 @@
 
 }
 
-#detallesServBusqueda{
-	display: block;
-}
+
 
 #generalesInfo{
 	display: inline;
@@ -123,12 +121,38 @@
 #rdspd{
 	display: flex;
 	flex-flow: row;
+	padding: 0.5em 0;
 }
 
 #imagenProd{
 	display: flex;
-	justify-content: center;
+	flex-grow: 1;
 }
+
+#opcionesProd{
+
+}
+
+#opcionesProd p{
+	font-weight: bold;
+}
+
+
+
+
+
+#detallesEmprBusqueda{
+	display: block;
+}
+
+#contEmp{
+	display: flex;
+	flex-flow: row;
+}
+
+
+
+
 
 
 

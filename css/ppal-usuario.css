@@ -142,11 +142,6 @@
 	flex-flow: row;
 }
 
-
-#emergenteCompraOK{
-	display: block;
-}
-
 #avisoEmerg{
 	display: flex;
 }

@@ -154,6 +154,27 @@ $.ajax({
 		}else {
 			respuesta = respuesta.split("~");
 			for (var i = 0; i < respuesta.length - 1; i++) {
+				$("#more-history").append("	<div class='ser-package-history'> <a href='#' class='prod-link' name="+respuesta[i]+">"+respuesta[i+1]+"</a><p class='descrip-serv-history'>"+respuesta[i+2]+"</p> </div>");
+				i+=2;
+			}
+
+		}
+	}
+});
+//------------------------------------------------------------------------------
+//historial Servicios
+
+$.ajax({
+	url: "php/historialServ.php",
+	success: function(respuesta){
+
+		if (respuesta == 0) {
+			console.log("error al poner el nombre");
+		}else if(respuesta == 1){
+
+		}else {
+			respuesta = respuesta.split("~");
+			for (var i = 0; i < respuesta.length - 1; i++) {
 				$("#more-history").append("	<div class='ser-package-history'> <a href='#' class='serv-link' name="+respuesta[i]+">"+respuesta[i+1]+"</a><p class='descrip-serv-history'>"+respuesta[i+2]+"</p> </div>");
 				i+=2;
 			}
@@ -161,6 +182,7 @@ $.ajax({
 		}
 	}
 });
+
 
 //------------------------------------------------------------------------------
 //Busqueda
@@ -181,7 +203,7 @@ $("#btoBuscar").on("click",function(){
 			}else {
 				respuesta = respuesta.split("~");
 				for (var i = 0; i < respuesta.length - 1; i++) {
-					$("#more-search").append("<div class='ser-package'><a href='#' class='serv-link' name="+respuesta[i]+">"+ respuesta[i+1] +"</a><p class='descrip-serv'>"+ respuesta[i+2] +"</p></div>");
+					$("#more-search").append("<div class='ser-package'><a href='#' class='prod-link' name="+respuesta[i]+">"+ respuesta[i+1] +"</a><p class='descrip-serv'>"+ respuesta[i+2] +"</p></div>");
 					i+=2;
 				}
 
@@ -218,7 +240,7 @@ $("#favoritos").on("click",function(){
 				}else {
 					respuesta = respuesta.split("~");
 					for (var i = 0; i < respuesta.length - 1; i++) {
-						$("#more-favs").append("<div class='ser-package-favs'><a href='#' class='serv-link' name="+respuesta[i]+">"+ respuesta[i+1] +"</a><p class='descrip-serv-favs'> "+ respuesta[i+2] +" </p></div>");
+						$("#more-favs").append("<div class='ser-package-favs'><a href='#' class='prod-link' name="+respuesta[i]+">"+ respuesta[i+1] +"</a><p class='descrip-serv-favs'> "+ respuesta[i+2] +" </p></div>");
 						i+=2;
 					}
 
@@ -232,19 +254,84 @@ $("#favoritos").on("click",function(){
 //------------------------------------------------------------------------------
 //Producto / Servicio
 
-$('#more-search,#more-favs,#more-history').on("click",".serv-link",function(e){
+$('#more-search,#more-favs,#more-history').on("click",".prod-link",function(e){
 		e.preventDefault();
 		var idProducto = $(this).attr('name');
 		$.ajax({
-			url: "php/Producto.php",
+			url: "php/producto.php",
 			data: "idProducto="+idProducto,
 			success: function(respuesta){
+				if (respuesta== 0) {
+
+				}else{
+						respuesta = respuesta.split("~");
+						$('#nomPS').attr('name',respuesta[0]);
+						$('#nomPS').text(respuesta[1]);
+						$('#descPSBus').text(respuesta[2]);
+						$('#precioProdDet').text(respuesta[3]);
+						$('#dispPSBus').text(respuesta[4]);
+						$('#perEmpBusq').text(respuesta[5]);
+						$('#perEmpBusq').attr('name',respuesta[6]);
+
+
+				}
 			}
 		});
 
 		$('#contenedor').css("display","block");
 		$('#detallesServBusqueda').css("display","block");
 });
+//------------------------------------------------------------------------------
+//Producto / Servicio
+
+$('#more-search,#more-favs,#more-history').on("click",".serv-link",function(e){
+		e.preventDefault();
+		var idServicio = $(this).attr('name');
+		$.ajax({
+			url: "php/servicio.php",
+			data: "idServicio="+idServicio,
+			success: function(respuesta){
+				if (respuesta== 0) {
+
+				}else{
+						respuesta = respuesta.split("~");
+						$('#nomPS').attr('name',respuesta[0]);
+						$('#nomPS').text(respuesta[1]);
+						$('#descPSBus').text(respuesta[2]);
+						$('#precioProdDet').text(respuesta[3]);
+						$('#dispPSBus').text(respuesta[4]);
+						$('#perEmpBusq').text(respuesta[5]);
+						$('#perEmpBusq').attr('name',respuesta[6]);
+
+
+				}
+			}
+		});
+
+		$('#contenedor').css("display","block");
+		$('#detallesServBusqueda').css("display","block");
+});
+//------------------------------------------------------------------------------
+//Añadir Producto/Servicio
+
+$('#agregarPS').on('click',function(e){
+
+	var idEmpresa = $('#perEmpBusq').attr('name');
+	var idProducto = $('#nomPS').attr('name');
+
+	$.ajax({
+		url: "php/agregarPS.php",
+		data: "idEmpresa="+idEmpresa+"&idProducto="+idProducto,
+		success: function(respuesta){
+			if (respuesta== 0) {
+
+			}else{
+
+			}
+		}
+	});
+});
+
 
 //---------------------------------------------------------------------rgb(255, 50, 50)---------
 //compraOK
@@ -258,5 +345,47 @@ $('#compraOK').on('click',function(){
 			e.preventDefault();
 			$($($(this).parent()).parent()).parent().remove();
 		})
+
+//------------------------------------------------------------------------------
+//Detalles empresa
+
+		$('#perEmpBusq').on('click',function(e){
+			e.preventDefault();
+			var idEmpresa = $(this).attr('name');
+			$.ajax({
+				url: "php/empresa.php",
+				data: "idEmpresa="+idEmpresa,
+				success: function(respuesta){
+					if (respuesta== 0) {
+
+					}else{
+							respuesta = respuesta.split("~");
+							$('#nomEmpresaDetalles').text(respuesta[0]);
+							$('.dirEmpBus').text(respuesta[1]);
+							$('.telEmpBus').text(respuesta[2]);
+							$('.titularEmpBus').text(respuesta[3]);
+
+					}
+				}
+			});
+
+			$('#detallesServBusqueda').css("display","none");
+			$('#contenedor').css("display","block");
+			$('#detallesEmprBusqueda').css("display","block");
+		});
+
+//Cerrar emergentes-------------------------------------------------------------
+
+$('#cerrarDetallesServBusqueda').on('click',function(){
+	$('#contenedor').css("display","none");
+	$('#detallesServBusqueda').css("display","none");
+});
+
+
+$('#cerrarDetallesEmprBusqueda').on('click',function(){
+	$('#contenedor').css("display","none");
+	$('#detallesEmprBusqueda').css("display","none");
+});
+//------------------------------------------------------------------------------
 
 });

@@ -7,7 +7,7 @@
   if($clave!=""){
 
     if (@$enlace = new mysqli("localhost","root","","publidom")) {
-      $consulta = "SELECT idProducto,nomProducto,descripcion from producto where nomProducto like '%".$clave."%'";
+      $consulta = "SELECT idProducto,nomProducto,descripcion from producto where nomProducto like '%".$clave."%' OR  descripcion like '%".$clave."%'";
       if (@$respuesta = $enlace -> query($consulta)) {
         if ($respuesta -> num_rows > 0) {
           while ($filas = $respuesta -> fetch_assoc()) {

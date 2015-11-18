@@ -129,12 +129,15 @@
 	flex-grow: 1;
 }
 
-#opcionesProd{
-
+#detallesServBusqueda{
+	display: block;
 }
 
 #opcionesProd p{
 	font-weight: bold;
+}
+#imgStar{
+	width: 14px;
 }
 
 #contEmp{

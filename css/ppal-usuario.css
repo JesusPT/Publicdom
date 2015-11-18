@@ -137,21 +137,23 @@
 	font-weight: bold;
 }
 
-
-
-
-
-#detallesEmprBusqueda{
-	display: block;
-}
-
 #contEmp{
 	display: flex;
 	flex-flow: row;
 }
 
 
+#emergenteCompraOK{
+	display: block;
+}
 
+#avisoEmerg{
+	display: flex;
+}
+
+#avisoEmerg p{
+	padding-bottom: 2em;
+}
 
 
 

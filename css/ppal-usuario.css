@@ -72,11 +72,15 @@
 
 }
 
+
+
+/* Ventanas emergentes - Estilos :D */
+
 #detallesServBusqueda,
 #detallesEmprBusqueda,
 #emergenteCompraOK{
 	content: " ";
-	display: block;
+	display: none;
 	height: 100%;
 	width: 100%;
 	position: fixed;
@@ -95,12 +99,46 @@
 
 }
 
+#detallesServBusqueda{
+	display: block;
+}
+
+#generalesInfo{
+	display: inline;
+}
+
+#generalesInfo p{
+	padding: 0.3em 0 0 0;
+}
+
+#generalesInfo a{
+	font-size: 16px;
+	text-decoration: none;
+}
+
+#dispPSBus{
+	font-weight: bold;
+}
+
+#rdspd{
+	display: flex;
+	flex-flow: row;
+}
+
+#imagenProd{
+	display: flex;
+	justify-content: center;
+}
 
 
 
 
 
-/*Estilo general de recuadros del centro*/
+
+
+
+/*Estilo general de recuadros del centro
+y VEntanas Emergentes*/
 .more{
 	border: 1px solid #CCC;
 	border-radius: 5px;
@@ -346,45 +384,7 @@
 	justify-content: space-between;
 }
 
-#generalesInfo{
-	display: flex;
-	flex-flow: column;
-	justify-content: space-between;
-	padding: 0.2em 0;
-	text-align: left;
-}
 
-#nomPS,
-#EmpresaPSBus,
-#descPSBus{
-	padding: 0.5em 0;
-}
-
-#dispPSBus{
-	font-weight: bold;
-	margin-bottom: 1em;
-}
-
-
-
-#rdspd{
-	align-items: center;
-	display: flex;
-	justify-content: space-around;
-
-}
-
-#imagenProd{
-	flex-grow: 1;
-}
-
-#imagenProd img{
-
-}
-
-#opcionesProd{
-	flex-grow: 1;
-}
 
 
 

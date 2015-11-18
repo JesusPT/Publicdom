@@ -238,6 +238,7 @@
 }
 
 .carritoEmpresa{
+	border: 1px solid black;
 	display: flex;
 	flex-flow: column;
 }
@@ -259,12 +260,23 @@
 
 .articuloCaja{
 	display: flex;
-	flex-flow: row;
-	justify-content: space-between;
 }
 
-.articuloCaja div{
-	flex-grow: 2;
+
+
+
+
+
+
+
+.detallesFinales{
+
+}
+
+.numerosTotales,
+.cajaBotonesCarrito{
+	text-align: right;
+	margin: 2em 2em 0 0;
 }
 
 

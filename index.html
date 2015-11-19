@@ -43,51 +43,114 @@
 		<div id = "contenedor">
 			<div class = "mostrar" id ="zoomin">
 				<img src="images/delete85.png" class="close">
-			    <h2>Registro</h2>
-				<form id = "formRegistro" action="" method="POST" name="nformRegistro">
-		       		<ul>
-		       			<li>
-		       				<label>Nombres</label>
-							<input type="text" name="name" 	placeholder="Nombre" />
-		       			</li>
-		       			<li>
-		       				<label>Apellido Paterno</label>
-							<input type="text" name="AP" placeholder="Apellido Paterno" />
-		       			</li>
-		       			<li>
-		       				<label>Apellido Materno</label>
-							<input type="text" name="AM" placeholder="Apellido Materno" />
-		       			</li>
-		       			<li>
-		       				<label>Usuario</label>
-							<input type="text" name="User" placeholder="Usuario" />
-		       			</li>
-		       			<li>
-		       				<label>Contraseña</label>
-							<input type="password" name="Pass" placeholder="********" />
-		       			</li>
-		       			<li>
-		       				<label>Reingresa Contraseña</label>
+
+				<div id="escojeRegistro">
+					<div class="boton"><a href="#">Usuario</a></div>
+					<div class="boton"><a href="#">Empresa</a></div>
+				</div>
+
+				<div id="regRapidoUser">
+					<h2>Registro de Usuario</h2>
+					<form id = "formRegistro" action="" method="POST" name="nformRegistro">
+			    		<ul>
+			    			<li>
+			    				<label>Nombres</label>
+								<input type="text" name="name" 	placeholder="Nombre" />
+			    			</li>
+							<li>
+			    				<label>Apellido Paterno</label>
+								<input type="text" name="AP" placeholder="Apellido Paterno" />
+			    			</li>
+			    			<li>
+			    				<label>Apellido Materno</label>
+								<input type="text" name="AM" placeholder="Apellido Materno" />
+			    			</li>
+			    			<li>
+								<label>Usuario</label>
+								<input type="text" name="User" placeholder="Usuario" />
+			    			</li>
+			    			<li>
+			    				<label>Contraseña</label>
+								<input type="password" name="Pass" placeholder="********" />
+			    			</li>
+			    			<li>
+			    				<label>Reingresa Contraseña</label>
+								<input type="password" name="rPass" placeholder="********" />
+			    			</li>
+			    			<li>
+			    				<label>Edad</label>
+								<input type="text" name="Age" placeholder="Edad" />
+			    			</li>
+			    			<li>
+			    				<label>Correo Electró nico</label>
+								<input type="email" name="Email" placeholder="ejemplo@mail.com" />
+			    			</li>
+									<li>
+										<span id="mensaje"></span>
+									</li>
+			    			<li>
+			    				<input type="submit" value="Registrarse" class="Reg" data-type="zoomin"></input>
+			    			</li>
+			    		</ul>
+			    	</form>
+				</div>
+			</div>
+
+
+			<div id="regRapidoEmpr">
+				<h2>Registro de Empresa</h2>
+				<form id = "formRegistroEmp" action="" method="POST" name="nformRegistroEmp">
+					<ul>
+						<li>
+							<label>Nombre</label>
+							<input type="text" name="nombreEmp" 	placeholder="Nombre de la Empresa" />
+						</li>
+						<li>
+							<label>Giro</label>
+							<input type="text" name="giroEmp" placeholder="Giro de la Empresa" />
+						</li>
+						<li>
+							<label>Teléfono</label>
+							<input type="text" name="telEmp" placeholder="00-0-0000" />
+						</li>
+						<li>
+							<label>Dirección</label>
+							<input type="text" name="direccionEmpr" placeholder="Calle #00" />
+						</li>
+						<li>
+							<label>Titular</label>
+							<input type="password" name="titularEmp" placeholder="Nombre" />
+						</li>
+						<li>
+							<label>Usuario</label>
+							<input type="text" name="usuario" placeholder="Usuario" />
+						</li>
+						<li>
+							<label>Contraseña</label>
 							<input type="password" name="rPass" placeholder="********" />
-		       			</li>
-		       			<li>
-		       				<label>Edad</label>
-							<input type="text" name="Age" placeholder="Edad" />
-		       			</li>
-		       			<li>
-		       				<label>Correo Electró nico</label>
+						</li>
+						<li>
+							<label>Reingresa Contraseña</label>
+							<input type="password" name="rPass" placeholder="********" />
+						</li>
+						<li>
+							<label>Correo Electró nico</label>
 							<input type="email" name="Email" placeholder="ejemplo@mail.com" />
-		       			</li>
+						</li>
 								<li>
 									<span id="mensaje"></span>
 								</li>
-		       			<li>
-		       				<input type="submit" value="Registrarse" class="Reg" data-type="zoomin"></input>
-		       			</li>
-		       		</ul>
-		      	</form>
+						<li>
+							<input type="submit" value="Registrarse" class="Reg" data-type="zoomin"></input>
+						</li>
+					</ul>
+				</form>
 			</div>
 		</div>
+
+
+
+	<!-- </div> -->
 
 		<div id = "ventaIniRegEx">
 			<div class = "mostrar" id ="zoomin">

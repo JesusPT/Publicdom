@@ -63,6 +63,9 @@ centerEmpresa
     Se encargaraá de visualizar todos los extendidos del menú
     del lado izquierdo.*/
 
+#moreProductos{
+	display: block;
+}
 
 #centerEmpresa{
 	display: inline-block;

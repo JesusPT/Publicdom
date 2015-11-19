@@ -208,6 +208,59 @@
 					Dicha empresa tendrá la posibilidad de agregar o eliminar
 					dicho pedido dependiento de sus posibilidades. -->
 				<div id="moreProductos" class="more">
+					<h2>Productos</h2>
+
+					<div id="contProductos">
+						<div class="prodInsertado">
+							<div class="editarProd">
+								<div class="boton">
+									<a href="#">Editar</a>
+								</div>
+							</div>
+
+							<div class="detaProd">
+								<div>
+									<h3><span class ="nomProd">Agregar Servicio/Producto</span></h3>
+								</div>
+
+								<div id="formAgrProd">
+									<form id = "formAgrProd" action="" method="POST" name="nformAgrProd">
+							    		<ul>
+							    			<li>
+							    				<label>Nombre del Servicio/Producto</label>
+												<input type="text" name="nameProd" 	placeholder="Nombre" />
+							    			</li>
+											<li>
+							    				<label>Descripción</label>
+												<input class ="labelDescProd" type="text" name="descProd" placeholder="Descripción" />
+							    			</li>
+							    			<li>
+							    				<label>Disponibilidad</label>
+												<select name="disponProd">
+													<option>Disponibilidad</option>
+													<option>Disponible</option>
+													<option>No dispinible</option>
+												</select>
+							    			</li>
+							    			<li>
+												<label>Precio</label>
+												<input type="text" name="precioProd" placeholder="$0.00" />
+							    			</li>
+							    			<li>
+												<span id="mensaje"></span>
+											</li>
+							    			<li>
+							    				<input type="submit" value="Agregar" class="boton" data-type="zoomin"></input>
+							    			</li>
+							    		</ul>
+							    	</form>
+								</div>
+
+
+
+							</div>
+						</div>
+					</div>
 				</div>
 
 

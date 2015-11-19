@@ -229,7 +229,7 @@ $("#favoritos").on("click",function(){
 		$(this).css('background-color','rgb(194, 194, 194)');
 		$(".pIzquierda").css('background-color','#5D5E60');
 		$("#more-favs").slideToggle("slow");
-
+		//favoritos Producto
 		$.ajax({
 			url: "php/favoritos.php",
 			success: function(respuesta){
@@ -247,12 +247,31 @@ $("#favoritos").on("click",function(){
 				}
 			}
 		});
+
+		//favoritos servicio
+		$.ajax({
+			url: "php/favoritosServ.php",
+			success: function(respuesta){
+				if (respuesta == 0) {
+					console.log("error al poner el nombre");
+				}else if(respuesta == 1){
+
+				}else {
+					respuesta = respuesta.split("~");
+					for (var i = 0; i < respuesta.length - 1; i++) {
+						$("#more-favs").append("<div class='ser-package-favs'><a href='#' class='serv-link' name="+respuesta[i]+">"+ respuesta[i+1] +"</a><p class='descrip-serv-favs'> "+ respuesta[i+2] +" </p></div>");
+						i+=2;
+					}
+
+				}
+			}
+		});
 	}
 
 });
 
 //------------------------------------------------------------------------------
-//Producto / Servicio
+//Producto
 
 $('#more-search,#more-favs,#more-history').on("click",".prod-link",function(e){
 		e.preventDefault();
@@ -282,7 +301,7 @@ $('#more-search,#more-favs,#more-history').on("click",".prod-link",function(e){
 		$('#detallesServBusqueda').css("display","block");
 });
 //------------------------------------------------------------------------------
-//Producto / Servicio
+//Servicio
 
 $('#more-search,#more-favs,#more-history').on("click",".serv-link",function(e){
 		e.preventDefault();

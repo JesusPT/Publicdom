@@ -1,12 +1,13 @@
 <?php
 
-  $idServ = $_GET['idServicio'];
+  session_start();
+  $user = $_SESSION['perfil']['user'];
 
   if (@$enlace = new mysqli("localhost","root","","publidom")){
-    $consulta = "SELECT idServicio,nomServicio,descripcion,Disponible,nomEmpresa,emp.idEmpresa from servicio serv INNER JOIN empresa emp ON serv.idEmpresa = emp.idEmpresa and idServicio = $idServ";
+    $consulta = "SELECT serv.idServicio,nomServicio,descripcion from servicio serv INNER JOIN favoritos fav ON serv.idServicio = fav.idServicio and idUsuario = '".$user."'";
     if (@$respuesta = $enlace -> query($consulta)) {
       if ($respuesta -> num_rows > 0) {
-        if ($filas = $respuesta -> fetch_assoc()) {
+        while ($filas = $respuesta -> fetch_assoc()) {
 
           foreach ($filas as $key) {
             echo $key;

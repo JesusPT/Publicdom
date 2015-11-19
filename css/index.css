@@ -4,7 +4,9 @@
 /**************************
 	OCULTAR - REGISTRO
 **************************/
-#contenedor, #ventaIni, #ventaIniRegEx{
+#contenedor,
+#ventaIni,
+#ventaIniRegEx{
 	content: " ";
 	display: none;
 	height: 100%;
@@ -25,12 +27,12 @@
 
 .close{
 	margin: 1em auto;
-	display: block;
-	position: relative;
-	left: 14.5em;
+	display:flex;
+	position: fixed;
+	/*left: 14.5em;
 	top:-20px;
 	padding: 5px;
-	border-radius: 3px;
+	border-radius: 3px;*/
 	-webkit-transition: 0.2s linear;
 	-moz-transition: 0.2s linear;
 	-ms-transition: 0.2s linear;
@@ -66,19 +68,22 @@
 
 /*ESTILOS DEL FORMULARIO DE EMPRESA*/
 
-#formRegistro, #formInicioSesion{
+#formRegistro,
+#formInicioSesion{
 	position: relative;
 	margin: 2em;
 }
 
-#formRegistro input, #formInicioSesion input{
+#formRegistro input,
+#formInicioSesion input{
 	border: 1px solid #AEADB3;
 	border-radius: 3px;
 	left: 25px;
 	padding: 5px;
 }
 
-#formRegistro label, #formInicioSesion label{
+#formRegistro label,
+#formInicioSesion label{
 	width: 30%;
 	margin-top: 1px;
 	display: inline-block;
@@ -115,10 +120,23 @@
 
 
 
+/*#formRegistro ul{
+	display: flex;
+	flex-flow: column;
+}
 
+#formRegistro li{
+	display: flex;
+	padding: 0.5em 0;
+}
 
-
-
+#formRegistro label,
+#formRegistro input{
+	flex-flow: row;
+	float: left;
+	text-align: left;
+	justify-content: flex-start;
+}*/
 
 
 

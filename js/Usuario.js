@@ -108,23 +108,45 @@ $('#formEdDatosPers').on('submit',function(e){
 				$("#more-carrito").slideToggle("slow");
 				$(this).css('background-color','#5D5E60');
 			}else {
-				$('#more-carrito h2').remove();
-				$('.carritoPorEmp').remove();
 				//carritos
+				$('.contenedorCarrito').remove();
 				$.ajax({
 					url: "php/carrito.php",
 					success: function(respuesta){
 						if(respuesta == 0){
 
 						}else{
-							$('.contenedorCarrito').remove();
+
 							respuesta = respuesta.split('~');
 							var carrito = 0;
 							for (var i = 0; i < respuesta.length-1; i+=6) {
 
 								if (carrito != respuesta[i]) {
 									carrito = respuesta[i];
-									$('#more-carrito').append("<div class='contenedorCarrito'> <div class='caritoEmpresa'> <div class='carritoTitulos'> <div> <a class ='EmpresaPSBus' href='#'>"+respuesta[i+1]+"</a> </div> <div class ='descArticulo'> <h3>Artículo</h3> <h3>Cantidad</h3> <h3>Precio</h3> </div> </div> <div class='cajaDeArticulos"+respuesta[i]+"'> </div> <div class ='detallesFinales'> <div class='numerosTotales'> <h3>Total</h3> <p>$ <span class='TotalCarrito'>"+respuesta[i+5]+"</span></p> </div> <div class='cajaBotonesCarrito'> <div class='boton'> <a class ='btnComprarCarrito' href='#'>Comprar</a> </div> <div class='boton'> <a class = 'btnBorrarCarrito' href='#'>Borrar</a> </div> </div> </div> </div> </div>");
+									$('#more-carrito').append("<div class='contenedorCarrito'> <div class='caritoEmpresa'> <div class='carritoTitulos'> <div> <a class ='EmpresaPSBus' href='#'>"+respuesta[i+1]+"</a> </div> <div class ='descArticulo'> <h3>Artículo</h3> <h3>Cantidad</h3> <h3>Precio</h3> </div> </div> <div class='cajaDeArticulos"+respuesta[i]+"'> </div> <div class ='detallesFinales'> <div class='numerosTotales'> <h3>Total</h3> <p>$ <span class='TotalCarrito'>"+respuesta[i+5]+"</span></p> </div> <div class='cajaBotonesCarrito'> <div class='boton'> <a class ='btnComprarCarrito' name="+respuesta[i]+" href='#'>Comprar</a> </div> <div class='boton'> <a class = 'btnBorrarCarrito' name="+respuesta[i]+" href='#'>Borrar</a> </div> </div> </div> </div> </div>");
+								}
+								//for (var j = i+1; j < i+5; j++) {
+									$(".cajaDeArticulos"+respuesta[i]).append("<div class='articuloCaja'> <div> <span class='nombreArticulo'>"+respuesta[i+2]+"</span> </div> <div> <p><span class='cantidadArticulo'>"+respuesta[i+3]+"</span> <span class='metricaArticulo'>Piezas</span></p> </div> <div> <p>$<span class='precioUnitArticulo'>"+respuesta[i+4]+"</span></p> </div></div>");
+								//}
+							}
+						}
+					}
+				});
+
+				$.ajax({
+					url: "php/carritoServ.php",
+					success: function(respuesta){
+						if(respuesta == 0){
+
+						}else{
+
+							respuesta = respuesta.split('~');
+							var carrito = 0;
+							for (var i = 0; i < respuesta.length-1; i+=6) {
+
+								if (carrito != respuesta[i]) {
+									carrito = respuesta[i];
+									//$('#more-carrito').append("<div class='contenedorCarrito'> <div class='caritoEmpresa'> <div class='carritoTitulos'> <div> <a class ='EmpresaPSBus' href='#'>"+respuesta[i+1]+"</a> </div> <div class ='descArticulo'> <h3>Artículo</h3> <h3>Cantidad</h3> <h3>Precio</h3> </div> </div> <div class='cajaDeArticulos"+respuesta[i]+"'> </div> <div class ='detallesFinales'> <div class='numerosTotales'> <h3>Total</h3> <p>$ <span class='TotalCarrito'>"+respuesta[i+5]+"</span></p> </div> <div class='cajaBotonesCarrito'> <div class='boton'> <a class ='btnComprarCarritoServ' name="+respuesta[i]+" href='#'>Comprar</a> </div> <div class='boton'> <a class = 'btnBorrarCarritoServ' name="+respuesta[i]+" href='#'>Borrar</a> </div> </div> </div> </div> </div>");
 								}
 								//for (var j = i+1; j < i+5; j++) {
 									$(".cajaDeArticulos"+respuesta[i]).append("<div class='articuloCaja'> <div> <span class='nombreArticulo'>"+respuesta[i+2]+"</span> </div> <div> <p><span class='cantidadArticulo'>"+respuesta[i+3]+"</span> <span class='metricaArticulo'>Piezas</span></p> </div> <div> <p>$<span class='precioUnitArticulo'>"+respuesta[i+4]+"</span></p> </div></div>");
@@ -441,6 +463,28 @@ $('#compraOK').on('click',function(){
 			$('#contenedor').css("display","block");
 			$('#detallesEmprBusqueda').css("display","block");
 		});
+//------------------------------------------------------------------------------
+//Comprar Carrito
+
+$('#more-carrito').on('click','.btnComprarCarrito',function(e){
+	e.preventDefault();
+	var idCar = $(this).attr('name');
+	console.log(idCar);
+	$.ajax({
+		url: "php/pedidos.php",
+		data: "idCarrito="+idCar,
+		success: function(respuesta){
+			if (respuesta == 1) {
+
+			}else{
+
+			}
+		}
+	});
+
+});
+
+
 
 //Cerrar emergentes-------------------------------------------------------------
 

@@ -63,10 +63,6 @@ centerEmpresa
     Se encargaraá de visualizar todos los extendidos del menú
     del lado izquierdo.*/
 
-#moreProductos{
-	display: block;
-}
-
 #centerEmpresa{
 	display: inline-block;
 	left: 8px;
@@ -142,6 +138,50 @@ centerEmpresa
 #morePedidos{
 	display: none;
 }
+
+
+
+
+
+#moreProductos{
+	display: block;
+
+}
+
+.editarProd{
+	display: inline;
+	float: right;
+}
+
+#formAgrProd{
+
+}
+
+#formAgrProd ul{
+	list-style: none;
+}
+
+#formAgrProd li{
+	padding: 0.3em 0;
+}
+
+#formAgrProd input{
+	border: 1px solid #AEADB3;
+	border-radius: 5px;
+	height: 1.5em;
+	padding: 0 0.2em;
+}
+
+.elUltimo{
+	height: 8em;
+}
+
+
+
+
+
+
+
 
 #img-box{
 	border: 1px solid #CCC;

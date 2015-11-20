@@ -1,5 +1,5 @@
 $(document).on("ready",function(){
-
+var ps;
 //Validar sesion
 $.ajax({
 	url: "php/val.php",
@@ -190,6 +190,7 @@ $.ajax({
 $("#btoBuscar").on("click",function(){
 	var clave = $("input[name$='busqueda']").val();
 	$('.ser-package').remove();
+
 	$.ajax({
 		url: "php/busqueda.php",
 		type: "POST",
@@ -210,6 +211,28 @@ $("#btoBuscar").on("click",function(){
 			}
 		}
 	});
+	//Servicios
+	$.ajax({
+		url: "php/busquedaServ.php",
+		type: "POST",
+		data: "busqueda="+clave,
+		success: function(respuesta){
+
+			if (respuesta == 0) {
+				console.log("error al poner el nombre");
+			}else if(respuesta == 1){
+
+			}else {
+				respuesta = respuesta.split("~");
+				for (var i = 0; i < respuesta.length - 1; i++) {
+					$("#more-search").append("<div class='ser-package'><a href='#' class='serv-link' name="+respuesta[i]+">"+ respuesta[i+1] +"</a><p class='descrip-serv'>"+ respuesta[i+2] +"</p></div>");
+					i+=2;
+				}
+
+			}
+		}
+	});
+
 	$(".more").css("display","none");
 	$("#more-search").slideToggle("slow");
 });
@@ -275,6 +298,7 @@ $("#favoritos").on("click",function(){
 
 $('#more-search,#more-favs,#more-history').on("click",".prod-link",function(e){
 		e.preventDefault();
+		ps = 0;
 		var idProducto = $(this).attr('name');
 		$.ajax({
 			url: "php/producto.php",
@@ -305,6 +329,7 @@ $('#more-search,#more-favs,#more-history').on("click",".prod-link",function(e){
 
 $('#more-search,#more-favs,#more-history').on("click",".serv-link",function(e){
 		e.preventDefault();
+		ps = 1;
 		var idServicio = $(this).attr('name');
 		$.ajax({
 			url: "php/servicio.php",
@@ -317,10 +342,9 @@ $('#more-search,#more-favs,#more-history').on("click",".serv-link",function(e){
 						$('#nomPS').attr('name',respuesta[0]);
 						$('#nomPS').text(respuesta[1]);
 						$('#descPSBus').text(respuesta[2]);
-						$('#precioProdDet').text(respuesta[3]);
-						$('#dispPSBus').text(respuesta[4]);
-						$('#perEmpBusq').text(respuesta[5]);
-						$('#perEmpBusq').attr('name',respuesta[6]);
+						$('#dispPSBus').text(respuesta[3]);
+						$('#perEmpBusq').text(respuesta[4]);
+						$('#perEmpBusq').attr('name',respuesta[5]);
 
 
 				}
@@ -336,11 +360,10 @@ $('#more-search,#more-favs,#more-history').on("click",".serv-link",function(e){
 $('#agregarPS').on('click',function(e){
 
 	var idEmpresa = $('#perEmpBusq').attr('name');
-	var idProducto = $('#nomPS').attr('name');
-
+	var idPS = $('#nomPS').attr('name');
 	$.ajax({
 		url: "php/agregarPS.php",
-		data: "idEmpresa="+idEmpresa+"&idProducto="+idProducto,
+		data: "idEmpresa="+idEmpresa+"&idProducto="+idPS+"&ps="+ps,
 		success: function(respuesta){
 			if (respuesta== 0) {
 

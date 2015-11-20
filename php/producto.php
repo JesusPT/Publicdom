@@ -1,7 +1,6 @@
 <?php
 
   $idPro = $_GET['idProducto'];
-
   if (@$enlace = new mysqli("localhost","root","","publidom")){
     $consulta = "SELECT idProducto,nomProducto,descripcion,precioProducto,Disponibilidad,nomEmpresa,emp.idEmpresa from producto pro INNER JOIN empresa emp ON pro.idEmpresa = emp.idEmpresa and idProducto = $idPro";
     if (@$respuesta = $enlace -> query($consulta)) {

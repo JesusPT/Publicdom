@@ -484,7 +484,22 @@ $('#more-carrito').on('click','.btnComprarCarrito',function(e){
 
 });
 
+//------------------------------------------------------------------------------
+//Agregar a favoritos
+$('#imgStar').on('click',function(e){
+	var idProd = $('#nomPS').attr('name');
+	$.ajax({
+		url: "php/agregarFavorito.php",
+		data: "idProducto="+idProd,
+		success: function(respuesta){
+			if (respuesta == 0) {
 
+			}else{
+
+			}
+		}
+	});
+});
 
 //Cerrar emergentes-------------------------------------------------------------
 

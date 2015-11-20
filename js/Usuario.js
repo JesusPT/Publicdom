@@ -108,6 +108,32 @@ $('#formEdDatosPers').on('submit',function(e){
 				$("#more-carrito").slideToggle("slow");
 				$(this).css('background-color','#5D5E60');
 			}else {
+				$('#more-carrito h2').remove();
+				$('.carritoPorEmp').remove();
+				//carritos
+				$.ajax({
+					url: "php/carrito.php",
+					success: function(respuesta){
+						if(respuesta == 0){
+
+						}else{
+							$('.contenedorCarrito').remove();
+							respuesta = respuesta.split('~');
+							var carrito = 0;
+							for (var i = 0; i < respuesta.length-1; i+=6) {
+
+								if (carrito != respuesta[i]) {
+									carrito = respuesta[i];
+									$('#more-carrito').append("<div class='contenedorCarrito'> <div class='caritoEmpresa'> <div class='carritoTitulos'> <div> <a class ='EmpresaPSBus' href='#'>"+respuesta[i+1]+"</a> </div> <div class ='descArticulo'> <h3>Artículo</h3> <h3>Cantidad</h3> <h3>Precio</h3> </div> </div> <div class='cajaDeArticulos"+respuesta[i]+"'> </div> <div class ='detallesFinales'> <div class='numerosTotales'> <h3>Total</h3> <p>$ <span class='TotalCarrito'>"+respuesta[i+5]+"</span></p> </div> <div class='cajaBotonesCarrito'> <div class='boton'> <a class ='btnComprarCarrito' href='#'>Comprar</a> </div> <div class='boton'> <a class = 'btnBorrarCarrito' href='#'>Borrar</a> </div> </div> </div> </div> </div>");
+								}
+								//for (var j = i+1; j < i+5; j++) {
+									$(".cajaDeArticulos"+respuesta[i]).append("<div class='articuloCaja'> <div> <span class='nombreArticulo'>"+respuesta[i+2]+"</span> </div> <div> <p><span class='cantidadArticulo'>"+respuesta[i+3]+"</span> <span class='metricaArticulo'>Piezas</span></p> </div> <div> <p>$<span class='precioUnitArticulo'>"+respuesta[i+4]+"</span></p> </div></div>");
+								//}
+							}
+						}
+					}
+				});
+
 				$(".more").css("display","none");
 				$(".pIzquierda").css('background-color','#5D5E60');
 				$(this).css('background-color','rgb(194, 194, 194)');
@@ -358,7 +384,7 @@ $('#more-search,#more-favs,#more-history').on("click",".serv-link",function(e){
 //Añadir Producto/Servicio
 
 $('#agregarPS').on('click',function(e){
-
+e.preventDefault();
 	var idEmpresa = $('#perEmpBusq').attr('name');
 	var idPS = $('#nomPS').attr('name');
 	$.ajax({

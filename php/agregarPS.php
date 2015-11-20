@@ -22,7 +22,7 @@
         crearCarrito($idUsu,$idEmp,$enlace,$idPS,$ps);
       }
     }else{
-      echo "error consulta " . $consulta;
+      echo 2;
     }
   }else{
     echo 0;
@@ -39,18 +39,34 @@
           $cantidad = $filas['cantidad'];
           $cantidad++;
           $consulta = "UPDATE psCarrito SET cantidad=$cantidad WHERE idCarrito = $idCarrito and idProducto = $idProd";
-          echo $consulta;
           if ($respuesta = $enlace -> query($consulta) ) {
+            $con = "SELECT precioProducto from producto where idProducto = $idProd";
+            if (@$respuesta = $enlace -> query($con)) {
+              if ($filas = $respuesta -> fetch_assoc()) {
+                $sumarPrecio =  $filas['precioProducto'];
+                $con = "UPDATE carritos SET total = total + $sumarPrecio where idCarrito = $idCarrito";
+                if (@$respuesta = $enlace -> query($con)) {
 
+                }
+              }
+            }
           }else{
             echo "456";
           }
         }
       }else{
         $consulta = "INSERT INTO psCarrito VALUES($idProd,0,1,$idCarrito)";
-        echo $consulta;
         if (@$respuesta = $enlace -> query($consulta) ) {
+          $con = "SELECT precioProducto from producto where idProducto = $idProd";
+          if (@$respuesta = $enlace -> query($con)) {
+            if ($filas = $respuesta -> fetch_assoc()) {
+              $sumarPrecio =  $filas['precioProducto'];
+              $con = "UPDATE carritos SET total = total + $sumarPrecio where idCarrito = $idCarrito";
+              if (@$respuesta = $enlace -> query($con)) {
 
+              }
+            }
+          }
         }else{
           echo "789";
         }

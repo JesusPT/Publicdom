@@ -39,24 +39,25 @@
 		<div id="contenedor">
 			<div id="detallesServBusqueda" class ="more">
 				<div class = "mostrar" id ="zoomin">
-					<img src="images/delete85.png" class="close" id="cerrarDetallesServBusqueda">
+					<img src="images/delete85.png" class="close">
 
 					<div>
 						<div id="generalesInfo">
 							<h3 id="nomPS">Naruto 3</h3>
-							<p id="EmpresaPSBus"><a href="#" id="perEmpBusq">JOManga</a></p>
+							<p class="EmpresaPSBus"><a href="detallesEmprBusqueda" id="perEmpBusq">JOManga</a></p>
 							<p id="descPSBus">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nostrum odit voluptas, repudiandae officia, reiciendis accusamus delectus fugiat maxime alias quae dolorem illum veniam suscipit quaerat mollitia nobis. Voluptatum, consequuntur.</p>
-							<p id="dispPSBus">Nope</p>
+							<p>Disponiblididad: <span id="dispPSBus">Nope</span></p>
 						</div>
 
 						<div id="rdspd">
-							<div id="imagenProd">
-								<img src="images/history6(2).png" alt="">
+							<div id="opcionesProd">
+								<p>$ <span id="precioProdDet">100.00</span></p>
+								<div class="boton"><a href="">Añadir a carrito</a></div>
+								<div class="boton"><img id ="imgStar" src="images/star_white.png" alt=""></div>
 							</div>
 
-							<div id="opcionesProd">
-								<div class="boton" id="agregarPS"><a href="#">Añadir</a></div>
-								<p>$ <span id="precioProdDet">100.00</span></p>
+							<div id="imagenProd">
+								<img src="images/history6(2).png" alt="">
 							</div>
 						</div>
 
@@ -67,17 +68,19 @@
 
 			<div id="detallesEmprBusqueda"  class ="more">
 				<div class = "mostrar" id ="zoomin">
-					<img src="images/delete85.png" class="close" id="cerrarDetallesEmprBusqueda">
+					<img src="images/delete85.png" class="close">
 
-					<div id="empDetallBusq">
-						<h3 id="nomEmpresaDetalles">JOManga</h3>
-						<p class="dirEmpBus">1ro de Mayo #289</p>
-						<p class="telEmpBus">41-2-58-59</p>
-						<p class="titularEmpBus">Jesús E. Pérez Toledo</p>
-					</div>
+					<div id = "contEmp">
+						<div id="empDetallBusq">
+							<h3>JOManga</h3>
+							<p class="dirEmpBus">1ro de Mayo #289</p>
+							<p class="telEmpBus">41-2-58-59</p>
+							<p class="titularEmpBus">Jesús E. Pérez Toledo</p>
+						</div>
 
-					<div id="logoEmpBusq">
-						<img src="images/factory6 (3).png" alt="">
+						<div id="logoEmpBusq">
+							<img src="images/factory6 (3).png" alt="">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -88,10 +91,13 @@
 
 			<div id="emergenteCompraOK"  class ="more">
 				<div class = "mostrar" id ="zoomin">
-					<p>Su compra ha sido realizada correctamente.</p>
-					<div>
-						<div class="boton" id="compraOK"><a href="#">OK</a></div>
+					<div id="avisoEmerg">
+						<p>Su compra ha sido realizada correctamente.</p>
+						<div>
+							<div class="boton" id="compraOK"><a href="#">OK</a></div>
+						</div>
 					</div>
+
 
 				</div>
 			</div>
@@ -295,63 +301,102 @@
 			        <div id="more-carrito" class="more">
 			        	<h2>Carrito</h2>
 
-						<div class="carritoPorEmp">
-							<span>Empresa EquisDe</span>
-							<div id="descArticulo">
-								<h3>Artículo</h3>
-								<h3>Cantidad</h3>
-								<h3>Precio</h3>
-							</div>
-						</div>
+						<div id="contenedorCarrito">
 
-						<div id="cajaDeArticulos">
-							<div class="articuloCaja">
-								<div>
-									<span class="nombreArticulo">Galletas  super duper deliciosas :D</span>
-								</div>
-								<div>
-									<p><span class="cantidadArticulo">10</span> <span class="metricaArticulo">Piezas</span></p>
-								</div>
-								<div>
-									<p>$<span class="precioUnitArticulo">1.00</span></p>
-								</div>
-
-								<div class="articuloCaja">
+							<div class="caritoEmpresa">
+								<div class="carritoTitulos">
 									<div>
-										<span class="nombreArticulo">Bombas de muerte y destrucción</span>
+										<a class ="EmpresaPSBus" href="#">Empresa EquisDe</a>
 									</div>
-									<div>
-										<p><span class="cantidadArticulo">1</span> <span class="metricaArticulo">Piezas</span></p>
-									</div>
-									<div>
-										<p>$<span class="precioUnitArticulo">100.00</span></p>
-									</div>
-							</div>
-						</div>
 
-						<div id ="detallesFinales">
-							<div id="numerosTotales">
-								<h3>Total</h3>
-								<p>$ <span id="TotalCarrito">101.00</span></p>
+									<div class ="descArticulo">
+										<h3>Artículo</h3>
+										<h3>Cantidad</h3>
+										<h3>Precio</h3>
+									</div>
+								</div>
+
+
+
+								<div class="cajaDeArticulos">
+									<div class="articuloCaja">
+										<div>
+											<span class="nombreArticulo">Galletas  super duper deliciosas :D</span>
+										</div>
+
+										<div>
+											<p><span class="cantidadArticulo">10</span> <span class="metricaArticulo">Piezas</span></p>
+										</div>
+
+										<div>
+											<p>$<span class="precioUnitArticulo">1.00</span></p>
+										</div>
+									</div>
+
+									<div class="articuloCaja">
+										<div>
+											<span class="nombreArticulo">Bombas de muerte y destrucción</span>
+										</div>
+										<div>
+											<p><span class="cantidadArticulo">1</span> <span class="metricaArticulo">Piezas</span></p>
+										</div>
+										<div>
+											<p>$<span class="precioUnitArticulo">100.00</span></p>
+										</div>
+									</div>
+								</div>
+
+								<div class ="detallesFinales">
+									<div class="numerosTotales">
+										<h3>Total</h3>
+										<p>$ <span class="TotalCarrito">101.00</span></p>
+									</div>
+
+									<div class="cajaBotonesCarrito">
+										<div class="boton">
+											<a class ="btnComprarCarrito" href="#">Comprar</a>
+										</div>
+										<div class="boton">
+											<a class = "btnBorrarCarrito" href="#">Borrar</a>
+										</div>
+									</div>
+								</div>
 							</div>
 
-							<div id="cajaBotonesCarrito">
-								<div class="boton">
-									<a href="#">Comprar</a>
-								</div>
-								<div class="boton">
-									<a href="#">Borrar</a>
-								</div>
-							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 						</div>
+					</div>
+
+
+
 
 
 				</div>
-
-
-
-
-			        </div>
 
 
 
@@ -360,36 +405,83 @@
 
 						<h2>Pedidos</h2>
 
-						<div class="info-display">
+						<div id="contenedorPedido">
 
-							<div class="detallesProd">
-								<h4 class="nombre-prod">Producto 1</h4>
-								<p class="cantidad">Cantidad X</p>
-								<p class="empres">Empresa Y</p>
-							</div>
+							<div class="pedidoEmpresa">
+								<div class="pedidoTitulos">
+									<div>
+										<a class ="EmpresaPSBus" href="#">Empresa EquisDe</a>
+									</div>
 
-							<div class="suatmm">
-								<p class="dineros">$<span>20.00</span></p>
-								<div class="boton">
-									<a href="" class="pide">Pedir</a>
+									<div class ="descArticulo">
+										<h3>Servicio</h3>
+										<h3>Precio</h3>
+									</div>
+								</div>
+
+
+
+								<div class="cajaDePedidos">
+									<div class="pedidosCaja">
+										<div>
+											<span class="nombreArticulo">Un servicio sofisticado</span>
+										</div>
+
+										<div>
+											<p>$<span class="precioUnitArticulo">1.00</span></p>
+										</div>
+									</div>
+
+									<div class="articuloCaja">
+										<div>
+											<span class="nombreArticulo">Servicio de Bombas de muerte y destrucción</span>
+										</div>
+										<div>
+											<p>$<span class="precioUnitArticulo">100.00</span></p>
+										</div>
+									</div>
+								</div>
+
+								<div class ="detallesFinales">
+									<div class="numerosTotales">
+										<h3>Total</h3>
+										<p>$ <span class="TotalPedido">101.00</span></p>
+									</div>
+
+									<div class="cajaBotonesPedido">
+										<div class="boton">
+											<a class ="btnEstadoPedido" href="#">Estado</a>
+										</div>
+
+									</div>
 								</div>
 							</div>
 
-						</div>
 
-	         			<div class="info-display">
-							<div class="detallesProd">
-								<h4 class="nombre-prod">Producto 1</h4>
-								<p class="cantidad">Cantidad X</p>
-								<p class="empres">Empresa Y</p>
-							</div>
 
-							<div class="suatmm">
-								<p class="dineros">$<span>20.00</span></p>
-								<div class="boton">
-									<a href="" class="pide">Pedir</a>
-								</div>
-							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 						</div>
 

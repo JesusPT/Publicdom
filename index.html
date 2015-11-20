@@ -59,11 +59,11 @@
 								<input type="text" name="name" 	placeholder="Nombre" />
 			    			</li>
 							<li>
-			    				<label>Apellido Paterno</label>
+			    				<label>Primer Apellido</label>
 								<input type="text" name="AP" placeholder="Apellido Paterno" />
 			    			</li>
 			    			<li>
-			    				<label>Apellido Materno</label>
+			    				<label>Segundo Apellido</label>
 								<input type="text" name="AM" placeholder="Apellido Materno" />
 			    			</li>
 			    			<li>
@@ -75,7 +75,7 @@
 								<input type="password" name="Pass" placeholder="********" />
 			    			</li>
 			    			<li>
-			    				<label>Reingresa Contraseña</label>
+			    				<label>Reingresa Contr</label>
 								<input type="password" name="rPass" placeholder="********" />
 			    			</li>
 			    			<li>
@@ -95,58 +95,60 @@
 			    		</ul>
 			    	</form>
 				</div>
+
+				<div id="regRapidoEmpr">
+					<h2>Registro de Empresa</h2>
+					<form id = "formRegistroEmp" action="" method="POST" name="nformRegistroEmp">
+						<ul>
+							<li>
+								<label>Nombre</label>
+								<input type="text" name="nombreEmp" 	placeholder="Nombre de la Empresa" />
+							</li>
+							<li>
+								<label>Giro</label>
+								<input type="text" name="giroEmp" placeholder="Giro de la Empresa" />
+							</li>
+							<li>
+								<label>Teléfono</label>
+								<input type="text" name="telEmp" placeholder="00-0-0000" />
+							</li>
+							<li>
+								<label>Dirección</label>
+								<input type="text" name="direccionEmpr" placeholder="Calle #00" />
+							</li>
+							<li>
+								<label>Titular</label>
+								<input type="password" name="titularEmp" placeholder="Nombre" />
+							</li>
+							<li>
+								<label>Usuario</label>
+								<input type="text" name="usuario" placeholder="Usuario" />
+							</li>
+							<li>
+								<label>Contraseña</label>
+								<input type="password" name="rPass" placeholder="********" />
+							</li>
+							<li>
+								<label>Reingresa Contraseña</label>
+								<input type="password" name="rPass" placeholder="********" />
+							</li>
+							<li>
+								<label>Correo Electró nico</label>
+								<input type="email" name="Email" placeholder="ejemplo@mail.com" />
+							</li>
+									<li>
+										<span id="mensaje"></span>
+									</li>
+							<li>
+								<input type="submit" value="Registrarse" class="Reg" data-type="zoomin"></input>
+							</li>
+						</ul>
+					</form>
+				</div>
 			</div>
 
 
-			<div id="regRapidoEmpr">
-				<h2>Registro de Empresa</h2>
-				<form id = "formRegistroEmp" action="" method="POST" name="nformRegistroEmp">
-					<ul>
-						<li>
-							<label>Nombre</label>
-							<input type="text" name="nombreEmp" 	placeholder="Nombre de la Empresa" />
-						</li>
-						<li>
-							<label>Giro</label>
-							<input type="text" name="giroEmp" placeholder="Giro de la Empresa" />
-						</li>
-						<li>
-							<label>Teléfono</label>
-							<input type="text" name="telEmp" placeholder="00-0-0000" />
-						</li>
-						<li>
-							<label>Dirección</label>
-							<input type="text" name="direccionEmpr" placeholder="Calle #00" />
-						</li>
-						<li>
-							<label>Titular</label>
-							<input type="password" name="titularEmp" placeholder="Nombre" />
-						</li>
-						<li>
-							<label>Usuario</label>
-							<input type="text" name="usuario" placeholder="Usuario" />
-						</li>
-						<li>
-							<label>Contraseña</label>
-							<input type="password" name="rPass" placeholder="********" />
-						</li>
-						<li>
-							<label>Reingresa Contraseña</label>
-							<input type="password" name="rPass" placeholder="********" />
-						</li>
-						<li>
-							<label>Correo Electró nico</label>
-							<input type="email" name="Email" placeholder="ejemplo@mail.com" />
-						</li>
-								<li>
-									<span id="mensaje"></span>
-								</li>
-						<li>
-							<input type="submit" value="Registrarse" class="Reg" data-type="zoomin"></input>
-						</li>
-					</ul>
-				</form>
-			</div>
+
 		</div>
 
 

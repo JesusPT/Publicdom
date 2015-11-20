@@ -26,7 +26,7 @@
 
 
 .close{
-	margin: 1em auto;
+	margin: 1em 0 0 0;
 	display:flex;
 	position: fixed;
 	/*left: 14.5em;
@@ -71,8 +71,9 @@
 #formRegistro,
 #formRegistroEmp,
 #formInicioSesion{
+	display: flex;
 	position: relative;
-	margin: 2em;
+	margin: 1em;
 }
 
 #formRegistro input,
@@ -80,16 +81,16 @@
 #formInicioSesion input{
 	border: 1px solid #AEADB3;
 	border-radius: 3px;
-	left: 25px;
+	left: 20px;
 	padding: 5px;
 }
 
 #formRegistro label,
 #formRegistroEmp label,
 #formInicioSesion label{
-	width: 30%;
+	/*width: 30%;*/
 	margin-top: 1px;
-	display: inline-block;
+	/*display: inline-block;*/
 	float: left;
 	padding: 3px;
 }
@@ -124,7 +125,6 @@
 }
 
 #formRegistro label,
-#formRegistroEmp
 #formRegistro input{
 	position: relative;
 	width: 33%;
@@ -167,7 +167,7 @@
 	box-shadow: 0px 0px 30px rgba(0,0,0,0.2);
 	color: #1F262B;
 	display: block;
-	margin: 4em auto;
+	margin: 2em auto;
 	position: relative;
 	padding: 2em;
 	width: 30em;
@@ -188,11 +188,11 @@
 
 
 #regRapidoEmpr{
-	display: block;
+	display: none;
 }
 
 #regRapidoUser{
-	display: none;
+	display: block;
 }
 
 

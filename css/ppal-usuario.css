@@ -349,13 +349,11 @@ y VEntanas Emergentes*/
 
 .descArticulo{
 	display: flex;
-	padding: 1em 0 0 0;
 }
 
 
 .cajaDeArticulos{
-	display: flex;
-	flex-flow: column;
+	display: block;
 }
 
 .articuloCaja{
@@ -476,12 +474,10 @@ y VEntanas Emergentes*/
 #contenedorPedido{
 	display: inline;
 	position: relative;
-	margin: 8em;
 }
 
 .pedidoEmpresa{
-	display: flex;
-	flex-flow: column;
+	display: inline-block;
 }
 
 .pedidoTitulos div a{
@@ -492,12 +488,18 @@ y VEntanas Emergentes*/
 
 
 .cajaDePedidos{
-	display: flex;
-	flex-flow: column;
+	display: block;
 }
 
-.pedidosCaja{
+.pedidosCaja,
+.articuloCaja{
 	display: flex;
+	flex-flow: row;
+}
+
+.pedidosCaja div,
+.articuloCaja div{
+
 }
 
 .numerosTotales,

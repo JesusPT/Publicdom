@@ -124,18 +124,56 @@
 	padding: 0.5em 0;
 }
 
+
+#opcionesProd,
+#imagenProd{
+	display: inline-block;
+	width: 40%;
+	text-align: left;
+}
+
+#opcionesProd{
+
+}
+
 #imagenProd{
 	display: flex;
 	flex-grow: 1;
 }
 
-#detallesServBusqueda{
-	display: block;
-}
 
-#opcionesProd p{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#opcionesProd{
 	font-weight: bold;
 }
+
 #imgStar{
 	width: 14px;
 }

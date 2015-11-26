@@ -89,6 +89,57 @@ $('#formEdDatosPers').on('submit',function(e){
 				$("#more-pedidos").slideToggle("slow");
 				$(this).css('background-color','#5D5E60');
 			}else {
+
+				//remove
+				$(".contenedorPedido").remove();
+				//Volcado de datos Pedidos
+				$.ajax({
+					url: "php/pedidosUsuario.php",
+					success: function(respuesta){
+						if(respuesta == 0){
+
+						}else{
+
+							respuesta = respuesta.split('~');
+							var carrito = 0;
+							for (var i = 0; i < respuesta.length-1; i+=6) {
+
+								if (carrito != respuesta[i]) {
+									carrito = respuesta[i];
+									$('#more-pedidos').append("<div class='contenedorPedido'><div class='pedidoEmpresa'><div class='pedidoTitulos'><div><a class ='EmpresaPSBus' href='#'>"+respuesta[i+1]+"</a></div><div class ='descArticulo'><h3>Servicio</h3><h3>Precio</h3></div></div><div class='cajaDePedidos"+respuesta[i]+"'> </div><div class ='detallesFinales'><div class='numerosTotales'><h3>Total</h3><p>$ <span class='TotalPedido'>"+respuesta[i+5]+"</span></p></div><div class='cajaBotonesPedido'><div class='boton'><a class ='btnEstadoPedido' href='#'>Estado</a></div></div></div></div></div>");
+								}
+								//for (var j = i+1; j < i+5; j++) {
+									$(".cajaDePedidos"+respuesta[i]).append("<div class='articuloCaja'> <div> <span class='nombreArticulo'>"+respuesta[i+2]+"</span> </div> <div> <p><span class='cantidadArticulo'>"+respuesta[i+3]+"</span> <span class='metricaArticulo'>Piezas</span></p> </div> <div> <p>$<span class='precioUnitArticulo'>"+respuesta[i+4]+"</span></p> </div></div>");
+								//}
+							}
+						}
+					}
+				});
+
+				$.ajax({
+					url: "php/pedidosUsuarioServ.php",
+					success: function(respuesta){
+						if(respuesta == 0){
+
+						}else{
+
+							respuesta = respuesta.split('~');
+							var carrito = 0;
+							for (var i = 0; i < respuesta.length-1; i+=6) {
+
+								if (carrito != respuesta[i]) {
+									carrito = respuesta[i];
+									//$('#more-carrito').append("<div class='contenedorCarrito'> <div class='caritoEmpresa'> <div class='carritoTitulos'> <div> <a class ='EmpresaPSBus' href='#'>"+respuesta[i+1]+"</a> </div> <div class ='descArticulo'> <h3>Artículo</h3> <h3>Cantidad</h3> <h3>Precio</h3> </div> </div> <div class='cajaDeArticulos"+respuesta[i]+"'> </div> <div class ='detallesFinales'> <div class='numerosTotales'> <h3>Total</h3> <p>$ <span class='TotalCarrito'>"+respuesta[i+5]+"</span></p> </div> <div class='cajaBotonesCarrito'> <div class='boton'> <a class ='btnComprarCarritoServ' name="+respuesta[i]+" href='#'>Comprar</a> </div> <div class='boton'> <a class = 'btnBorrarCarritoServ' name="+respuesta[i]+" href='#'>Borrar</a> </div> </div> </div> </div> </div>");
+								}
+								//for (var j = i+1; j < i+5; j++) {
+									$(".cajaDePedidos"+respuesta[i]).append("<div class='articuloCaja'> <div> <span class='nombreArticulo'>"+respuesta[i+2]+"</span> </div> <div> <p><span class='cantidadArticulo'>"+respuesta[i+3]+"</span> <span class='metricaArticulo'>Servicios</span></p> </div> </div>");
+								//}
+							}
+						}
+					}
+				});
+
+
 				$(".more").css("display","none");
 				$(".pIzquierda").css('background-color','#5D5E60');
 				$(this).css('background-color','rgb(194, 194, 194)');
@@ -288,6 +339,59 @@ $("#btoBuscar").on("click",function(){
 //------------------------------------------------------------------------------
 //favoritos
 
+$('#profile-favs').on("click",function(){
+	if ($("#more-favs").css('display')=='block') {
+		$("#more-favs").slideToggle("slow");
+		$("#favoritos").css('background-color','#5D5E60');
+
+
+	}else {
+		$('.ser-package-favs').remove();
+		$(".more").css("display","none");
+		$("#favoritos").css('background-color','rgb(194, 194, 194)');
+		$(".pIzquierda").css('background-color','#5D5E60');
+		$("#more-favs").slideToggle("slow");
+		//favoritos Producto
+		$.ajax({
+			url: "php/favoritos.php",
+			success: function(respuesta){
+				if (respuesta == 0) {
+					console.log("error al poner el nombre");
+				}else if(respuesta == 1){
+
+				}else {
+					respuesta = respuesta.split("~");
+					for (var i = 0; i < respuesta.length - 1; i++) {
+						$("#more-favs").append("<div class='ser-package-favs'><a href='#' class='prod-link' name="+respuesta[i]+">"+ respuesta[i+1] +"</a><p class='descrip-serv-favs'> "+ respuesta[i+2] +" </p></div>");
+						i+=2;
+					}
+
+				}
+			}
+		});
+
+		//favoritos servicio
+		$.ajax({
+			url: "php/favoritosServ.php",
+			success: function(respuesta){
+				if (respuesta == 0) {
+					console.log("error al poner el nombre");
+				}else if(respuesta == 1){
+
+				}else {
+					respuesta = respuesta.split("~");
+					for (var i = 0; i < respuesta.length - 1; i++) {
+						$("#more-favs").append("<div class='ser-package-favs'><a href='#' class='serv-link' name="+respuesta[i]+">"+ respuesta[i+1] +"</a><p class='descrip-serv-favs'> "+ respuesta[i+2] +" </p></div>");
+						i+=2;
+					}
+
+				}
+			}
+		});
+	}
+
+});
+
 $("#favoritos").on("click",function(){
 	if ($("#more-favs").css('display')=='block') {
 		$("#more-favs").slideToggle("slow");
@@ -416,7 +520,8 @@ e.preventDefault();
 			if (respuesta== 0) {
 
 			}else{
-
+				$('#contenedor').css("display","none");
+				$('#detallesServBusqueda').css("display","none");
 			}
 		}
 	});
@@ -477,7 +582,7 @@ $('#more-carrito').on('click','.btnComprarCarrito',function(e){
 			if (respuesta == 1) {
 
 			}else{
-
+				$('#more-carrito').slideToggle('slow');
 			}
 		}
 	});

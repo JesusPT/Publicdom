@@ -15,7 +15,7 @@
             }
 
           }
-          
+
         }else {
           echo 2;
         }
@@ -30,3 +30,4 @@
  <!-- use publidom -->
 <!-- SELECT car.idCarrito,emp.nomEmpresa,nomProducto,cantidad,precioProducto from ((producto pro inner join psCarrito psC ON pro.idProducto = psC.idProducto) inner join carritos car ON car.idCarrito = psC.idCarrito) inner join empresa emp ON emp.idEmpresa = car.idEmpresa and idUsuario = 'Shini6' ORDER BY idCarrito DESC -->
 <!-- SELECT car.idCarrito,emp.nomEmpresa,nomServicio,cantidad,Horario,total from ((servicio pro inner join psCarrito psC ON pro.idServicio = psC.idServicio) inner join carritos car ON car.idCarrito = psC.idCarrito) inner join empresa emp ON emp.idEmpresa = car.idEmpresa and idUsuario = 'Shini6' ORDER BY idCarrito DESC -->
+<!-- SELECT ped.idPedido,emp.nomEmpresa,nomProducto,cantidad,precioProducto,total from ((producto pro inner join productosPedido psP ON pro.idProducto = psP.idProducto) inner join pedidos ped ON ped.idPedido = psP.idPedido) inner join empresa emp ON emp.idEmpresa = ped.idEmpresa and idUsuario = 'Shini6' ORDER BY idPedido DESC -->

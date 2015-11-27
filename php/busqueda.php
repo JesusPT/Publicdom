@@ -6,7 +6,7 @@
 
   if($clave!=""){
 
-    if (@$enlace = new mysqli("localhost","root","","publidom")) {
+    if (@$enlace = new mysqli("mysql.hostinger.mx","u606309797_root","PAO425","u606309797_publi")) {
       $consulta = "SELECT idProducto,nomProducto,descripcion from producto where nomProducto like '%".$clave."%' OR  descripcion like '%".$clave."%'";
       if (@$respuesta = $enlace -> query($consulta)) {
         if ($respuesta -> num_rows > 0) {

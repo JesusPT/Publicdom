@@ -3,7 +3,7 @@
   session_start();
   $user = $_SESSION['perfil']['user'];
 
-  if (@$enlace = new mysqli("localhost","root","","publidom")) {
+  if (@$enlace = new mysqli("mysql.hostinger.mx","u606309797_root","PAO425","u606309797_publi")) {
     $consulta = "SELECT serv.idServicio,nomServicio,descripcion from servicio serv INNER JOIN historiales his ON serv.idServicio = his.idServicio and idUsuario = '".$user."'";
     if (@$respuesta = $enlace -> query($consulta)) {
       if ($respuesta -> num_rows > 0) {

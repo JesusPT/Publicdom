@@ -1,7 +1,7 @@
 <?php
 
   $idPro = $_GET['idProducto'];
-  if (@$enlace = new mysqli("localhost","root","","publidom")){
+  if (@$enlace = new mysqli("mysql.hostinger.mx","u606309797_root","PAO425","u606309797_publi")){
     $consulta = "SELECT idProducto,nomProducto,descripcion,precioProducto,Disponibilidad,nomEmpresa,emp.idEmpresa from producto pro INNER JOIN empresa emp ON pro.idEmpresa = emp.idEmpresa and idProducto = $idPro";
     if (@$respuesta = $enlace -> query($consulta)) {
       if ($respuesta -> num_rows > 0) {

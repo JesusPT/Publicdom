@@ -3,7 +3,7 @@
 	$usuario = $_POST['User'];
 	$pass = $_POST['Pass'];
 
-if (@$enlace = new mysqli("localhost","root","","publidom")) {//Conexion con la DB
+if (@$enlace = new mysqli("mysql.hostinger.mx","u606309797_root","PAO425","u606309797_publi")) {//Conexion con la DB
 	$consulta = "SELECT * FROM usuario where idUsuario = '$usuario' AND contraUsuario = '$pass'";//Consulta SQL a ejecutar
 	if (@$respuesta = $enlace->query($consulta)) {//Realizar consulta
 		if ($respuesta -> num_rows > 0) {//si la respuesta contiene alguna fila

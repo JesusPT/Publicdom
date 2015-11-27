@@ -19,7 +19,7 @@ $Email = $_POST['Email'];//correo electronico
            if(preg_match("/^[\d]{2}$/",$Age)){//7
              if (filter_var($Email, FILTER_VALIDATE_EMAIL)){//8
                   //echo "dentro de email";
-               if (@$enlace = new mysqli("localhost","root","","publidom")) {
+               if (@$enlace = new mysqli("mysql.hostinger.mx","u606309797_root","PAO425","u606309797_publi")) {
                  if (@$enlace -> query("call registro('$User','$name $paterno $materno','$Age','$Email','$Pass')")) {
                    echo 1;
                  }else{

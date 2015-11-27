@@ -26,7 +26,7 @@ if($pass == ($_SESSION ['perfil']['pass'])){
      echo 4;
    }///////=================================================
    /////Conexion a base de datos============================
-  if (@$enlace = new mysqli("localhost","root","","publidom")) {
+  if (@$enlace = new mysqli("mysql.hostinger.mx","u606309797_root","PAO425","u606309797_publi")) {
     ////Conexion Formulario====================================
     if (@$enlace -> query("call registro('$User','$name $paterno $materno','$Age','$Email','$Pass')")) {
       echo 1;

@@ -3,7 +3,7 @@
   session_start();
   $user = $_SESSION['perfil']['user'];
 
-    if (@$enlace = new mysqli("localhost","root","","publidom")) {
+    if (@$enlace = new mysqli("mysql.hostinger.mx","u606309797_root","PAO425","u606309797_publi")) {
       $consulta = "SELECT car.idCarrito,emp.nomEmpresa,nomProducto,cantidad,precioProducto,total from ((producto pro inner join psCarrito psC ON pro.idProducto = psC.idProducto) inner join carritos car ON car.idCarrito = psC.idCarrito) inner join empresa emp ON emp.idEmpresa = car.idEmpresa and idUsuario = '$user' ORDER BY idCarrito DESC";
       if (@$respuesta = $enlace -> query($consulta)) {
         if ($respuesta -> num_rows > 0) {

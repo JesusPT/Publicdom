@@ -230,7 +230,6 @@ $.ajax({
 
 		}else {
 			respuesta = respuesta.split(",");
-			console.log(respuesta[0]);
 			$('#nombreUsuario').text(respuesta[0]);
 			$('#nuser').text(respuesta[1]);
 		}
@@ -600,7 +599,8 @@ $('#imgStar').on('click',function(e){
 			if (respuesta == 0) {
 
 			}else{
-
+				$('#contenedor').css("display","none");
+				$('#detallesServBusqueda').css("display","none");
 			}
 		}
 	});

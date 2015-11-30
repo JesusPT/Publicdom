@@ -133,6 +133,88 @@ pruebaDeVariable = "Hola mundo";
 			});
 		});
 
+
+//Tipo de Registro--------------------------------------------------------------
+$('#btoRegUsuario').on('click',function(){
+	$('#regRapidoUser').css("display","block");
+	$('#regRapidoEmpr').css("display","none");
+});
+
+$('#btoRegEmpresa').on('click',function(){
+	$('#regRapidoUser').css("display","none");
+	$('#regRapidoEmpr').css("display","block");
+});
+
+//------------------------------------------------------------------------------
+//Registro empresa
+
+$('#formRegistroEmp').on('submit',function(e){
+	e.preventDefault();
+	var nomEmp = document.formRegistroEmp.nombreEmp.value;
+	var giro = document.formRegistroEmp.giroEmp.value;
+	var telEmp = document.formRegistroEmp.telEmp.value;
+	var dir = document.formRegistroEmp.direccionEmpr.value;
+	var titularEmp = document.formRegistroEmp.titularEmp.value;
+	var user = document.formRegistroEmp.usuario.value;
+	var pass = document.formRegistroEmp.Pass.value;
+	var rpass = document.formRegistroEmp.rPass.value;
+	var mail = document.formRegistroEmp.Email.value;
+
+
+	if (pass == rpass) {
+		$.ajax({
+			type:"POST",
+			url: "php/registro.php",
+			data: "nomEmp="+nomEmp+"&giroEmp="+giro+"&telEmp="+telEmp+"&direccionEmpr="+dir+"&titularEmp="+titularEmp+"&Pass="+pass+"&rPass="+rpass+"&Email="+mail+"&user="+user,
+			success: function(respuesta){
+				if (respuesta == 0) {
+					console.log("Error");
+				}else if (respuesta == 1) {
+					//correcto
+					$('#mensaje').text("Correcto");
+					$('#ventaIniRegEx').css('display','block');
+					$("#contenedor").css("display","none");
+				}else if (respuesta == 2) {
+					//
+					$("input[name $='name']").css("border-color","red");
+					$("input[name $='name']").val("");
+					$('#mensaje').text("Nombre no válido");
+				}else if (respuesta == 3) {
+					$("input[name $='AP']").css("border-color","red");
+					$("input[name $='AP']").val("");
+					$('#mensaje').text("Apellido paterno no válido");
+				}else if (respuesta == 4) {
+					$("input[name $='AM']").css("border-color","red");
+					$("input[name $='AM']").val("");
+					$('#mensaje').text("Apellido materno no válido");
+				}else if (respuesta == 5) {
+					$("input[name $='User']").css("border-color","red");
+					$("input[name $='User']").val("");
+					$('#mensaje').text("Nombre de Usuario no válido");
+				}else if (respuesta == 6) {
+					$("input[name $='Pass']").css("border-color","red");
+					$("input[name $='Pass']").val("");
+					$('#mensaje').text("Contraseña no válida");
+				}else if (respuesta == 7) {
+					$("input[name $='Age']").css("border-color","red");
+					$("input[name $='Age']").val("");
+					$('#mensaje').text("Edad no válido");
+				}else if (respuesta == 8) {
+					$("input[name $='Email']").css("border-color","red");
+					$("input[name $='Email']").val("");
+					$('#mensaje').text("E-mail no válido");
+				}
+
+			}
+		});
+	}else{
+		$("input[name $='Pass']").css("border-color","red");
+		document.nformRegistro.Pass.value = "";
+		document.nformRegistro.rPass.value = "";
+		$('#mensaje').text("Las contraseñas no coinciden");
+	}
+});
+
 $('#FooDer').on('click',function(){
 	$.ajax({
 		url: "php/con.php",

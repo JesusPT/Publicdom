@@ -229,7 +229,7 @@ $.ajax({
 		}else if(respuesta == 1){
 
 		}else {
-			respuesta = respuesta.split(",");
+			respuesta = respuesta.split(",");	
 			$('#nombreUsuario').text(respuesta[0]);
 			$('#nuser').text(respuesta[1]);
 		}

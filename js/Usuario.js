@@ -5,7 +5,7 @@ $.ajax({
 	url: "php/val.php",
 	success: function(respuesta){
 		if (respuesta == 0) {
-			$(window).attr('location',"/Publicdom");
+			$(window).attr('location',"index.html");
 		}
 	}
 });
@@ -27,13 +27,19 @@ $('#formEdDatosPers').on('submit',function(e){
 
 });
 
+//logo
+
+$('#logo').on('click',function(){
+	$(window).attr('location',"index.html");
+});
+
 //Cerrar session
 
 		$('#mSalir').on('click',function(){
 			$.ajax({
 				url: "php/cerrarSesion.php",
 				success: function(respuesta){
-					$(window).attr('location',"/Publicdom");
+					$(window).attr('location',"index.html");
 				}
 			});
 		});
@@ -229,7 +235,7 @@ $.ajax({
 		}else if(respuesta == 1){
 
 		}else {
-			respuesta = respuesta.split(",");	
+			respuesta = respuesta.split(",");
 			$('#nombreUsuario').text(respuesta[0]);
 			$('#nuser').text(respuesta[1]);
 		}

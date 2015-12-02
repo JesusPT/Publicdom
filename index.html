@@ -101,12 +101,29 @@
 					<form id = "formRegistroEmp" action="" method="POST" name="nformRegistroEmp">
 						<ul>
 							<li>
-								<label>Nombre</label>
+								<label>Nombre Empresa</label>
 								<input type="text" name="nombreEmp" 	placeholder="Nombre de la Empresa" />
 							</li>
 							<li>
 								<label>Giro</label>
-								<input type="text" name="giroEmp" placeholder="Giro de la Empresa" />
+								<select name="giroEmp">
+									<option value="gIndExt">Industrial Extractiva</option>
+									<option value="gIndMan">Industrial Manufacturera</option>
+									<option value="gIndAgro">Industrial Agropecuaria</option>
+									<option value="gBieFin">Bienes de Consumo Final</option>
+									<option value="gBieCap">Bienes de Capital</option>
+									<option value="bComMay">Comercial Mayorista</option>
+									<option value="bComMin">Comercial Minorista o Detallista</option>
+									<option value="bComCom">Comercial Comisionista</option>
+									<option value="bServTran">De Servicio(Transporte)</option>
+									<option value="bServTur">De Servicio(Turismo)</option>
+									<option value="bServFin">De Servicio(Finanzas)</option>
+									<option value="bServSPub">De Servicio(Serv. Públicos)</option>
+									<option value="bServSPro">De Servicio(Serv. Profesionales)</option>
+									<option value="bServEdu">De Servicio(Educación)</option>
+									<option value="bServSalud">De Servicio(Salud)</option>
+									<option value="bServCom">De Servicio(Comunicaciones)</option>
+								</select>
 							</li>
 							<li>
 								<label>Teléfono</label>
@@ -118,7 +135,7 @@
 							</li>
 							<li>
 								<label>Titular</label>
-								<input type="password" name="titularEmp" placeholder="Nombre" />
+								<input type="text" name="titularEmp" placeholder="Nombre" />
 							</li>
 							<li>
 								<label>Usuario</label>
@@ -133,7 +150,7 @@
 								<input type="password" name="rPass" placeholder="********" />
 							</li>
 							<li>
-								<label>Correo Electró nico</label>
+								<label>Correo Electrónico</label>
 								<input type="email" name="Email" placeholder="ejemplo@mail.com" />
 							</li>
 									<li>

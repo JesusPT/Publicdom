@@ -129,7 +129,9 @@
 }
 
 #formRegistro label,
-#formRegistro input{
+#formRegistro input,
+#formRegistroEmp label,
+#formRegistroEmp input{
 	position: relative;
 	width: 44%;
 }

@@ -29,9 +29,6 @@ $('#formEdDatosPers').on('submit',function(e){
 
 //logo
 
-$('#logo').on('click',function(){
-	$(window).attr('location',"index.html");
-});
 
 //Cerrar session
 
@@ -48,7 +45,7 @@ $('#logo').on('click',function(){
 			$.ajax({
 				url: "php/cerrarSesion.php",
 				success: function(respuesta){
-					$(window).attr('location',"/Publicdom");
+					$(window).attr('location',"index.html");
 				}
 			});
 		});

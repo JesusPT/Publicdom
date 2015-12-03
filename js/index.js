@@ -1,12 +1,11 @@
 $(document).on("ready",function(){
 
-pruebaDeVariable = "Hola mundo";
 
 	$.ajax({
 		url: "php/val.php",
 		success: function(respuesta){
 			if (respuesta == 1) {
-				$(window).attr('location',"/Publicdom/inicio-usuario.html");
+				$(window).attr('location',"inicio-usuario.html");
 			}
 		}
 	});
@@ -150,21 +149,21 @@ $('#btoRegEmpresa').on('click',function(){
 
 $('#formRegistroEmp').on('submit',function(e){
 	e.preventDefault();
-	var nomEmp = document.formRegistroEmp.nombreEmp.value;
-	var giro = document.formRegistroEmp.giroEmp.value;
-	var telEmp = document.formRegistroEmp.telEmp.value;
-	var dir = document.formRegistroEmp.direccionEmpr.value;
-	var titularEmp = document.formRegistroEmp.titularEmp.value;
-	var user = document.formRegistroEmp.usuario.value;
-	var pass = document.formRegistroEmp.Pass.value;
-	var rpass = document.formRegistroEmp.rPass.value;
-	var mail = document.formRegistroEmp.Email.value;
+	var nomEmp = document.nformRegistroEmp.nombreEmp.value;
+	var giro = $('#menuGiro option:selected').text();
+	var telEmp = document.nformRegistroEmp.telEmp.value;
+	var dir = document.nformRegistroEmp.direccionEmpr.value;
+	var titularEmp = document.nformRegistroEmp.titularEmp.value;
+	var user = document.nformRegistroEmp.usuario.value;
+	var pass = document.nformRegistroEmp.Pass.value;
+	var rpass = document.nformRegistroEmp.rPass.value;
+	var mail = document.nformRegistroEmp.Emailemp.value;
 
 
 	if (pass == rpass) {
 		$.ajax({
 			type:"POST",
-			url: "php/registro.php",
+			url: "php/registroEmpresa.php",
 			data: "nomEmp="+nomEmp+"&giroEmp="+giro+"&telEmp="+telEmp+"&direccionEmpr="+dir+"&titularEmp="+titularEmp+"&Pass="+pass+"&rPass="+rpass+"&Email="+mail+"&user="+user,
 			success: function(respuesta){
 				if (respuesta == 0) {
@@ -176,32 +175,36 @@ $('#formRegistroEmp').on('submit',function(e){
 					$("#contenedor").css("display","none");
 				}else if (respuesta == 2) {
 					//
-					$("input[name $='name']").css("border-color","red");
-					$("input[name $='name']").val("");
+					$("input[name $='nombreEmp']").css("border-color","red");
+					$("input[name $='nombreEmp']").val("");
 					$('#mensaje').text("Nombre no válido");
 				}else if (respuesta == 3) {
-					$("input[name $='AP']").css("border-color","red");
-					$("input[name $='AP']").val("");
-					$('#mensaje').text("Apellido paterno no válido");
+					$("input[name $='giroEmp']").css("border-color","red");
+					$("input[name $='giroEmp']").val("");
+					$('#mensaje').text("giro invalido");
 				}else if (respuesta == 4) {
-					$("input[name $='AM']").css("border-color","red");
-					$("input[name $='AM']").val("");
+					$("input[name $='telEmp']").css("border-color","red");
+					$("input[name $='telEmp']").val("");
 					$('#mensaje').text("Apellido materno no válido");
 				}else if (respuesta == 5) {
-					$("input[name $='User']").css("border-color","red");
-					$("input[name $='User']").val("");
+					$("input[name $='direccionEmpr']").css("border-color","red");
+					$("input[name $='direccionEmpr']").val("");
 					$('#mensaje').text("Nombre de Usuario no válido");
 				}else if (respuesta == 6) {
-					$("input[name $='Pass']").css("border-color","red");
-					$("input[name $='Pass']").val("");
+					$("input[name $='titularEmp']").css("border-color","red");
+					$("input[name $='titularEmp']").val("");
 					$('#mensaje').text("Contraseña no válida");
 				}else if (respuesta == 7) {
-					$("input[name $='Age']").css("border-color","red");
-					$("input[name $='Age']").val("");
+					$("input[name $='usuario']").css("border-color","red");
+					$("input[name $='usuario']").val("");
 					$('#mensaje').text("Edad no válido");
 				}else if (respuesta == 8) {
-					$("input[name $='Email']").css("border-color","red");
-					$("input[name $='Email']").val("");
+					$("input[name $='Pass']").css("border-color","red");
+					$("input[name $='Pass']").val("");
+					$('#mensaje').text("E-mail no válido");
+				}else if (respuesta == 8) {
+					$("input[name $='Emailemp']").css("border-color","red");
+					$("input[name $='Emailemp']").val("");
 					$('#mensaje').text("E-mail no válido");
 				}
 

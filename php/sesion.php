@@ -18,7 +18,10 @@ if (@$enlace = new mysqli("mysql.hostinger.mx","u606309797_root","PAO425","u6063
 				echo 4;
 			}
 		}else{
-			//Error no hay filas
+			$consulta = "SELECT * FROM empresa where usuarioEmp = '$usuario' and pass = '$pass'";
+			if ($respuesta = $enlace -> query()) {
+				# code...
+			}
 			echo 3;
 		}
 	}else{

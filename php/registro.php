@@ -16,15 +16,21 @@ $Email = $_POST['Email'];//correo electronico
      if (preg_match("/^[A-Za-z|ÁÉÍÓÚ|áéíóú]{1}[a-z|ñáéíóú]*$/",$materno)) {//4
        if (preg_match("/^[a-zA-Z0-9|_|#]{3,11}$/", $User)) {//5
          if( preg_match ("/^[\w|-]{5,18}$/",$Pass)){//6
+           $Pass = md5($_POST['Pass']);
            if(preg_match("/^[\d]{2}$/",$Age)){//7
              if (filter_var($Email, FILTER_VALIDATE_EMAIL)){//8
                   //echo "dentro de email";
                if (@$enlace = new mysqli("mysql.hostinger.mx","u606309797_root","PAO425","u606309797_publi")) {
-                 if (@$enlace -> query("call registro('$User','$name $paterno $materno','$Age','$Email','$Pass')")) {
-                   echo 1;
-                 }else{
-                   echo 01;
-                 }
+                  if (existencia($enlace,$User,$Email)) {
+                    if (@$enlace -> query("call registro('$User','$name $paterno $materno','$Age','$Email','$Pass')")) {
+                      echo 1;
+                    }else{
+                      echo 01;
+                    }
+                  }else{
+                    echo 9;
+                  }
+
                }else{
                  echo 02;
                }
@@ -48,6 +54,19 @@ $Email = $_POST['Email'];//correo electronico
      }
    } else{
      echo 2;
+   }
+
+
+   function existencia($enlace,$User,$Email){
+     $consulta = "SELECT idUsuario,nomEmpresa from usuario,empresa where idUsuario = '$User' or eMail= '$Email' or nomEmpresa = '$User' or usuarioEmp = '$User'";
+     if ($respuesta = $enlace -> query($consulta)) {
+       if ($respuesta -> num_rows > 0) {
+         return false;
+       }else{
+         return true;
+       }
+     }
+
    }
 
 ?>

@@ -1,7 +1,7 @@
 <?php
 
 	$usuario = $_POST['User'];
-	$pass = $_POST['Pass'];
+	$pass = md5($_POST['Pass']);
 
 if (@$enlace = new mysqli("mysql.hostinger.mx","u606309797_root","PAO425","u606309797_publi")) {//Conexion con la DB
 	$consulta = "SELECT * FROM usuario where idUsuario = '$usuario' AND contraUsuario = '$pass'";//Consulta SQL a ejecutar
@@ -19,10 +19,21 @@ if (@$enlace = new mysqli("mysql.hostinger.mx","u606309797_root","PAO425","u6063
 			}
 		}else{
 			$consulta = "SELECT * FROM empresa where usuarioEmp = '$usuario' and pass = '$pass'";
-			if ($respuesta = $enlace -> query()) {
-				# code...
+			if ($respuesta = $enlace -> query($consulta)) {
+				if ($respuesta -> num_rows > 0) {
+					session_start();
+					unset($_SESSION['perfilEmp']);//limpiar el espacio 'perfil'
+					$_SESSION['perfilEmp']['user'] = $usuario;//Guardar nombre de usuario en el arreglo de sesiones
+					$_SESSION['perfilEmp']['pass'] = $pass;//Guardar contraseña en el arreglo de sesiones
+					echo 9;
+				}else{
+					echo 3;
+				}
+
+			}else{
+				echo 3;
 			}
-			echo 3;
+
 		}
 	}else{
 		//Error al realizar la consulta

@@ -94,6 +94,12 @@ $(document).on("ready",function(){
 							$("input[name $='Email']").css("border-color","red");
 							$("input[name $='Email']").val("");
 							$('#mensaje').text("E-mail no válido");
+						}else if (respuesta == 9) {
+							$("input[name $='Email']").css("border-color","red");
+							$("input[name $='Email']").val("");
+							$("input[name $='User']").css("border-color","red");
+							$("input[name $='User']").val("");
+							$('#mensaje').text("Usuario o Email ya esta siendo usado");
 						}
 
 					}
@@ -119,6 +125,8 @@ $(document).on("ready",function(){
 						console.log("Error de conexion");
 					}else if (respuesta == 1) {
 						$(window).attr('location',"inicio-usuario.html");
+					}else if (respuesta == 9) {
+						$(window).attr('location',"inicio-empresa.html");
 					}else if (respuesta == 2) {
 						//Error en la consulta
 					}else if (respuesta == 3) {
@@ -155,8 +163,8 @@ $('#formRegistroEmp').on('submit',function(e){
 	var dir = document.nformRegistroEmp.direccionEmpr.value;
 	var titularEmp = document.nformRegistroEmp.titularEmp.value;
 	var user = document.nformRegistroEmp.usuario.value;
-	var pass = document.nformRegistroEmp.Pass.value;
-	var rpass = document.nformRegistroEmp.rPass.value;
+	var pass = document.nformRegistroEmp.PassE.value;
+	var rpass = document.nformRegistroEmp.rPassE.value;
 	var mail = document.nformRegistroEmp.Emailemp.value;
 
 
@@ -177,36 +185,46 @@ $('#formRegistroEmp').on('submit',function(e){
 					//
 					$("input[name $='nombreEmp']").css("border-color","red");
 					$("input[name $='nombreEmp']").val("");
-					$('#mensaje').text("Nombre no válido");
+					$('#mensajeE').text("Nombre no válido");
 				}else if (respuesta == 3) {
 					$("input[name $='giroEmp']").css("border-color","red");
 					$("input[name $='giroEmp']").val("");
-					$('#mensaje').text("giro invalido");
+					$('#mensajeE').text("giro invalido");
 				}else if (respuesta == 4) {
 					$("input[name $='telEmp']").css("border-color","red");
 					$("input[name $='telEmp']").val("");
-					$('#mensaje').text("Apellido materno no válido");
+					$('#mensajeE').text("telefono no válido");
 				}else if (respuesta == 5) {
 					$("input[name $='direccionEmpr']").css("border-color","red");
 					$("input[name $='direccionEmpr']").val("");
-					$('#mensaje').text("Nombre de Usuario no válido");
+					$('#mensajeE').text("Direccion de empresa no válido");
 				}else if (respuesta == 6) {
 					$("input[name $='titularEmp']").css("border-color","red");
 					$("input[name $='titularEmp']").val("");
-					$('#mensaje').text("Contraseña no válida");
+					$('#mensajeE').text("Nombre de Titular no válida");
 				}else if (respuesta == 7) {
 					$("input[name $='usuario']").css("border-color","red");
 					$("input[name $='usuario']").val("");
-					$('#mensaje').text("Edad no válido");
+					$('#mensajeE').text("Usuario no válido");
 				}else if (respuesta == 8) {
-					$("input[name $='Pass']").css("border-color","red");
-					$("input[name $='Pass']").val("");
-					$('#mensaje').text("E-mail no válido");
-				}else if (respuesta == 8) {
+					$("input[name $='PassE']").css("border-color","red");
+					$("input[name $='PassE']").val("");
+					$('#mensajeE').text("Contraseña no valida");
+				}else if (respuesta == 9) {
 					$("input[name $='Emailemp']").css("border-color","red");
 					$("input[name $='Emailemp']").val("");
-					$('#mensaje').text("E-mail no válido");
+					$('#mensajeE').text("E-mail no válido");
+				}else if (respuesta == 10) {
+					$("input[name $='Emailemp']").css("border-color","red");
+					$("input[name $='Emailemp']").val("");
+					$("input[name $='usuario']").css("border-color","red");
+					$("input[name $='usuario']").val("");
+					$("input[name $='nombreEmp']").css("border-color","red");
+					$("input[name $='nombreEmp']").val("");
+					$('#mensajeE').text("Usuario o Email ya esta siendo usado, tome en cuenta que la empresa no puede compartir el nombre de algun usuario");
+
 				}
+
 
 			}
 		});

@@ -10,6 +10,14 @@ $(document).on("ready",function(){
 		}
 	});
 
+	$.ajax({
+		url: "php/valEmp.php",
+		success: function(respuesta){
+			if (respuesta == 1) {
+				$(window).attr('location',"inicio-empresa.html");
+			}
+		}
+	});
 
 		$("#btoReg").click(function(){
 			if ($("#ventaIni").css("display") == "none") {

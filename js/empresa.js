@@ -29,6 +29,40 @@ $.ajax({
 });
 
 //------------------------------------------------------------------------------
+//Agregar Producto Servicio
+  $('#formAgrProd').on('submit',function(){
+    e.preventDefault();
+  	var nomProd = document.nformAgrProd.nameProd.value;
+  	var descProd = document.nformAgrProd.descProd.value;
+  	var disp = $('#disponProd option:selected').text();
+  	var precio = document.nformAgrProd.precioProd.value;
+
+    $.ajax({
+      type: "POST",
+      url: "agregarProd.php",
+      data: "nomProd=" + nomProd + "&descProd=" + descProd + "&disp=" + disp + "&precio" + precio,
+      success: function(respuesta){
+        if (respuesta == 1) {
+          $("input[name $='nameProd']").val("");
+          $("input[name $='descProd']").val("");
+          $("input[name $='precioProd']").val("");
+        }
+      }
+
+    })
+
+  });
+//------------------------------------------------------------------------------
+//Salir
+  $('#salir').on('click',function(){
+    $.ajax({
+      url: "php/cerrarSesionEmp.php",
+      success: function(respuesta){
+        $(window).attr('location',"index.html");
+      }
+    });
+  });
+//------------------------------------------------------------------------------
   $('#menuPerfil').on("click",function(){
     if ($("#moreEditEmpresa").css('display')=='block') {
       $("#moreEditEmpresa").slideToggle("slow");

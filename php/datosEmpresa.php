@@ -5,7 +5,7 @@
   $user = $_SESSION['perfilEmp']['user'];
 
   if (@$enlace = new mysqli("mysql.hostinger.mx","u606309797_root","PAO425","u606309797_publi")) {
-    $consulta = "SELECT nomEmpresa,idEmpresa from empresa where usuarioEmp ='".$user."'";
+    $consulta = "SELECT nomEmpresa,idEmpresa from empresa where usuarioEmp = '$user'";
     if (@$respuesta = $enlace -> query($consulta)) {
       if ($respuesta -> num_rows > 0) {
         if ($filas = $respuesta -> fetch_assoc()) {

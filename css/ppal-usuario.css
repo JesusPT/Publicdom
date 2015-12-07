@@ -477,24 +477,21 @@ y VEntanas Emergentes*/
 	display: block;
 }
 
-.pedidosCaja,
-.articuloCaja{
-	display: flex;
-	flex-flow: row;
+.pedidosCaja{
+	display: table;
+	width: 100%;
+	table-layout: fixed;
 }
 
-.pedidosCaja div,
-.articuloCaja div{
-
+.sPed{
+	text-align: center;
+	width: 80%;
 }
 
-.numerosTotales,
-.cajaBotonesPedido{
-	text-align: right;
-	margin: 2em 2em 0 0;
+.pPed{
+	width: 20%;
+	text-align: center;
 }
-
-
 
 
 

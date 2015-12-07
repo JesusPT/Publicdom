@@ -330,47 +330,33 @@ y VEntanas Emergentes*/
 
 
 /*Estilos de Carrito*/
-#contenedorCarrito{
-	display: inline;
-	position: relative;
-	margin: 8em;
-}
 
-.carritoEmpresa{
-	border: 1px solid black;
-	display: flex;
-	flex-flow: column;
-}
-
-.carritoTitulos div a{
-	font-size: 18px;
-	text-decoration: none;
-}
-
+.articuloCaja,
 .descArticulo{
-	display: flex;
+	display: table;
+	width: 100%;
+	table-layout: fixed;
 }
 
-
-.cajaDeArticulos{
-	display: block;
+.cell{
+	display: table-cell;
+	height: 2rem;
+	align-items: middle;
 }
 
-.articuloCaja{
-	display: flex;
+.nArt{
+	width: 70%;
 }
 
-.numerosTotales,
-.cajaBotonesCarrito{
-	text-align: right;
-	margin: 2em 2em 0 0;
+.cArt{
+	width: 20%;
+	text-align: center;
 }
 
-
-
-
-
-
+.pArt{
+	width: 20%;
+	text-align: center;
+}
 
 
 

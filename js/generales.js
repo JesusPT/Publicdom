@@ -5,17 +5,27 @@ $(document).on("ready",function(){
     if (key.which == 27) {
       if ($('#contenedor').css("display") == "block") {
         $("#contenedor").css("display","none");
+        $("input[type$='text']").val("");
+  			$("input[type$='text']").css("border-color","#999");
+  			$("input[type$='password']").val("");
+  			$("input[type$='password']").css("border-color","#999");
+  			$("input[type$='email']").val("");
+  			$("input[type$='email']").css("border-color","#999");
       }
       if ($('#ventaIni').css("display") == "block") {
         $("#ventaIni").css("display","none");
+        $("input[type$='text']").val("");
+  			$("input[type$='text']").css("border-color","#999");
+  			$("input[type$='password']").val("");
+  			$("input[type$='password']").css("border-color","#999");
+  			$("input[type$='email']").val("");
+  			$("input[type$='email']").css("border-color","#999");
       }
     }
 
     if (key.which == 13) {
-      console.log($("input[name $='busqueda']").activeElement.tagName);
-      if ($("input[name $='busqueda']").activeElement) {
-        console.log("el buscador tiene el foco");
-      }
+      
+
     }
   });
 

@@ -30,17 +30,18 @@ $.ajax({
 
 //------------------------------------------------------------------------------
 //Agregar Producto Servicio
-  $('#formAgrProd').on('submit',function(){
+  $('#formAgrProd').on('submit',function(e){
     e.preventDefault();
   	var nomProd = document.nformAgrProd.nameProd.value;
   	var descProd = document.nformAgrProd.descProd.value;
   	var disp = $('#disponProd option:selected').text();
   	var precio = document.nformAgrProd.precioProd.value;
+    console.log(precio);
 
     $.ajax({
       type: "POST",
-      url: "agregarProd.php",
-      data: "nomProd=" + nomProd + "&descProd=" + descProd + "&disp=" + disp + "&precio" + precio,
+      url: "php/agregarProd.php",
+      data: "nomProd=" + nomProd + "&descProd=" + descProd + "&disp=" + disp + "&precioProd" + precio,
       success: function(respuesta){
         if (respuesta == 1) {
           $("input[name $='nameProd']").val("");
@@ -55,6 +56,15 @@ $.ajax({
 //------------------------------------------------------------------------------
 //Salir
   $('#salir').on('click',function(){
+    $.ajax({
+      url: "php/cerrarSesionEmp.php",
+      success: function(respuesta){
+        $(window).attr('location',"index.html");
+      }
+    });
+  });
+
+  $('#menuSalir').on('click',function(){
     $.ajax({
       url: "php/cerrarSesionEmp.php",
       success: function(respuesta){

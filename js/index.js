@@ -36,13 +36,27 @@ $(document).on("ready",function(){
 			}
 
 		});
+//------------------------------------------------------------------------------
+//cerrar ventanas
 		$(".close").click(function(){
 			$("#contenedor").css("display","none");
+			$("input[type$='text']").val("");
+			$("input[type$='text']").css("border-color","#999");
+			$("input[type$='password']").val("");
+			$("input[type$='password']").css("border-color","#999");
+			$("input[type$='email']").val("");
+			$("input[type$='email']").css("border-color","#999");
 		});
 		$("#closeIni").click(function(){
 			$("#ventaIni").css("display","none");
+			$("input[type$='text']").val("");
+			$("input[type$='text']").css("border-color","#999");
+			$("input[type$='password']").val("");
+			$("input[type$='password']").css("border-color","#999");
+			$("input[type$='email']").val("");
+			$("input[type$='email']").css("border-color","#999");
 		});
-
+//_-----------------------------------------------------------------------------
 		$("input").focus(function(){
 			$('#mensaje').text('');
 			$(this).css("border-color","#999");
@@ -73,41 +87,56 @@ $(document).on("ready",function(){
 							$('#mensaje').text("Correcto");
 							$('#ventaIniRegEx').css('display','block');
 							$("#contenedor").css("display","none");
-						}else if (respuesta == 2) {
-							//
-							$("input[name $='name']").css("border-color","red");
-							$("input[name $='name']").val("");
-							$('#mensaje').text("Nombre no válido");
-						}else if (respuesta == 3) {
-							$("input[name $='AP']").css("border-color","red");
-							$("input[name $='AP']").val("");
-							$('#mensaje').text("Apellido paterno no válido");
-						}else if (respuesta == 4) {
-							$("input[name $='AM']").css("border-color","red");
-							$("input[name $='AM']").val("");
-							$('#mensaje').text("Apellido materno no válido");
-						}else if (respuesta == 5) {
-							$("input[name $='User']").css("border-color","red");
-							$("input[name $='User']").val("");
-							$('#mensaje').text("Nombre de Usuario no válido");
-						}else if (respuesta == 6) {
-							$("input[name $='Pass']").css("border-color","red");
-							$("input[name $='Pass']").val("");
-							$('#mensaje').text("Contraseña no válida");
-						}else if (respuesta == 7) {
-							$("input[name $='Age']").css("border-color","red");
-							$("input[name $='Age']").val("");
-							$('#mensaje').text("Edad no válido");
-						}else if (respuesta == 8) {
-							$("input[name $='Email']").css("border-color","red");
-							$("input[name $='Email']").val("");
-							$('#mensaje').text("E-mail no válido");
-						}else if (respuesta == 9) {
-							$("input[name $='Email']").css("border-color","red");
-							$("input[name $='Email']").val("");
-							$("input[name $='User']").css("border-color","red");
-							$("input[name $='User']").val("");
-							$('#mensaje').text("Usuario o Email ya esta siendo usado");
+							$("input[type$='text']").val("");
+							$("input[type$='text']").css("border-color","#999");
+							$("input[type$='password']").val("");
+							$("input[type$='password']").css("border-color","#999");
+							$("input[type$='email']").val("");
+							$("input[type$='email']").css("border-color","#999");
+						}else{
+							if (respuesta.indexOf("2")>=0) {
+								//
+								$("input[name $='name']").css("border-color","red");
+								$("input[name $='name']").val("");
+
+							}
+							if (respuesta.indexOf("3")>=0) {
+								$("input[name $='AP']").css("border-color","red");
+								$("input[name $='AP']").val("");
+
+							}
+							if (respuesta.indexOf("4")>=0) {
+								$("input[name $='AM']").css("border-color","red");
+								$("input[name $='AM']").val("");
+
+							}
+							if (respuesta.indexOf("5")>=0) {
+								$("input[name $='User']").css("border-color","red");
+								$("input[name $='User']").val("");
+
+							}
+							if (respuesta.indexOf("6")>=0) {
+								$("input[name $='Pass']").css("border-color","red");
+								$("input[name $='Pass']").val("");
+
+							}
+							if (respuesta.indexOf("7")>=0) {
+								$("input[name $='Age']").css("border-color","red");
+								$("input[name $='Age']").val("");
+
+							}
+							if (respuesta.indexOf("8")>=0) {
+								$("input[name $='Email']").css("border-color","red");
+								$("input[name $='Email']").val("");
+
+							}
+							if (respuesta.indexOf("9")>=0) {
+								$("input[name $='Email']").css("border-color","red");
+								$("input[name $='Email']").val("");
+								$("input[name $='User']").css("border-color","red");
+								$("input[name $='User']").val("");
+								$('#mensaje').text("Usuario o Email ya esta siendo usado");
+							}
 						}
 
 					}
@@ -136,9 +165,12 @@ $(document).on("ready",function(){
 					}else if (respuesta == 9) {
 						$(window).attr('location',"inicio-empresa.html");
 					}else if (respuesta == 2) {
-						//Error en la consulta
+						$("input[name $='User']").css("border-color","red");
+						$("input[name $='User']").val("");
+						$("input[name $='Pass']").css("border-color","red");
+						$("input[name $='Pass']").val("");
 					}else if (respuesta == 3) {
-						console.log("entre a 3");
+						
 						$("input[name $='User']").css("border-color","red");
 						$("input[name $='User']").val("");
 						$("input[name $='Pass']").css("border-color","red");
@@ -153,11 +185,23 @@ $(document).on("ready",function(){
 $('#btoRegUsuario').on('click',function(){
 	$('#regRapidoUser').css("display","block");
 	$('#regRapidoEmpr').css("display","none");
+	$("input[type$='text']").val("");
+	$("input[type$='text']").css("border-color","#999");
+	$("input[type$='password']").val("");
+	$("input[type$='password']").css("border-color","#999");
+	$("input[type$='email']").val("");
+	$("input[type$='email']").css("border-color","#999");
 });
 
 $('#btoRegEmpresa').on('click',function(){
 	$('#regRapidoUser').css("display","none");
 	$('#regRapidoEmpr').css("display","block");
+	$("input[type$='text']").val("");
+	$("input[type$='text']").css("border-color","#999");
+	$("input[type$='password']").val("");
+	$("input[type$='password']").css("border-color","#999");
+	$("input[type$='email']").val("");
+	$("input[type$='email']").css("border-color","#999");
 });
 
 //------------------------------------------------------------------------------
@@ -189,48 +233,64 @@ $('#formRegistroEmp').on('submit',function(e){
 					$('#mensaje').text("Correcto");
 					$('#ventaIniRegEx').css('display','block');
 					$("#contenedor").css("display","none");
-				}else if (respuesta == 2) {
-					//
-					$("input[name $='nombreEmp']").css("border-color","red");
-					$("input[name $='nombreEmp']").val("");
-					$('#mensajeE').text("Nombre no válido");
-				}else if (respuesta == 3) {
-					$("input[name $='giroEmp']").css("border-color","red");
-					$("input[name $='giroEmp']").val("");
-					$('#mensajeE').text("giro invalido");
-				}else if (respuesta == 4) {
-					$("input[name $='telEmp']").css("border-color","red");
-					$("input[name $='telEmp']").val("");
-					$('#mensajeE').text("telefono no válido");
-				}else if (respuesta == 5) {
-					$("input[name $='direccionEmpr']").css("border-color","red");
-					$("input[name $='direccionEmpr']").val("");
-					$('#mensajeE').text("Direccion de empresa no válido");
-				}else if (respuesta == 6) {
-					$("input[name $='titularEmp']").css("border-color","red");
-					$("input[name $='titularEmp']").val("");
-					$('#mensajeE').text("Nombre de Titular no válida");
-				}else if (respuesta == 7) {
-					$("input[name $='usuario']").css("border-color","red");
-					$("input[name $='usuario']").val("");
-					$('#mensajeE').text("Usuario no válido");
-				}else if (respuesta == 8) {
-					$("input[name $='PassE']").css("border-color","red");
-					$("input[name $='PassE']").val("");
-					$('#mensajeE').text("Contraseña no valida");
-				}else if (respuesta == 9) {
-					$("input[name $='Emailemp']").css("border-color","red");
-					$("input[name $='Emailemp']").val("");
-					$('#mensajeE').text("E-mail no válido");
-				}else if (respuesta == 10) {
-					$("input[name $='Emailemp']").css("border-color","red");
-					$("input[name $='Emailemp']").val("");
-					$("input[name $='usuario']").css("border-color","red");
-					$("input[name $='usuario']").val("");
-					$("input[name $='nombreEmp']").css("border-color","red");
-					$("input[name $='nombreEmp']").val("");
-					$('#mensajeE').text("Usuario o Email ya esta siendo usado, tome en cuenta que la empresa no puede compartir el nombre de algun usuario");
+					$("input[type$='text']").val("");
+					$("input[type$='text']").css("border-color","#999");
+					$("input[type$='password']").val("");
+					$("input[type$='password']").css("border-color","#999");
+					$("input[type$='email']").val("");
+					$("input[type$='email']").css("border-color","#999");
+				}else{
 
+					if (respuesta.indexOf("2")>=0) {
+						//
+						$("input[name $='nombreEmp']").css("border-color","red");
+						$("input[name $='nombreEmp']").val("");
+
+					}
+					if (respuesta.indexOf("3")>=0) {
+						$("input[name $='giroEmp']").css("border-color","red");
+						$("input[name $='giroEmp']").val("");
+
+					}
+					if (respuesta.indexOf("4")>=0) {
+						$("input[name $='telEmp']").css("border-color","red");
+						$("input[name $='telEmp']").val("");
+
+					}
+					if (respuesta.indexOf("5")>=0) {
+						$("input[name $='direccionEmpr']").css("border-color","red");
+						$("input[name $='direccionEmpr']").val("");
+
+					}
+					if (respuesta.indexOf("6")>=0) {
+						$("input[name $='titularEmp']").css("border-color","red");
+						$("input[name $='titularEmp']").val("");
+
+					}
+					if (respuesta.indexOf("7")>=0) {
+						$("input[name $='usuario']").css("border-color","red");
+						$("input[name $='usuario']").val("");
+
+					}
+					if (respuesta.indexOf("8")>=0) {
+						$("input[name $='PassE']").css("border-color","red");
+						$("input[name $='PassE']").val("");
+
+					}
+					if (respuesta.indexOf("9")>=0) {
+						$("input[name $='Emailemp']").css("border-color","red");
+						$("input[name $='Emailemp']").val("");
+					}
+					if (respuesta.indexOf("10")>=0) {
+						$("input[name $='Emailemp']").css("border-color","red");
+						$("input[name $='Emailemp']").val("");
+						$("input[name $='usuario']").css("border-color","red");
+						$("input[name $='usuario']").val("");
+						$("input[name $='nombreEmp']").css("border-color","red");
+						$("input[name $='nombreEmp']").val("");
+						$('#mensajeE').text("Usuario o Email ya esta siendo usado, tome en cuenta que la empresa no puede compartir el nombre de algun usuario");
+
+					}
 				}
 
 

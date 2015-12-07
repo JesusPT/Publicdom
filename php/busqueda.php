@@ -4,7 +4,7 @@
   $user = $_SESSION['perfil']['user'];
   $clave = $_POST['busqueda'];
 
-  if($clave!=""){
+  if($clave!="" & $clave!="_"){
 
     if (@$enlace = new mysqli("mysql.hostinger.mx","u606309797_root","PAO425","u606309797_publi")) {
       $consulta = "SELECT idProducto,nomProducto,descripcion from producto where nomProducto like '%".$clave."%' OR  descripcion like '%".$clave."%'";

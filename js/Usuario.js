@@ -105,11 +105,11 @@ $('#formEdDatosPers').on('submit',function(e){
 
 							respuesta = respuesta.split('~');
 							var carrito = 0;
-							for (var i = 0; i < respuesta.length-1; i+=6) {
+							for (var i = 0; i < respuesta.length-1; i+=7) {
 
 								if (carrito != respuesta[i]) {
 									carrito = respuesta[i];
-									$('#more-pedidos').append("<div class='contenedorPedido'><div class='pedidoEmpresa'><div class='pedidoTitulos'><div><a class ='EmpresaPSBus' href='#'>"+respuesta[i+1]+"</a></div><div class ='descArticulo'><h3>Servicio</h3><h3>Precio</h3></div></div><div class='cajaDePedidos"+respuesta[i]+"'> </div><div class ='detallesFinales'><div class='numerosTotales'><h3>Total</h3><p>$ <span class='TotalPedido'>"+respuesta[i+5]+"</span></p></div><div class='cajaBotonesPedido'><div class='boton'><a class ='btnEstadoPedido' href='#'>Estado</a></div></div></div></div></div>");
+									$('#more-pedidos').append("<div class='contenedorPedido'><div class='pedidoEmpresa'><div class='pedidoTitulos'><div><a class ='EmpresaPSBus' href='#'>"+respuesta[i+1]+"</a></div><div class ='descArticulo'><h3>Servicio</h3><h3>Precio</h3></div></div><div class='cajaDePedidos"+respuesta[i]+"'> </div><div class ='detallesFinales'><div class='numerosTotales'><h3>Total</h3><p>$ <span class='TotalPedido'>"+respuesta[i+5]+"</span></p></div><div class='cajaBotonesPedido'><div class='boton'><a class ='btnEstadoPedido' href='#'>"+respuesta[i+6]+"</a></div></div></div></div></div>");
 								}
 								//for (var j = i+1; j < i+5; j++) {
 									$(".cajaDePedidos"+respuesta[i]).append("<div class='articuloCaja'> <div> <span class='nombreArticulo'>"+respuesta[i+2]+"</span> </div> <div> <p><span class='cantidadArticulo'>"+respuesta[i+3]+"</span> <span class='metricaArticulo'>Piezas</span></p> </div> <div> <p>$<span class='precioUnitArticulo'>"+respuesta[i+4]+"</span></p> </div></div>");
@@ -350,8 +350,8 @@ $('#profile-favs').on("click",function(){
 	}else {
 		$('.ser-package-favs').remove();
 		$(".more").css("display","none");
-		$("#favoritos").css('background-color','rgb(194, 194, 194)');
 		$(".pIzquierda").css('background-color','#5D5E60');
+		$("#favoritos").css('background-color','rgb(194, 194, 194)');
 		$("#more-favs").slideToggle("slow");
 		//favoritos Producto
 		$.ajax({
@@ -397,14 +397,14 @@ $('#profile-favs').on("click",function(){
 $("#favoritos").on("click",function(){
 	if ($("#more-favs").css('display')=='block') {
 		$("#more-favs").slideToggle("slow");
-		$(this).css('background-color','#5D5E60');
+		$("#favoritos").css('background-color','#5D5E60');
 
 
 	}else {
 		$('.ser-package-favs').remove();
 		$(".more").css("display","none");
-		$(this).css('background-color','rgb(194, 194, 194)');
 		$(".pIzquierda").css('background-color','#5D5E60');
+		$("#favoritos").css('background-color','rgb(194, 194, 194)');
 		$("#more-favs").slideToggle("slow");
 		//favoritos Producto
 		$.ajax({
@@ -582,7 +582,7 @@ $('#more-carrito').on('click','.btnComprarCarrito',function(e){
 		data: "idCarrito="+idCar,
 		success: function(respuesta){
 			if (respuesta == 1) {
-
+				
 			}else{
 				$('#more-carrito').slideToggle('slow');
 			}

@@ -53,8 +53,10 @@
           $cant = $filas['cantidad'];
           if ($idSer == 0) {
               $consulta = "INSERT INTO productosPedido(idPedido,idProducto,cantidad,idServicio) values($idPed,$idPro,$cant,0)";
+
           }else{
               $consulta = "INSERT INTO productosPedido(idPedido,idProducto,cantidad,idServicio) values($idPed,0,$cant,$idSer)";
+              
           }
           if (@$respuesta2 = $enlace -> query($consulta)) {
             echo "si";
